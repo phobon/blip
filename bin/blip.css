@@ -1,0 +1,3040 @@
+/*
+    Standard, modular styles.
+*/
+/* 
+    Z-index values.
+*/
+.z1 {
+  z-index: 951;
+}
+.z2 {
+  z-index: 952;
+}
+.z3 {
+  z-index: 953;
+}
+.z4 {
+  z-index: 954;
+}
+.z5 {
+  z-index: 955;
+}
+.z6 {
+  z-index: 956;
+}
+.z7 {
+  z-index: 957;
+}
+.z8 {
+  z-index: 958;
+}
+/*
+    Special z-index classes.
+*/
+.z-dialog {
+  z-index: 958;
+}
+.z-abovedialog {
+  z-index: 959;
+}
+/*
+    Modular css to handle various border styles.
+    border-radius styles correspond in size to things found in sizing.less (ie: for a perfectly round element, pick the same border radius as its size)
+*/
+.br-ra-none {
+  border-radius: 0;
+}
+.br-ra-tl-none {
+  border-top-left-radius: 0;
+}
+.br-ra-tr-none {
+  border-top-right-radius: 0;
+}
+.br-ra-bl-none {
+  border-bottom-left-radius: 0;
+}
+.br-ra-br-none {
+  border-bottom-right-radius: 0;
+}
+.br-ra-nano {
+  border-radius: 0.125rem;
+}
+.br-ra-tl-nano {
+  border-top-left-radius: 0.125rem;
+}
+.br-ra-tr-nano {
+  border-top-right-radius: 0.125rem;
+}
+.br-ra-bl-nano {
+  border-bottom-left-radius: 0.125rem;
+}
+.br-ra-br-nano {
+  border-bottom-right-radius: 0.125rem;
+}
+.br-ra-tiny {
+  border-radius: 0.25rem;
+}
+.br-ra-tl-tiny {
+  border-top-left-radius: 0.25rem;
+}
+.br-ra-tr-tiny {
+  border-top-right-radius: 0.25rem;
+}
+.br-ra-bl-tiny {
+  border-bottom-left-radius: 0.25rem;
+}
+.br-ra-br-tiny {
+  border-bottom-right-radius: 0.25rem;
+}
+.br-ra-small {
+  border-radius: 0.5rem;
+}
+.br-ra-tl-small {
+  border-top-left-radius: 0.5rem;
+}
+.br-ra-tr-small {
+  border-top-right-radius: 0.5rem;
+}
+.br-ra-bl-small {
+  border-bottom-left-radius: 0.5rem;
+}
+.br-ra-br-small {
+  border-bottom-right-radius: 0.5rem;
+}
+.br-ra-medium {
+  border-radius: 1rem;
+}
+.br-ra-tl-medium {
+  border-top-left-radius: 1rem;
+}
+.br-ra-tr-medium {
+  border-top-right-radius: 1rem;
+}
+.br-ra-bl-medium {
+  border-bottom-left-radius: 1rem;
+}
+.br-ra-br-medium {
+  border-bottom-right-radius: 1rem;
+}
+.br-ra-large {
+  border-radius: 1.5rem;
+}
+.br-ra-tl-large {
+  border-top-left-radius: 1.5rem;
+}
+.br-ra-tr-large {
+  border-top-right-radius: 1.5rem;
+}
+.br-ra-bl-large {
+  border-bottom-left-radius: 1.5rem;
+}
+.br-ra-br-large {
+  border-bottom-right-radius: 1.5rem;
+}
+.br-ra-huge {
+  border-radius: 2rem;
+}
+.br-ra-tl-huge {
+  border-top-left-radius: 2rem;
+}
+.br-ra-tr-huge {
+  border-top-right-radius: 2rem;
+}
+.br-ra-bl-huge {
+  border-bottom-left-radius: 2rem;
+}
+.br-ra-br-huge {
+  border-bottom-right-radius: 2rem;
+}
+.br-ra-massive {
+  border-radius: 3rem;
+}
+.br-ra-tl-massive {
+  border-top-left-radius: 3rem;
+}
+.br-ra-tr-massive {
+  border-top-right-radius: 3rem;
+}
+.br-ra-bl-massive {
+  border-bottom-left-radius: 3rem;
+}
+.br-ra-br-massive {
+  border-bottom-right-radius: 3rem;
+}
+/*
+    We really only want a couple of border sizes, otherwise it gets a little bit
+    ridiculous. Even a couple is too many I guess.
+*/
+.br-none {
+  border: solid;
+  border-width: 0;
+}
+.br-t-none {
+  border-top: 0 solid;
+}
+.br-b-none {
+  border-bottom: 0 solid;
+}
+.br-l-none {
+  border-left: 0 solid;
+}
+.br-r-none {
+  border-right: 0 solid;
+}
+.br-horizontal-none {
+  border-left: 0 solid;
+  border-right: 0 solid;
+}
+.br-vertical-none {
+  border-left: 0 solid;
+  border-right: 0 solid;
+}
+.br-nano {
+  border: solid;
+  border-width: 0.125rem;
+}
+.br-t-nano {
+  border-top: 0.125rem solid;
+}
+.br-b-nano {
+  border-bottom: 0.125rem solid;
+}
+.br-l-nano {
+  border-left: 0.125rem solid;
+}
+.br-r-nano {
+  border-right: 0.125rem solid;
+}
+.br-horizontal-nano {
+  border-left: 0.125rem solid;
+  border-right: 0.125rem solid;
+}
+.br-vertical-nano {
+  border-left: 0.125rem solid;
+  border-right: 0.125rem solid;
+}
+.br-tiny {
+  border: solid;
+  border-width: 0.25rem;
+}
+.br-t-tiny {
+  border-top: 0.25rem solid;
+}
+.br-b-tiny {
+  border-bottom: 0.25rem solid;
+}
+.br-l-tiny {
+  border-left: 0.25rem solid;
+}
+.br-r-tiny {
+  border-right: 0.25rem solid;
+}
+.br-horizontal-tiny {
+  border-left: 0.25rem solid;
+  border-right: 0.25rem solid;
+}
+.br-vertical-tiny {
+  border-left: 0.25rem solid;
+  border-right: 0.25rem solid;
+}
+.br-small {
+  border: solid;
+  border-width: 0.5rem;
+}
+.br-t-small {
+  border-top: 0.5rem solid;
+}
+.br-b-small {
+  border-bottom: 0.5rem solid;
+}
+.br-l-small {
+  border-left: 0.5rem solid;
+}
+.br-r-small {
+  border-right: 0.5rem solid;
+}
+.br-horizontal-small {
+  border-left: 0.5rem solid;
+  border-right: 0.5rem solid;
+}
+.br-vertical-small {
+  border-left: 0.5rem solid;
+  border-right: 0.5rem solid;
+}
+.br-solid {
+  border-style: solid;
+}
+.br-dashed {
+  border-style: dashed;
+}
+.br-ra-100 {
+  border-radius: 100%;
+}
+html,
+body,
+div,
+article,
+section,
+main,
+footer,
+header,
+form,
+fieldset,
+pre,
+code,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+textarea,
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+.border-box {
+  box-sizing: border-box;
+}
+.content-box {
+  box-sizing: content-box;
+}
+.border-box {
+  box-sizing: border-box;
+}
+/*
+    Modular css to handle varying cursor styles.
+*/
+.cur-pointer {
+  cursor: pointer;
+}
+.cur-normal {
+  cursor: default;
+}
+.cur-move {
+  cursor: move;
+}
+.d-block {
+  display: block;
+}
+.d-inline {
+  display: inline;
+}
+.d-inline-block {
+  display: inline-block;
+}
+.d-none {
+  display: none;
+}
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.d-table {
+  display: table;
+}
+.d-table-cell {
+  display: table-cell;
+}
+.vis-hidden {
+  visibility: hidden;
+}
+.vis-visible {
+  visibility: visible;
+}
+.vis-collapsed {
+  visibility: collapsed;
+}
+.user-select-none {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+/*
+    Modular css for font families.
+    We went maximum compatibility here and speed here - we don't want to use web fonts at all. So we're utilizing system fonts where we can
+    This code is taken specifically from tachyons https://github.com/tachyons-css/tachyons
+    See https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/ for some details on why we would use system fonts
+    See http://mrmrs.io/writing/2016/03/17/webfonts/ for more information on web fonts and why we should avoid them
+*/
+.sans-serif {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+.serif {
+  font-family: georgia, times, serif;
+}
+.system-sans-serif {
+  font-family: sans-serif;
+}
+.system-serif {
+  font-family: serif;
+}
+/* Monospaced Typefaces (for code) */
+/* From http://cssfontstack.com */
+code,
+.code {
+  font-family: Consolas, monaco, monospace;
+}
+/*
+    Font sizes.
+    The base font sizes are extremely important, because it handles all sizing. We use rem for our sizing to create a consistent experience
+    across responsive environments.
+*/
+.f1 {
+  font-size: 5rem;
+}
+.f2 {
+  font-size: 4rem;
+}
+.f3 {
+  font-size: 3rem;
+}
+.f4 {
+  font-size: 2rem;
+}
+.f5 {
+  font-size: 1rem;
+}
+.f6 {
+  font-size: 0.875rem;
+}
+.f7 {
+  font-size: 0.75rem;
+}
+/* Set the base font size on our html element. */
+html {
+  font-size: 16px;
+}
+/* Set the font size again as we want it to be slightly smaller than the base font size. */
+body {
+  font-size: 0.875rem;
+}
+/*
+    Responsive media query for mobile devices.
+*/
+@media only screen and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  html {
+    font-size: 32px !important;
+  }
+}
+/*
+    Simple font styles.
+*/
+.i {
+  font-style: italic;
+}
+.f-normal {
+  font-style: normal;
+}
+/*
+    Some simple font weights.
+    Includes a proc to build a set of classes corresponding to a list of font weights that have been defined.
+*/
+.bold {
+  font-weight: bold;
+}
+.fw-normal {
+  font-weight: normal;
+}
+.fw-lighter {
+  font-weight: lighter;
+}
+.fw-bolder {
+  font-weight: bolder;
+}
+.fw1 {
+  font-weight: 100;
+}
+.fw2 {
+  font-weight: 200;
+}
+.fw3 {
+  font-weight: 300;
+}
+.fw4 {
+  font-weight: 400;
+}
+.fw5 {
+  font-weight: 500;
+}
+/* 
+    Modular css to define layout-related classes
+    Positioning, layout and flexbox model.
+*/
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  margin: 0rem;
+  padding: 0rem;
+}
+/* Positions */
+.fixed {
+  position: fixed;
+}
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+/*
+    Flexbox model
+*/
+.f {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+/* Handle flex grow and shrink extents */
+.f-none {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+}
+.f-grow-0 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+.f-grow-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.f-grow-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+.f-grow-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+}
+.f-shrink-0 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.f-shrink-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.f-shrink-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -ms-flex-negative: 2;
+      flex-shrink: 2;
+}
+.f-shrink-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -ms-flex-negative: 3;
+      flex-shrink: 3;
+}
+/* Flex alignment and justification */
+.f-ai-start {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.f-ai-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.f-ai-end {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.f-ai-stretch {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+.f-as-start {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+.f-as-center {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+.f-as-end {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+.f-j-start {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.f-j-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.f-j-end {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.f-j-spacearound {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.f-j-spacebetween {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+/* Flex wrapping */
+.f-w {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.f-w-none {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+.f-w-reverse {
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+}
+/* Direction */
+.f-d-row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.f-d-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+/*
+    Line heights for text.   
+*/
+.lh-solid {
+  line-height: 1;
+}
+.lh-title {
+  line-height: 1.3;
+}
+.lh-copy {
+  line-height: 1.6;
+}
+/*
+    Element opacity
+    This function will create classes corresponding to opacity values: 1 through to 0
+    eg: 100 = 1, 50 = 0.5, 10 = 0.1
+*/
+.o-100 {
+  opacity: 1;
+}
+.o-90 {
+  opacity: 0.9;
+}
+.o-80 {
+  opacity: 0.8;
+}
+.o-70 {
+  opacity: 0.7;
+}
+.o-60 {
+  opacity: 0.6;
+}
+.o-50 {
+  opacity: 0.5;
+}
+.o-40 {
+  opacity: 0.4;
+}
+.o-30 {
+  opacity: 0.3;
+}
+.o-20 {
+  opacity: 0.2;
+}
+.o-10 {
+  opacity: 0.1;
+}
+.o-0 {
+  opacity: 0;
+}
+.of-auto {
+  overflow: auto;
+}
+.of-visible {
+  overflow: visible;
+}
+.of-hidden {
+  overflow: hidden;
+}
+.of-scroll {
+  overflow: scroll;
+}
+.of-x-auto {
+  overflow-x: auto;
+}
+.of-x-visible {
+  overflow-x: visible;
+}
+.of-x-hidden {
+  overflow-x: hidden;
+}
+.of-x-scroll {
+  overflow-x: scroll;
+}
+.of-y-auto {
+  overflow-y: auto;
+}
+.of-y-visible {
+  overflow-y: visible;
+}
+.of-y-hidden {
+  overflow-y: hidden;
+}
+.of-y-scroll {
+  overflow-y: scroll;
+}
+.pe-all {
+  pointer-events: all;
+}
+.pe-none {
+  pointer-events: none;
+}
+/* 
+    Modular css to define sizing-related classes - not to be confused with layout.     
+
+    This will generate classes that represent margins, paddings, widths and heights.
+
+    .m-none: no margin
+    .m-@{size} : margin on all sides
+    .m-l-@{size} : left margin
+    .m-r-@{size} : right margin
+    .m-t-@{size} : top margin
+    .m-b-@{size} : bottom margin
+    .m-horizontal-@{size} : left and right margin
+    .m-vertical-@{size}: top and bottom margin
+
+    .p- | none | l | r | t | b | horizontal | vertical | - @{size} : paddings
+
+    .w-@{size} : width
+    .w-min-@{size} : min-width
+    .h-@{size} : height
+    .h-min-@{size} : min-height
+*/
+/* Margins */
+.m-auto {
+  margin: auto;
+}
+.m-l-auto {
+  margin-left: auto;
+}
+.m-r-auto {
+  margin-right: auto;
+}
+.m-horizontal-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.m-t-auto {
+  margin-top: auto;
+}
+.m-b-auto {
+  margin-bottom: auto;
+}
+.m-vertical-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+/* Paddings */
+.p-auto {
+  padding: auto;
+}
+.p-l-auto {
+  padding-left: auto;
+}
+.p-r-auto {
+  padding-right: auto;
+}
+.p-horizontal-auto {
+  padding-left: auto;
+  padding-right: auto;
+}
+.p-t-auto {
+  padding-top: auto;
+}
+.p-b-auto {
+  padding-bottom: auto;
+}
+.p-vertical-auto {
+  padding-top: auto;
+  padding-bottom: auto;
+}
+/* Height & Width */
+.h-auto {
+  height: auto;
+}
+.h-min-auto {
+  min-height: auto;
+}
+.w-auto {
+  width: auto;
+}
+.w-min-auto {
+  min-width: auto;
+}
+/* Margins */
+.m-none {
+  margin: 0rem;
+}
+.m-l-none {
+  margin-left: 0rem;
+}
+.m-r-none {
+  margin-right: 0rem;
+}
+.m-horizontal-none {
+  margin-left: 0rem;
+  margin-right: 0rem;
+}
+.m-t-none {
+  margin-top: 0rem;
+}
+.m-b-none {
+  margin-bottom: 0rem;
+}
+.m-vertical-none {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+/* Paddings */
+.p-none {
+  padding: 0rem;
+}
+.p-l-none {
+  padding-left: 0rem;
+}
+.p-r-none {
+  padding-right: 0rem;
+}
+.p-horizontal-none {
+  padding-left: 0rem;
+  padding-right: 0rem;
+}
+.p-t-none {
+  padding-top: 0rem;
+}
+.p-b-none {
+  padding-bottom: 0rem;
+}
+.p-vertical-none {
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+}
+/* Height & Width */
+.h-none {
+  height: 0rem;
+}
+.h-min-none {
+  min-height: 0rem;
+}
+.w-none {
+  width: 0rem;
+}
+.w-min-none {
+  min-width: 0rem;
+}
+/* Margins */
+.m-nano {
+  margin: 0.25rem;
+}
+.m-l-nano {
+  margin-left: 0.25rem;
+}
+.m-r-nano {
+  margin-right: 0.25rem;
+}
+.m-horizontal-nano {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+.m-t-nano {
+  margin-top: 0.25rem;
+}
+.m-b-nano {
+  margin-bottom: 0.25rem;
+}
+.m-vertical-nano {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+/* Paddings */
+.p-nano {
+  padding: 0.25rem;
+}
+.p-l-nano {
+  padding-left: 0.25rem;
+}
+.p-r-nano {
+  padding-right: 0.25rem;
+}
+.p-horizontal-nano {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+.p-t-nano {
+  padding-top: 0.25rem;
+}
+.p-b-nano {
+  padding-bottom: 0.25rem;
+}
+.p-vertical-nano {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+/* Height & Width */
+.h-nano {
+  height: 0.25rem;
+}
+.h-min-nano {
+  min-height: 0.25rem;
+}
+.w-nano {
+  width: 0.25rem;
+}
+.w-min-nano {
+  min-width: 0.25rem;
+}
+/* Margins */
+.m-tiny {
+  margin: 0.5rem;
+}
+.m-l-tiny {
+  margin-left: 0.5rem;
+}
+.m-r-tiny {
+  margin-right: 0.5rem;
+}
+.m-horizontal-tiny {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.m-t-tiny {
+  margin-top: 0.5rem;
+}
+.m-b-tiny {
+  margin-bottom: 0.5rem;
+}
+.m-vertical-tiny {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+/* Paddings */
+.p-tiny {
+  padding: 0.5rem;
+}
+.p-l-tiny {
+  padding-left: 0.5rem;
+}
+.p-r-tiny {
+  padding-right: 0.5rem;
+}
+.p-horizontal-tiny {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.p-t-tiny {
+  padding-top: 0.5rem;
+}
+.p-b-tiny {
+  padding-bottom: 0.5rem;
+}
+.p-vertical-tiny {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+/* Height & Width */
+.h-tiny {
+  height: 0.5rem;
+}
+.h-min-tiny {
+  min-height: 0.5rem;
+}
+.w-tiny {
+  width: 0.5rem;
+}
+.w-min-tiny {
+  min-width: 0.5rem;
+}
+/* Margins */
+.m-small {
+  margin: 1rem;
+}
+.m-l-small {
+  margin-left: 1rem;
+}
+.m-r-small {
+  margin-right: 1rem;
+}
+.m-horizontal-small {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.m-t-small {
+  margin-top: 1rem;
+}
+.m-b-small {
+  margin-bottom: 1rem;
+}
+.m-vertical-small {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+/* Paddings */
+.p-small {
+  padding: 1rem;
+}
+.p-l-small {
+  padding-left: 1rem;
+}
+.p-r-small {
+  padding-right: 1rem;
+}
+.p-horizontal-small {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.p-t-small {
+  padding-top: 1rem;
+}
+.p-b-small {
+  padding-bottom: 1rem;
+}
+.p-vertical-small {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+/* Height & Width */
+.h-small {
+  height: 1rem;
+}
+.h-min-small {
+  min-height: 1rem;
+}
+.w-small {
+  width: 1rem;
+}
+.w-min-small {
+  min-width: 1rem;
+}
+/* Margins */
+.m-medium {
+  margin: 1.5rem;
+}
+.m-l-medium {
+  margin-left: 1.5rem;
+}
+.m-r-medium {
+  margin-right: 1.5rem;
+}
+.m-horizontal-medium {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+.m-t-medium {
+  margin-top: 1.5rem;
+}
+.m-b-medium {
+  margin-bottom: 1.5rem;
+}
+.m-vertical-medium {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+/* Paddings */
+.p-medium {
+  padding: 1.5rem;
+}
+.p-l-medium {
+  padding-left: 1.5rem;
+}
+.p-r-medium {
+  padding-right: 1.5rem;
+}
+.p-horizontal-medium {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.p-t-medium {
+  padding-top: 1.5rem;
+}
+.p-b-medium {
+  padding-bottom: 1.5rem;
+}
+.p-vertical-medium {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+/* Height & Width */
+.h-medium {
+  height: 1.5rem;
+}
+.h-min-medium {
+  min-height: 1.5rem;
+}
+.w-medium {
+  width: 1.5rem;
+}
+.w-min-medium {
+  min-width: 1.5rem;
+}
+/* Margins */
+.m-large {
+  margin: 2rem;
+}
+.m-l-large {
+  margin-left: 2rem;
+}
+.m-r-large {
+  margin-right: 2rem;
+}
+.m-horizontal-large {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.m-t-large {
+  margin-top: 2rem;
+}
+.m-b-large {
+  margin-bottom: 2rem;
+}
+.m-vertical-large {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+/* Paddings */
+.p-large {
+  padding: 2rem;
+}
+.p-l-large {
+  padding-left: 2rem;
+}
+.p-r-large {
+  padding-right: 2rem;
+}
+.p-horizontal-large {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.p-t-large {
+  padding-top: 2rem;
+}
+.p-b-large {
+  padding-bottom: 2rem;
+}
+.p-vertical-large {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+/* Height & Width */
+.h-large {
+  height: 2rem;
+}
+.h-min-large {
+  min-height: 2rem;
+}
+.w-large {
+  width: 2rem;
+}
+.w-min-large {
+  min-width: 2rem;
+}
+/* Margins */
+.m-huge {
+  margin: 3rem;
+}
+.m-l-huge {
+  margin-left: 3rem;
+}
+.m-r-huge {
+  margin-right: 3rem;
+}
+.m-horizontal-huge {
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+.m-t-huge {
+  margin-top: 3rem;
+}
+.m-b-huge {
+  margin-bottom: 3rem;
+}
+.m-vertical-huge {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+/* Paddings */
+.p-huge {
+  padding: 3rem;
+}
+.p-l-huge {
+  padding-left: 3rem;
+}
+.p-r-huge {
+  padding-right: 3rem;
+}
+.p-horizontal-huge {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.p-t-huge {
+  padding-top: 3rem;
+}
+.p-b-huge {
+  padding-bottom: 3rem;
+}
+.p-vertical-huge {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+/* Height & Width */
+.h-huge {
+  height: 3rem;
+}
+.h-min-huge {
+  min-height: 3rem;
+}
+.w-huge {
+  width: 3rem;
+}
+.w-min-huge {
+  min-width: 3rem;
+}
+/* Margins */
+.m-massive {
+  margin: 4rem;
+}
+.m-l-massive {
+  margin-left: 4rem;
+}
+.m-r-massive {
+  margin-right: 4rem;
+}
+.m-horizontal-massive {
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+.m-t-massive {
+  margin-top: 4rem;
+}
+.m-b-massive {
+  margin-bottom: 4rem;
+}
+.m-vertical-massive {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+/* Paddings */
+.p-massive {
+  padding: 4rem;
+}
+.p-l-massive {
+  padding-left: 4rem;
+}
+.p-r-massive {
+  padding-right: 4rem;
+}
+.p-horizontal-massive {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+.p-t-massive {
+  padding-top: 4rem;
+}
+.p-b-massive {
+  padding-bottom: 4rem;
+}
+.p-vertical-massive {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+/* Height & Width */
+.h-massive {
+  height: 4rem;
+}
+.h-min-massive {
+  min-height: 4rem;
+}
+.w-massive {
+  width: 4rem;
+}
+.w-min-massive {
+  min-width: 4rem;
+}
+/* Grid sizing */
+.w-100 {
+  width: 100%;
+}
+.w-max-100 {
+  max-width: 100%;
+}
+.h-100 {
+  height: 100%;
+}
+.h-max-100 {
+  max-height: 100%;
+}
+.w-90 {
+  width: 90%;
+}
+.w-max-90 {
+  max-width: 90%;
+}
+.h-90 {
+  height: 90%;
+}
+.h-max-90 {
+  max-height: 90%;
+}
+.w-80 {
+  width: 80%;
+}
+.w-max-80 {
+  max-width: 80%;
+}
+.h-80 {
+  height: 80%;
+}
+.h-max-80 {
+  max-height: 80%;
+}
+.w-70 {
+  width: 70%;
+}
+.w-max-70 {
+  max-width: 70%;
+}
+.h-70 {
+  height: 70%;
+}
+.h-max-70 {
+  max-height: 70%;
+}
+.w-60 {
+  width: 60%;
+}
+.w-max-60 {
+  max-width: 60%;
+}
+.h-60 {
+  height: 60%;
+}
+.h-max-60 {
+  max-height: 60%;
+}
+.w-50 {
+  width: 50%;
+}
+.w-max-50 {
+  max-width: 50%;
+}
+.h-50 {
+  height: 50%;
+}
+.h-max-50 {
+  max-height: 50%;
+}
+.w-40 {
+  width: 40%;
+}
+.w-max-40 {
+  max-width: 40%;
+}
+.h-40 {
+  height: 40%;
+}
+.h-max-40 {
+  max-height: 40%;
+}
+.w-30 {
+  width: 30%;
+}
+.w-max-30 {
+  max-width: 30%;
+}
+.h-30 {
+  height: 30%;
+}
+.h-max-30 {
+  max-height: 30%;
+}
+.w-25 {
+  width: 25%;
+}
+.w-max-25 {
+  max-width: 25%;
+}
+.h-25 {
+  height: 25%;
+}
+.h-max-25 {
+  max-height: 25%;
+}
+.w-20 {
+  width: 20%;
+}
+.w-max-20 {
+  max-width: 20%;
+}
+.h-20 {
+  height: 20%;
+}
+.h-max-20 {
+  max-height: 20%;
+}
+.w-15 {
+  width: 15%;
+}
+.w-max-15 {
+  max-width: 15%;
+}
+.h-15 {
+  height: 15%;
+}
+.h-max-15 {
+  max-height: 15%;
+}
+.w-10 {
+  width: 10%;
+}
+.w-max-10 {
+  max-width: 10%;
+}
+.h-10 {
+  height: 10%;
+}
+.h-max-10 {
+  max-height: 10%;
+}
+.w-33 {
+  width: 33.33333333;
+}
+.w-max-33 {
+  max-width: 33.33333333;
+}
+.h-33 {
+  height: 33.33333333;
+}
+.h-max-33 {
+  max-height: 33.33333333;
+}
+.ta-justify {
+  text-align: justify;
+}
+.ta-center {
+  text-align: center;
+}
+.ta-l {
+  text-align: left;
+}
+.ta-r {
+  text-align: right;
+}
+.td-none {
+  text-decoration: none;
+}
+.td-ul {
+  text-decoration: underline;
+}
+.td-linethrough {
+  text-decoration: line-through;
+}
+/*
+    Simple text transform classes
+*/
+.t-none {
+  text-transform: none;
+}
+.t-lc {
+  text-transform: lowercase;
+}
+.t-uc {
+  text-transform: uppercase;
+}
+/*
+    Handle typography styles.
+    Classes are taken from font-family.less, font-sizes.less, font-spacing.less, etc.   
+*/
+html {
+  font-family: serif;
+}
+/* Setup font sizes and other specific typographic properties */
+h1 {
+  font-size: 5rem;
+}
+h2 {
+  font-size: 4rem;
+}
+h3 {
+  font-size: 3rem;
+}
+h4 {
+  font-size: 2rem;
+}
+h5 {
+  font-size: 1rem;
+}
+/* Heading styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 100;
+  font-style: normal;
+  margin: 0rem;
+}
+.nowrap {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+pre {
+  white-space: pre;
+  padding: 1rem;
+  background-color: #f2f2f2;
+}
+code {
+  background-color: #f2f2f2;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+.mono {
+  font-family: monospace;
+}
+.resize-none {
+  resize: none;
+}
+.to-left {
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+.to-right {
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+.to-center {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+.to-top {
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+.to-bottom {
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+/*
+    Transition classes. This is a bit of a sledgehammer case here. I want to move this transition code out of external CSS.
+*/
+.transition-s {
+  -webkit-transition: opacity 0.2s ease-out, fill 0.2s ease-out, color 0.2s ease-out, background-color 0.2s ease-out;
+  transition: opacity 0.2s ease-out, fill 0.2s ease-out, color 0.2s ease-out, background-color 0.2s ease-out;
+}
+.transition-all-s {
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.transition-m {
+  -webkit-transition: opacity 0.4s ease-out, fill 0.4s ease-out, color 0.4s ease-out, background-color 0.4s ease-out;
+  transition: opacity 0.4s ease-out, fill 0.4s ease-out, color 0.4s ease-out, background-color 0.4s ease-out;
+}
+.transition-all-m {
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+.transition-l {
+  -webkit-transition: opacity 0.6s ease-out, fill 0.6s ease-out, color 0.6s ease-out, background-color 0.6s ease-out;
+  transition: opacity 0.6s ease-out, fill 0.6s ease-out, color 0.6s ease-out, background-color 0.6s ease-out;
+}
+.transition-all-l {
+  -webkit-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
+}
+.transition-none {
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+.transition-rotate {
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*
+    A collection of colours used in boab. These may change in the future depending on how we do our bundling and build process.
+    This file will generate a series of lightweight classes for each of the colours below:
+
+    .@{color} : foreground colour
+    .@{color}-bg : background colour
+    .@{color}-f : fill colour
+    .@{color}-t-bg : transparent background colour
+    .@{color}-br : border colour
+
+    .@{color}-l | -bg | -f | -t : light
+    .@{color}-h | -bg | -f | -t : heavy
+*/
+/* Colors */
+/* Generic - color, background, fill and transparent */
+.c-black {
+  color: #000;
+}
+.c-black-bg {
+  background-color: #000;
+}
+.c-black-f {
+  fill: #000;
+}
+.c-black-t-bg {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.c-black-tt-bg {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+/* Lights, darks and corresponding transparents */
+.c-black-l {
+  color: #0d0d0d;
+}
+.c-black-l-bg {
+  background-color: #0d0d0d;
+}
+.c-black-l-f {
+  fill: #0d0d0d;
+}
+.c-black-l-t-bg {
+  background-color: rgba(13, 13, 13, 0.7);
+}
+.c-black-l-tt-bg {
+  background-color: rgba(13, 13, 13, 0.4);
+}
+.c-black-h {
+  color: #000000;
+}
+.c-black-h-bg {
+  background-color: #000000;
+}
+.c-black-h-f {
+  fill: #000000;
+}
+.c-black-h-t-bg {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.c-black-h-tt-bg {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+/* Border colours */
+.c-black-br {
+  border-color: #000;
+}
+.c-black-l-br {
+  border-color: #0d0d0d;
+}
+.c-black-h-br {
+  border-color: #000000;
+}
+/* Generic - color, background, fill and transparent */
+.c-white {
+  color: #FFF;
+}
+.c-white-bg {
+  background-color: #FFF;
+}
+.c-white-f {
+  fill: #FFF;
+}
+.c-white-t-bg {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.c-white-tt-bg {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+/* Lights, darks and corresponding transparents */
+.c-white-l {
+  color: #ffffff;
+}
+.c-white-l-bg {
+  background-color: #ffffff;
+}
+.c-white-l-f {
+  fill: #ffffff;
+}
+.c-white-l-t-bg {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.c-white-l-tt-bg {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.c-white-h {
+  color: #f2f2f2;
+}
+.c-white-h-bg {
+  background-color: #f2f2f2;
+}
+.c-white-h-f {
+  fill: #f2f2f2;
+}
+.c-white-h-t-bg {
+  background-color: rgba(242, 242, 242, 0.7);
+}
+.c-white-h-tt-bg {
+  background-color: rgba(242, 242, 242, 0.4);
+}
+/* Border colours */
+.c-white-br {
+  border-color: #FFF;
+}
+.c-white-l-br {
+  border-color: #ffffff;
+}
+.c-white-h-br {
+  border-color: #f2f2f2;
+}
+/* Generic - color, background, fill and transparent */
+.c-blue {
+  color: #1BA1E2;
+}
+.c-blue-bg {
+  background-color: #1BA1E2;
+}
+.c-blue-f {
+  fill: #1BA1E2;
+}
+.c-blue-t-bg {
+  background-color: rgba(27, 161, 226, 0.7);
+}
+.c-blue-tt-bg {
+  background-color: rgba(27, 161, 226, 0.4);
+}
+/* Lights, darks and corresponding transparents */
+.c-blue-l {
+  color: #30abe6;
+}
+.c-blue-l-bg {
+  background-color: #30abe6;
+}
+.c-blue-l-f {
+  fill: #30abe6;
+}
+.c-blue-l-t-bg {
+  background-color: rgba(48, 171, 230, 0.7);
+}
+.c-blue-l-tt-bg {
+  background-color: rgba(48, 171, 230, 0.4);
+}
+.c-blue-h {
+  color: #1891cb;
+}
+.c-blue-h-bg {
+  background-color: #1891cb;
+}
+.c-blue-h-f {
+  fill: #1891cb;
+}
+.c-blue-h-t-bg {
+  background-color: rgba(24, 145, 203, 0.7);
+}
+.c-blue-h-tt-bg {
+  background-color: rgba(24, 145, 203, 0.4);
+}
+/* Border colours */
+.c-blue-br {
+  border-color: #1BA1E2;
+}
+.c-blue-l-br {
+  border-color: #30abe6;
+}
+.c-blue-h-br {
+  border-color: #1891cb;
+}
+/* Generic - color, background, fill and transparent */
+.c-green {
+  color: #339933;
+}
+.c-green-bg {
+  background-color: #339933;
+}
+.c-green-f {
+  fill: #339933;
+}
+.c-green-t-bg {
+  background-color: rgba(51, 153, 51, 0.7);
+}
+.c-green-tt-bg {
+  background-color: rgba(51, 153, 51, 0.4);
+}
+/* Lights, darks and corresponding transparents */
+.c-green-l {
+  color: #39ac39;
+}
+.c-green-l-bg {
+  background-color: #39ac39;
+}
+.c-green-l-f {
+  fill: #39ac39;
+}
+.c-green-l-t-bg {
+  background-color: rgba(57, 172, 57, 0.7);
+}
+.c-green-l-tt-bg {
+  background-color: rgba(57, 172, 57, 0.4);
+}
+.c-green-h {
+  color: #2d862d;
+}
+.c-green-h-bg {
+  background-color: #2d862d;
+}
+.c-green-h-f {
+  fill: #2d862d;
+}
+.c-green-h-t-bg {
+  background-color: rgba(45, 134, 45, 0.7);
+}
+.c-green-h-tt-bg {
+  background-color: rgba(45, 134, 45, 0.4);
+}
+/* Border colours */
+.c-green-br {
+  border-color: #339933;
+}
+.c-green-l-br {
+  border-color: #39ac39;
+}
+.c-green-h-br {
+  border-color: #2d862d;
+}
+/* Generic - color, background, fill and transparent */
+.c-magenta {
+  color: #FF0097;
+}
+.c-magenta-bg {
+  background-color: #FF0097;
+}
+.c-magenta-f {
+  fill: #FF0097;
+}
+.c-magenta-t-bg {
+  background-color: rgba(255, 0, 151, 0.7);
+}
+.c-magenta-tt-bg {
+  background-color: rgba(255, 0, 151, 0.4);
+}
+/* Lights, darks and corresponding transparents */
+.c-magenta-l {
+  color: #ff1aa1;
+}
+.c-magenta-l-bg {
+  background-color: #ff1aa1;
+}
+.c-magenta-l-f {
+  fill: #ff1aa1;
+}
+.c-magenta-l-t-bg {
+  background-color: rgba(255, 26, 161, 0.7);
+}
+.c-magenta-l-tt-bg {
+  background-color: rgba(255, 26, 161, 0.4);
+}
+.c-magenta-h {
+  color: #e60088;
+}
+.c-magenta-h-bg {
+  background-color: #e60088;
+}
+.c-magenta-h-f {
+  fill: #e60088;
+}
+.c-magenta-h-t-bg {
+  background-color: rgba(230, 0, 136, 0.7);
+}
+.c-magenta-h-tt-bg {
+  background-color: rgba(230, 0, 136, 0.4);
+}
+/* Border colours */
+.c-magenta-br {
+  border-color: #FF0097;
+}
+.c-magenta-l-br {
+  border-color: #ff1aa1;
+}
+.c-magenta-h-br {
+  border-color: #e60088;
+}
+/* Generic - color, background, fill and transparent */
+.c-orange {
+  color: #F09609;
+}
+.c-orange-bg {
+  background-color: #F09609;
+}
+.c-orange-f {
+  fill: #F09609;
+}
+.c-orange-t-bg {
+  background-color: rgba(240, 150, 9, 0.7);
+}
+.c-orange-tt-bg {
+  background-color: rgba(240, 150, 9, 0.4);
+}
+/* Lights, darks and corresponding transparents */
+.c-orange-l {
+  color: #f6a11c;
+}
+.c-orange-l-bg {
+  background-color: #f6a11c;
+}
+.c-orange-l-f {
+  fill: #f6a11c;
+}
+.c-orange-l-t-bg {
+  background-color: rgba(246, 161, 28, 0.7);
+}
+.c-orange-l-tt-bg {
+  background-color: rgba(246, 161, 28, 0.4);
+}
+.c-orange-h {
+  color: #d78708;
+}
+.c-orange-h-bg {
+  background-color: #d78708;
+}
+.c-orange-h-f {
+  fill: #d78708;
+}
+.c-orange-h-t-bg {
+  background-color: rgba(215, 135, 8, 0.7);
+}
+.c-orange-h-tt-bg {
+  background-color: rgba(215, 135, 8, 0.4);
+}
+/* Border colours */
+.c-orange-br {
+  border-color: #F09609;
+}
+.c-orange-l-br {
+  border-color: #f6a11c;
+}
+.c-orange-h-br {
+  border-color: #d78708;
+}
+/* Generic - color, background, fill and transparent */
+.c-red {
+  color: #E51400;
+}
+.c-red-bg {
+  background-color: #E51400;
+}
+.c-red-f {
+  fill: #E51400;
+}
+.c-red-t-bg {
+  background-color: rgba(229, 20, 0, 0.7);
+}
+.c-red-tt-bg {
+  background-color: rgba(229, 20, 0, 0.4);
+}
+/* Lights, darks and corresponding transparents */
+.c-red-l {
+  color: #ff1600;
+}
+.c-red-l-bg {
+  background-color: #ff1600;
+}
+.c-red-l-f {
+  fill: #ff1600;
+}
+.c-red-l-t-bg {
+  background-color: rgba(255, 22, 0, 0.7);
+}
+.c-red-l-tt-bg {
+  background-color: rgba(255, 22, 0, 0.4);
+}
+.c-red-h {
+  color: #cc1200;
+}
+.c-red-h-bg {
+  background-color: #cc1200;
+}
+.c-red-h-f {
+  fill: #cc1200;
+}
+.c-red-h-t-bg {
+  background-color: rgba(204, 18, 0, 0.7);
+}
+.c-red-h-tt-bg {
+  background-color: rgba(204, 18, 0, 0.4);
+}
+/* Border colours */
+.c-red-br {
+  border-color: #E51400;
+}
+.c-red-l-br {
+  border-color: #ff1600;
+}
+.c-red-h-br {
+  border-color: #cc1200;
+}
+/* Generic - color, background, fill and transparent */
+.c-brown {
+  color: #A05000;
+}
+.c-brown-bg {
+  background-color: #A05000;
+}
+.c-brown-f {
+  fill: #A05000;
+}
+.c-brown-t-bg {
+  background-color: rgba(160, 80, 0, 0.7);
+}
+.c-brown-tt-bg {
+  background-color: rgba(160, 80, 0, 0.4);
+}
+/* Lights, darks and corresponding transparents */
+.c-brown-l {
+  color: #ba5d00;
+}
+.c-brown-l-bg {
+  background-color: #ba5d00;
+}
+.c-brown-l-f {
+  fill: #ba5d00;
+}
+.c-brown-l-t-bg {
+  background-color: rgba(186, 93, 0, 0.7);
+}
+.c-brown-l-tt-bg {
+  background-color: rgba(186, 93, 0, 0.4);
+}
+.c-brown-h {
+  color: #874300;
+}
+.c-brown-h-bg {
+  background-color: #874300;
+}
+.c-brown-h-f {
+  fill: #874300;
+}
+.c-brown-h-t-bg {
+  background-color: rgba(135, 67, 0, 0.7);
+}
+.c-brown-h-tt-bg {
+  background-color: rgba(135, 67, 0, 0.4);
+}
+/* Border colours */
+.c-brown-br {
+  border-color: #A05000;
+}
+.c-brown-l-br {
+  border-color: #ba5d00;
+}
+.c-brown-h-br {
+  border-color: #874300;
+}
+/* Generic - color, background, fill and transparent */
+.c-emerald {
+  color: #008a00;
+}
+.c-emerald-bg {
+  background-color: #008a00;
+}
+.c-emerald-f {
+  fill: #008a00;
+}
+.c-emerald-t-bg {
+  background-color: rgba(0, 138, 0, 0.7);
+}
+.c-emerald-tt-bg {
+  background-color: rgba(0, 138, 0, 0.4);
+}
+/* Lights, darks and corresponding transparents */
+.c-emerald-l {
+  color: #00a300;
+}
+.c-emerald-l-bg {
+  background-color: #00a300;
+}
+.c-emerald-l-f {
+  fill: #00a300;
+}
+.c-emerald-l-t-bg {
+  background-color: rgba(0, 163, 0, 0.7);
+}
+.c-emerald-l-tt-bg {
+  background-color: rgba(0, 163, 0, 0.4);
+}
+.c-emerald-h {
+  color: #007100;
+}
+.c-emerald-h-bg {
+  background-color: #007100;
+}
+.c-emerald-h-f {
+  fill: #007100;
+}
+.c-emerald-h-t-bg {
+  background-color: rgba(0, 113, 0, 0.7);
+}
+.c-emerald-h-tt-bg {
+  background-color: rgba(0, 113, 0, 0.4);
+}
+/* Border colours */
+.c-emerald-br {
+  border-color: #008a00;
+}
+.c-emerald-l-br {
+  border-color: #00a300;
+}
+.c-emerald-h-br {
+  border-color: #007100;
+}
+/* Generic - color, background, fill and transparent */
+.c-lime {
+  color: #8CBF26;
+}
+.c-lime-bg {
+  background-color: #8CBF26;
+}
+.c-lime-f {
+  fill: #8CBF26;
+}
+.c-lime-t-bg {
+  background-color: rgba(140, 191, 38, 0.7);
+}
+.c-lime-tt-bg {
+  background-color: rgba(140, 191, 38, 0.4);
+}
+/* Lights, darks and corresponding transparents */
+.c-lime-l {
+  color: #9cd42a;
+}
+.c-lime-l-bg {
+  background-color: #9cd42a;
+}
+.c-lime-l-f {
+  fill: #9cd42a;
+}
+.c-lime-l-t-bg {
+  background-color: rgba(156, 212, 42, 0.7);
+}
+.c-lime-l-tt-bg {
+  background-color: rgba(156, 212, 42, 0.4);
+}
+.c-lime-h {
+  color: #7caa22;
+}
+.c-lime-h-bg {
+  background-color: #7caa22;
+}
+.c-lime-h-f {
+  fill: #7caa22;
+}
+.c-lime-h-t-bg {
+  background-color: rgba(124, 170, 34, 0.7);
+}
+.c-lime-h-tt-bg {
+  background-color: rgba(124, 170, 34, 0.4);
+}
+/* Border colours */
+.c-lime-br {
+  border-color: #8CBF26;
+}
+.c-lime-l-br {
+  border-color: #9cd42a;
+}
+.c-lime-h-br {
+  border-color: #7caa22;
+}
+/* Generic - color, background, fill and transparent */
+.c-mustard {
+  color: #d7c000;
+}
+.c-mustard-bg {
+  background-color: #d7c000;
+}
+.c-mustard-f {
+  fill: #d7c000;
+}
+.c-mustard-t-bg {
+  background-color: rgba(215, 192, 0, 0.7);
+}
+.c-mustard-tt-bg {
+  background-color: rgba(215, 192, 0, 0.4);
+}
+/* Lights, darks and corresponding transparents */
+.c-mustard-l {
+  color: #f1d700;
+}
+.c-mustard-l-bg {
+  background-color: #f1d700;
+}
+.c-mustard-l-f {
+  fill: #f1d700;
+}
+.c-mustard-l-t-bg {
+  background-color: rgba(241, 215, 0, 0.7);
+}
+.c-mustard-l-tt-bg {
+  background-color: rgba(241, 215, 0, 0.4);
+}
+.c-mustard-h {
+  color: #bea900;
+}
+.c-mustard-h-bg {
+  background-color: #bea900;
+}
+.c-mustard-h-f {
+  fill: #bea900;
+}
+.c-mustard-h-t-bg {
+  background-color: rgba(190, 169, 0, 0.7);
+}
+.c-mustard-h-tt-bg {
+  background-color: rgba(190, 169, 0, 0.4);
+}
+/* Border colours */
+.c-mustard-br {
+  border-color: #d7c000;
+}
+.c-mustard-l-br {
+  border-color: #f1d700;
+}
+.c-mustard-h-br {
+  border-color: #bea900;
+}
+/* Generic - color, background, fill and transparent */
+.c-pink {
+  color: #E671B8;
+}
+.c-pink-bg {
+  background-color: #E671B8;
+}
+.c-pink-f {
+  fill: #E671B8;
+}
+.c-pink-t-bg {
+  background-color: rgba(230, 113, 184, 0.7);
+}
+.c-pink-tt-bg {
+  background-color: rgba(230, 113, 184, 0.4);
+}
+/* Lights, darks and corresponding transparents */
+.c-pink-l {
+  color: #ea87c3;
+}
+.c-pink-l-bg {
+  background-color: #ea87c3;
+}
+.c-pink-l-f {
+  fill: #ea87c3;
+}
+.c-pink-l-t-bg {
+  background-color: rgba(234, 135, 195, 0.7);
+}
+.c-pink-l-tt-bg {
+  background-color: rgba(234, 135, 195, 0.4);
+}
+.c-pink-h {
+  color: #e25bad;
+}
+.c-pink-h-bg {
+  background-color: #e25bad;
+}
+.c-pink-h-f {
+  fill: #e25bad;
+}
+.c-pink-h-t-bg {
+  background-color: rgba(226, 91, 173, 0.7);
+}
+.c-pink-h-tt-bg {
+  background-color: rgba(226, 91, 173, 0.4);
+}
+/* Border colours */
+.c-pink-br {
+  border-color: #E671B8;
+}
+.c-pink-l-br {
+  border-color: #ea87c3;
+}
+.c-pink-h-br {
+  border-color: #e25bad;
+}
+/* Generic - color, background, fill and transparent */
+.c-purple {
+  color: #A200FF;
+}
+.c-purple-bg {
+  background-color: #A200FF;
+}
+.c-purple-f {
+  fill: #A200FF;
+}
+.c-purple-t-bg {
+  background-color: rgba(162, 0, 255, 0.7);
+}
+.c-purple-tt-bg {
+  background-color: rgba(162, 0, 255, 0.4);
+}
+/* Lights, darks and corresponding transparents */
+.c-purple-l {
+  color: #ab1aff;
+}
+.c-purple-l-bg {
+  background-color: #ab1aff;
+}
+.c-purple-l-f {
+  fill: #ab1aff;
+}
+.c-purple-l-t-bg {
+  background-color: rgba(171, 26, 255, 0.7);
+}
+.c-purple-l-tt-bg {
+  background-color: rgba(171, 26, 255, 0.4);
+}
+.c-purple-h {
+  color: #9200e6;
+}
+.c-purple-h-bg {
+  background-color: #9200e6;
+}
+.c-purple-h-f {
+  fill: #9200e6;
+}
+.c-purple-h-t-bg {
+  background-color: rgba(146, 0, 230, 0.7);
+}
+.c-purple-h-tt-bg {
+  background-color: rgba(146, 0, 230, 0.4);
+}
+/* Border colours */
+.c-purple-br {
+  border-color: #A200FF;
+}
+.c-purple-l-br {
+  border-color: #ab1aff;
+}
+.c-purple-h-br {
+  border-color: #9200e6;
+}
+/* Generic - color, background, fill and transparent */
+.c-teal {
+  color: #00ABA9;
+}
+.c-teal-bg {
+  background-color: #00ABA9;
+}
+.c-teal-f {
+  fill: #00ABA9;
+}
+.c-teal-t-bg {
+  background-color: rgba(0, 171, 169, 0.7);
+}
+.c-teal-tt-bg {
+  background-color: rgba(0, 171, 169, 0.4);
+}
+/* Lights, darks and corresponding transparents */
+.c-teal-l {
+  color: #00c4c2;
+}
+.c-teal-l-bg {
+  background-color: #00c4c2;
+}
+.c-teal-l-f {
+  fill: #00c4c2;
+}
+.c-teal-l-t-bg {
+  background-color: rgba(0, 196, 194, 0.7);
+}
+.c-teal-l-tt-bg {
+  background-color: rgba(0, 196, 194, 0.4);
+}
+.c-teal-h {
+  color: #009290;
+}
+.c-teal-h-bg {
+  background-color: #009290;
+}
+.c-teal-h-f {
+  fill: #009290;
+}
+.c-teal-h-t-bg {
+  background-color: rgba(0, 146, 144, 0.7);
+}
+.c-teal-h-tt-bg {
+  background-color: rgba(0, 146, 144, 0.4);
+}
+/* Border colours */
+.c-teal-br {
+  border-color: #00ABA9;
+}
+.c-teal-l-br {
+  border-color: #00c4c2;
+}
+.c-teal-h-br {
+  border-color: #009290;
+}
+/* Generic - color, background, fill and transparent */
+.c-pastelblue {
+  color: #54b3e3;
+}
+.c-pastelblue-bg {
+  background-color: #54b3e3;
+}
+.c-pastelblue-f {
+  fill: #54b3e3;
+}
+.c-pastelblue-t-bg {
+  background-color: rgba(84, 179, 227, 0.7);
+}
+.c-pastelblue-tt-bg {
+  background-color: rgba(84, 179, 227, 0.4);
+}
+/* Lights, darks and corresponding transparents */
+.c-pastelblue-l {
+  color: #6abde7;
+}
+.c-pastelblue-l-bg {
+  background-color: #6abde7;
+}
+.c-pastelblue-l-f {
+  fill: #6abde7;
+}
+.c-pastelblue-l-t-bg {
+  background-color: rgba(106, 189, 231, 0.7);
+}
+.c-pastelblue-l-tt-bg {
+  background-color: rgba(106, 189, 231, 0.4);
+}
+.c-pastelblue-h {
+  color: #3ea9df;
+}
+.c-pastelblue-h-bg {
+  background-color: #3ea9df;
+}
+.c-pastelblue-h-f {
+  fill: #3ea9df;
+}
+.c-pastelblue-h-t-bg {
+  background-color: rgba(62, 169, 223, 0.7);
+}
+.c-pastelblue-h-tt-bg {
+  background-color: rgba(62, 169, 223, 0.4);
+}
+/* Border colours */
+.c-pastelblue-br {
+  border-color: #54b3e3;
+}
+.c-pastelblue-l-br {
+  border-color: #6abde7;
+}
+.c-pastelblue-h-br {
+  border-color: #3ea9df;
+}
+/* Generic - color, background, fill and transparent */
+.c-pastelgreen {
+  color: #75a842;
+}
+.c-pastelgreen-bg {
+  background-color: #75a842;
+}
+.c-pastelgreen-f {
+  fill: #75a842;
+}
+.c-pastelgreen-t-bg {
+  background-color: rgba(117, 168, 66, 0.7);
+}
+.c-pastelgreen-tt-bg {
+  background-color: rgba(117, 168, 66, 0.4);
+}
+/* Lights, darks and corresponding transparents */
+.c-pastelgreen-l {
+  color: #82b84b;
+}
+.c-pastelgreen-l-bg {
+  background-color: #82b84b;
+}
+.c-pastelgreen-l-f {
+  fill: #82b84b;
+}
+.c-pastelgreen-l-t-bg {
+  background-color: rgba(130, 184, 75, 0.7);
+}
+.c-pastelgreen-l-tt-bg {
+  background-color: rgba(130, 184, 75, 0.4);
+}
+.c-pastelgreen-h {
+  color: #68963b;
+}
+.c-pastelgreen-h-bg {
+  background-color: #68963b;
+}
+.c-pastelgreen-h-f {
+  fill: #68963b;
+}
+.c-pastelgreen-h-t-bg {
+  background-color: rgba(104, 150, 59, 0.7);
+}
+.c-pastelgreen-h-tt-bg {
+  background-color: rgba(104, 150, 59, 0.4);
+}
+/* Border colours */
+.c-pastelgreen-br {
+  border-color: #75a842;
+}
+.c-pastelgreen-l-br {
+  border-color: #82b84b;
+}
+.c-pastelgreen-h-br {
+  border-color: #68963b;
+}
+/* Generic - color, background, fill and transparent */
+.c-pastelorange {
+  color: #fa8d3e;
+}
+.c-pastelorange-bg {
+  background-color: #fa8d3e;
+}
+.c-pastelorange-f {
+  fill: #fa8d3e;
+}
+.c-pastelorange-t-bg {
+  background-color: rgba(250, 141, 62, 0.7);
+}
+.c-pastelorange-tt-bg {
+  background-color: rgba(250, 141, 62, 0.4);
+}
+/* Lights, darks and corresponding transparents */
+.c-pastelorange-l {
+  color: #fb9c57;
+}
+.c-pastelorange-l-bg {
+  background-color: #fb9c57;
+}
+.c-pastelorange-l-f {
+  fill: #fb9c57;
+}
+.c-pastelorange-l-t-bg {
+  background-color: rgba(251, 156, 87, 0.7);
+}
+.c-pastelorange-l-tt-bg {
+  background-color: rgba(251, 156, 87, 0.4);
+}
+.c-pastelorange-h {
+  color: #f97e25;
+}
+.c-pastelorange-h-bg {
+  background-color: #f97e25;
+}
+.c-pastelorange-h-f {
+  fill: #f97e25;
+}
+.c-pastelorange-h-t-bg {
+  background-color: rgba(249, 126, 37, 0.7);
+}
+.c-pastelorange-h-tt-bg {
+  background-color: rgba(249, 126, 37, 0.4);
+}
+/* Border colours */
+.c-pastelorange-br {
+  border-color: #fa8d3e;
+}
+.c-pastelorange-l-br {
+  border-color: #fb9c57;
+}
+.c-pastelorange-h-br {
+  border-color: #f97e25;
+}
+/* Generic - color, background, fill and transparent */
+.c-pastelred {
+  color: #e64839;
+}
+.c-pastelred-bg {
+  background-color: #e64839;
+}
+.c-pastelred-f {
+  fill: #e64839;
+}
+.c-pastelred-t-bg {
+  background-color: rgba(230, 72, 57, 0.7);
+}
+.c-pastelred-tt-bg {
+  background-color: rgba(230, 72, 57, 0.4);
+}
+/* Lights, darks and corresponding transparents */
+.c-pastelred-l {
+  color: #e95d50;
+}
+.c-pastelred-l-bg {
+  background-color: #e95d50;
+}
+.c-pastelred-l-f {
+  fill: #e95d50;
+}
+.c-pastelred-l-t-bg {
+  background-color: rgba(233, 93, 80, 0.7);
+}
+.c-pastelred-l-tt-bg {
+  background-color: rgba(233, 93, 80, 0.4);
+}
+.c-pastelred-h {
+  color: #e33322;
+}
+.c-pastelred-h-bg {
+  background-color: #e33322;
+}
+.c-pastelred-h-f {
+  fill: #e33322;
+}
+.c-pastelred-h-t-bg {
+  background-color: rgba(227, 51, 34, 0.7);
+}
+.c-pastelred-h-tt-bg {
+  background-color: rgba(227, 51, 34, 0.4);
+}
+/* Border colours */
+.c-pastelred-br {
+  border-color: #e64839;
+}
+.c-pastelred-l-br {
+  border-color: #e95d50;
+}
+.c-pastelred-h-br {
+  border-color: #e33322;
+}
+/* Generic - color, background, fill and transparent */
+.c-gray-ll {
+  color: #f2f2f2;
+}
+.c-gray-ll-bg {
+  background-color: #f2f2f2;
+}
+.c-gray-ll-f {
+  fill: #f2f2f2;
+}
+.c-gray-ll-t-bg {
+  background-color: rgba(242, 242, 242, 0.7);
+}
+.c-gray-ll-tt-bg {
+  background-color: rgba(242, 242, 242, 0.4);
+}
+/* Lights, darks and corresponding transparents */
+.c-gray-ll-l {
+  color: #ffffff;
+}
+.c-gray-ll-l-bg {
+  background-color: #ffffff;
+}
+.c-gray-ll-l-f {
+  fill: #ffffff;
+}
+.c-gray-ll-l-t-bg {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.c-gray-ll-l-tt-bg {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.c-gray-ll-h {
+  color: #e5e5e5;
+}
+.c-gray-ll-h-bg {
+  background-color: #e5e5e5;
+}
+.c-gray-ll-h-f {
+  fill: #e5e5e5;
+}
+.c-gray-ll-h-t-bg {
+  background-color: rgba(229, 229, 229, 0.7);
+}
+.c-gray-ll-h-tt-bg {
+  background-color: rgba(229, 229, 229, 0.4);
+}
+/* Border colours */
+.c-gray-ll-br {
+  border-color: #f2f2f2;
+}
+.c-gray-ll-l-br {
+  border-color: #ffffff;
+}
+.c-gray-ll-h-br {
+  border-color: #e5e5e5;
+}
+/* Generic - color, background, fill and transparent */
+.c-gray-l {
+  color: #e0e0e0;
+}
+.c-gray-l-bg {
+  background-color: #e0e0e0;
+}
+.c-gray-l-f {
+  fill: #e0e0e0;
+}
+.c-gray-l-t-bg {
+  background-color: rgba(224, 224, 224, 0.7);
+}
+.c-gray-l-tt-bg {
+  background-color: rgba(224, 224, 224, 0.4);
+}
+/* Lights, darks and corresponding transparents */
+.c-gray-l-l {
+  color: #ededed;
+}
+.c-gray-l-l-bg {
+  background-color: #ededed;
+}
+.c-gray-l-l-f {
+  fill: #ededed;
+}
+.c-gray-l-l-t-bg {
+  background-color: rgba(237, 237, 237, 0.7);
+}
+.c-gray-l-l-tt-bg {
+  background-color: rgba(237, 237, 237, 0.4);
+}
+.c-gray-l-h {
+  color: #d3d3d3;
+}
+.c-gray-l-h-bg {
+  background-color: #d3d3d3;
+}
+.c-gray-l-h-f {
+  fill: #d3d3d3;
+}
+.c-gray-l-h-t-bg {
+  background-color: rgba(211, 211, 211, 0.7);
+}
+.c-gray-l-h-tt-bg {
+  background-color: rgba(211, 211, 211, 0.4);
+}
+/* Border colours */
+.c-gray-l-br {
+  border-color: #e0e0e0;
+}
+.c-gray-l-l-br {
+  border-color: #ededed;
+}
+.c-gray-l-h-br {
+  border-color: #d3d3d3;
+}
+/* Generic - color, background, fill and transparent */
+.c-gray-m {
+  color: #a0a0a0;
+}
+.c-gray-m-bg {
+  background-color: #a0a0a0;
+}
+.c-gray-m-f {
+  fill: #a0a0a0;
+}
+.c-gray-m-t-bg {
+  background-color: rgba(160, 160, 160, 0.7);
+}
+.c-gray-m-tt-bg {
+  background-color: rgba(160, 160, 160, 0.4);
+}
+/* Lights, darks and corresponding transparents */
+.c-gray-m-l {
+  color: #adadad;
+}
+.c-gray-m-l-bg {
+  background-color: #adadad;
+}
+.c-gray-m-l-f {
+  fill: #adadad;
+}
+.c-gray-m-l-t-bg {
+  background-color: rgba(173, 173, 173, 0.7);
+}
+.c-gray-m-l-tt-bg {
+  background-color: rgba(173, 173, 173, 0.4);
+}
+.c-gray-m-h {
+  color: #939393;
+}
+.c-gray-m-h-bg {
+  background-color: #939393;
+}
+.c-gray-m-h-f {
+  fill: #939393;
+}
+.c-gray-m-h-t-bg {
+  background-color: rgba(147, 147, 147, 0.7);
+}
+.c-gray-m-h-tt-bg {
+  background-color: rgba(147, 147, 147, 0.4);
+}
+/* Border colours */
+.c-gray-m-br {
+  border-color: #a0a0a0;
+}
+.c-gray-m-l-br {
+  border-color: #adadad;
+}
+.c-gray-m-h-br {
+  border-color: #939393;
+}
+/* Generic - color, background, fill and transparent */
+.c-gray-h {
+  color: #606060;
+}
+.c-gray-h-bg {
+  background-color: #606060;
+}
+.c-gray-h-f {
+  fill: #606060;
+}
+.c-gray-h-t-bg {
+  background-color: rgba(96, 96, 96, 0.7);
+}
+.c-gray-h-tt-bg {
+  background-color: rgba(96, 96, 96, 0.4);
+}
+/* Lights, darks and corresponding transparents */
+.c-gray-h-l {
+  color: #6d6d6d;
+}
+.c-gray-h-l-bg {
+  background-color: #6d6d6d;
+}
+.c-gray-h-l-f {
+  fill: #6d6d6d;
+}
+.c-gray-h-l-t-bg {
+  background-color: rgba(109, 109, 109, 0.7);
+}
+.c-gray-h-l-tt-bg {
+  background-color: rgba(109, 109, 109, 0.4);
+}
+.c-gray-h-h {
+  color: #535353;
+}
+.c-gray-h-h-bg {
+  background-color: #535353;
+}
+.c-gray-h-h-f {
+  fill: #535353;
+}
+.c-gray-h-h-t-bg {
+  background-color: rgba(83, 83, 83, 0.7);
+}
+.c-gray-h-h-tt-bg {
+  background-color: rgba(83, 83, 83, 0.4);
+}
+/* Border colours */
+.c-gray-h-br {
+  border-color: #606060;
+}
+.c-gray-h-l-br {
+  border-color: #6d6d6d;
+}
+.c-gray-h-h-br {
+  border-color: #535353;
+}
+/* Generic - color, background, fill and transparent */
+.c-gray-hh {
+  color: #373737;
+}
+.c-gray-hh-bg {
+  background-color: #373737;
+}
+.c-gray-hh-f {
+  fill: #373737;
+}
+.c-gray-hh-t-bg {
+  background-color: rgba(55, 55, 55, 0.7);
+}
+.c-gray-hh-tt-bg {
+  background-color: rgba(55, 55, 55, 0.4);
+}
+/* Lights, darks and corresponding transparents */
+.c-gray-hh-l {
+  color: #444444;
+}
+.c-gray-hh-l-bg {
+  background-color: #444444;
+}
+.c-gray-hh-l-f {
+  fill: #444444;
+}
+.c-gray-hh-l-t-bg {
+  background-color: rgba(68, 68, 68, 0.7);
+}
+.c-gray-hh-l-tt-bg {
+  background-color: rgba(68, 68, 68, 0.4);
+}
+.c-gray-hh-h {
+  color: #2a2a2a;
+}
+.c-gray-hh-h-bg {
+  background-color: #2a2a2a;
+}
+.c-gray-hh-h-f {
+  fill: #2a2a2a;
+}
+.c-gray-hh-h-t-bg {
+  background-color: rgba(42, 42, 42, 0.7);
+}
+.c-gray-hh-h-tt-bg {
+  background-color: rgba(42, 42, 42, 0.4);
+}
+/* Border colours */
+.c-gray-hh-br {
+  border-color: #373737;
+}
+.c-gray-hh-l-br {
+  border-color: #444444;
+}
+.c-gray-hh-h-br {
+  border-color: #2a2a2a;
+}
+/* Generic - color, background, fill and transparent */
+.c-transparent {
+  color: rgba(0, 0, 0, 0);
+}
+.c-transparent-bg {
+  background-color: rgba(0, 0, 0, 0);
+}
+.c-transparent-f {
+  fill: rgba(0, 0, 0, 0);
+}
+.c-transparent-t-bg {
+  background-color: rgba(0, 0, 0, 0);
+}
+.c-transparent-tt-bg {
+  background-color: rgba(0, 0, 0, 0);
+}
+/* Lights, darks and corresponding transparents */
+.c-transparent-l {
+  color: rgba(13, 13, 13, 0);
+}
+.c-transparent-l-bg {
+  background-color: rgba(13, 13, 13, 0);
+}
+.c-transparent-l-f {
+  fill: rgba(13, 13, 13, 0);
+}
+.c-transparent-l-t-bg {
+  background-color: rgba(13, 13, 13, 0);
+}
+.c-transparent-l-tt-bg {
+  background-color: rgba(13, 13, 13, 0);
+}
+.c-transparent-h {
+  color: rgba(0, 0, 0, 0);
+}
+.c-transparent-h-bg {
+  background-color: rgba(0, 0, 0, 0);
+}
+.c-transparent-h-f {
+  fill: rgba(0, 0, 0, 0);
+}
+.c-transparent-h-t-bg {
+  background-color: rgba(0, 0, 0, 0);
+}
+.c-transparent-h-tt-bg {
+  background-color: rgba(0, 0, 0, 0);
+}
+/* Border colours */
+.c-transparent-br {
+  border-color: rgba(0, 0, 0, 0);
+}
+.c-transparent-l-br {
+  border-color: rgba(13, 13, 13, 0);
+}
+.c-transparent-h-br {
+  border-color: rgba(0, 0, 0, 0);
+}
+.bg-none {
+  background: none;
+}

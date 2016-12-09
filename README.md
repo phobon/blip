@@ -11,3 +11,8 @@ It was like a bolt of lightning hitting me right between the eyes and led me to 
 I created **blip** as an academic exercise, mainly because I'm a software developer and we always want to reinvent the wheel, but also to give me a greater understanding the pattern and of styling in general. 
 
 **I like to see this as a tribute to one of the most transformative and positive styling patterns on the web**
+
+## how to use
+Pretty simply grab _blip.min.css_ from the _bin_ folder (autoprefixed and minified) and plop it into a style tag, then you get everything.
+
+If you want to compile, clone the repo; npm install and off you go.
