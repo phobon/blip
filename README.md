@@ -1,2 +1,2 @@
 # blip
-Modular, visually-semantic style system
+Modular, visually-semantic style system using less
