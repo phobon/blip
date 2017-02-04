@@ -333,6 +333,11 @@ input[type="password"],
   display: -ms-flexbox;
   display: flex;
 }
+.d-inline-flex {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
 .d-table {
   display: table;
 }
@@ -385,19 +390,19 @@ code,
     across responsive environments.
 */
 .f1 {
-  font-size: 5rem;
+  font-size: 4.25rem;
 }
 .f2 {
-  font-size: 4rem;
+  font-size: 3.4rem;
 }
 .f3 {
-  font-size: 3rem;
+  font-size: 2.55rem;
 }
 .f4 {
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 .f5 {
-  font-size: 1rem;
+  font-size: 0.85rem;
 }
 .f6 {
   font-size: 0.875rem;
@@ -1523,23 +1528,23 @@ body {
     Classes are taken from font-family.less, font-sizes.less, font-spacing.less, etc.   
 */
 html {
-  font-family: serif;
+  font-family: sans-serif;
 }
 /* Setup font sizes and other specific typographic properties */
 h1 {
-  font-size: 5rem;
+  font-size: 4.25rem;
 }
 h2 {
-  font-size: 4rem;
+  font-size: 3.4rem;
 }
 h3 {
-  font-size: 3rem;
+  font-size: 2.55rem;
 }
 h4 {
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 h5 {
-  font-size: 1rem;
+  font-size: 0.85rem;
 }
 /* Heading styles */
 h1,
@@ -1549,7 +1554,7 @@ h4,
 h5,
 h6 {
   font-weight: 100;
-  font-style: normal;
+  font-weight: lighter;
   margin: 0rem;
 }
 .nowrap {
@@ -1591,6 +1596,22 @@ code {
 .to-bottom {
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
+}
+.to-left-top {
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+}
+.to-left-bottom {
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+}
+.to-right-top {
+  -webkit-transform-origin: right top;
+          transform-origin: right top;
+}
+.to-right-bottom {
+  -webkit-transform-origin: right bottom;
+          transform-origin: right bottom;
 }
 /*
     Transition classes. This is a bit of a sledgehammer case here. I want to move this transition code out of external CSS.
