@@ -1727,13 +1727,7 @@ h3,
 h4,
 h5,
 h6 {
-<<<<<<< HEAD
-  z-index: 200;
-  font-weight: normal;
-=======
-  font-weight: 100;
   font-weight: lighter;
->>>>>>> 2651695bd4f8bd7a53f99b4b5e447f2ad7db7d8a
   margin: 0rem;
 }
 .nowrap {
@@ -1757,109 +1751,6 @@ code {
 .mono {
   font-family: monospace;
 }
-<<<<<<< HEAD
-=======
-.resize-none {
-  resize: none;
-}
-.to-left {
-  -webkit-transform-origin: left;
-          transform-origin: left;
-}
-.to-right {
-  -webkit-transform-origin: right;
-          transform-origin: right;
-}
-.to-center {
-  -webkit-transform-origin: center;
-          transform-origin: center;
-}
-.to-top {
-  -webkit-transform-origin: top;
-          transform-origin: top;
-}
-.to-bottom {
-  -webkit-transform-origin: bottom;
-          transform-origin: bottom;
-}
-.to-left-top {
-  -webkit-transform-origin: left top;
-          transform-origin: left top;
-}
-.to-left-bottom {
-  -webkit-transform-origin: left bottom;
-          transform-origin: left bottom;
-}
-.to-right-top {
-  -webkit-transform-origin: right top;
-          transform-origin: right top;
-}
-.to-right-bottom {
-  -webkit-transform-origin: right bottom;
-          transform-origin: right bottom;
-}
-/*
-    Transition classes. This is a bit of a sledgehammer case here. I want to move this transition code out of external CSS.
-*/
-.transition-s {
-  -webkit-transition: opacity 0.2s ease-out, fill 0.2s ease-out, color 0.2s ease-out, background-color 0.2s ease-out;
-  transition: opacity 0.2s ease-out, fill 0.2s ease-out, color 0.2s ease-out, background-color 0.2s ease-out;
-}
-.transition-all-s {
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
-.transition-m {
-  -webkit-transition: opacity 0.4s ease-out, fill 0.4s ease-out, color 0.4s ease-out, background-color 0.4s ease-out;
-  transition: opacity 0.4s ease-out, fill 0.4s ease-out, color 0.4s ease-out, background-color 0.4s ease-out;
-}
-.transition-all-m {
-  -webkit-transition: all 0.4s ease-out;
-  transition: all 0.4s ease-out;
-}
-.transition-l {
-  -webkit-transition: opacity 0.6s ease-out, fill 0.6s ease-out, color 0.6s ease-out, background-color 0.6s ease-out;
-  transition: opacity 0.6s ease-out, fill 0.6s ease-out, color 0.6s ease-out, background-color 0.6s ease-out;
-}
-.transition-all-l {
-  -webkit-transition: all 0.6s ease-out;
-  transition: all 0.6s ease-out;
-}
-.transition-none {
-  -webkit-transition: none !important;
-  transition: none !important;
-}
-.transition-rotate {
-  -webkit-animation-name: rotate;
-          animation-name: rotate;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-}
-@-webkit-keyframes rotate {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-@keyframes rotate {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
->>>>>>> 2651695bd4f8bd7a53f99b4b5e447f2ad7db7d8a
 /*
     A collection of colours used in boab. These may change in the future depending on how we do our bundling and build process.
     This file will generate a series of lightweight classes for each of the colours below:
