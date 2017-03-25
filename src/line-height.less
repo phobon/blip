@@ -1,15 +1,19 @@
 ﻿/*
-    Line heights for text.   
+    Line heights for text in various scenarios. 
 */
 
+@lh-solid:            1;
+@lh-title:          1.3;
+@lh-copy:           1.6;
+
 .lh-solid {
-    line-height: 1;
+    line-height: @lh-solid;
 }
 
 .lh-title {
-    line-height: 1.3;
+    line-height: @lh-title;
 }
 
 .lh-copy {
-    line-height: 1.6;
+    line-height: @lh-copy;
 }

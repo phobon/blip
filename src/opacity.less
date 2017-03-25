@@ -4,7 +4,7 @@
     eg: 100 = 1, 50 = 0.5, 10 = 0.1
 */
 
-.opacity-proc(@counter) when (@counter > 0) {
+.opacity-proc(@counter) when (@counter >= 0) {
     .o-@{counter} {
         opacity: @counter / 100;
     }
@@ -13,7 +13,3 @@
 }
 
 .opacity-proc(100);
-
-.o-0 {
-    opacity: 0;
-}

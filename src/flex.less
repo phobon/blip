@@ -1,0 +1,135 @@
+/*
+    Flexbox model classes
+
+    This is the engine-room for a lot of what blip is about - the flexbox layout model.
+    This class contains a set of modular classes that are designed to live on their to handle the majority of layout.
+*/
+
+/* 
+    Handle flex grow and shrink extents 
+*/
+.f-grow-shrink-procs(@iterator: 0) when (@iterator <= 4) {
+    .f-grow-@{iterator} {
+        flex-grow: @iterator;
+    }
+    .f-shrink-@{iterator} {
+        flex-shrink: @iterator;
+    }
+    .f-grow-shrink-procs(@iterator + 1);
+}
+.f-grow-shrink-procs();
+
+/* 
+    Flex alignment and justification 
+*/
+.f-ai-start {
+    align-items: flex-start;
+}
+.f-ai-center {
+    align-items: center;
+}
+.f-ai-end {
+    align-items: flex-end;
+}
+.f-ai-stretch {
+    align-items: stretch;
+}
+
+.f-as-start {
+    align-self: flex-start;
+}
+.f-as-center {
+    align-self: center;
+}
+.f-as-end {
+    align-self: flex-end;
+}
+
+.f-j-start {
+    justify-content: flex-start;
+}
+.f-j-center {
+    justify-content: center;
+}
+.f-j-end {
+    justify-content: flex-end;
+}
+.f-j-spacearound {
+    justify-content: space-around;
+}
+.f-j-spacebetween {
+    justify-content: space-between;
+}
+
+/* Flex wrapping */
+.f-w {
+    flex-wrap: wrap;
+}
+.f-w-none {
+    flex-wrap: nowrap;
+}
+.f-w-reverse {
+    flex-wrap: wrap-reverse;
+}
+
+/* Direction */
+.f-d-row {
+    flex-direction: row;
+}
+.f-d-column {
+    flex-direction: column;
+}
+
+/*
+    Makes an element flexible and fills a container.
+*/
+.f {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+/*
+    Handle row and column directions.
+*/
+.f-column {
+    .f;
+    .f-d-column;
+}
+.f-row {
+    .f;
+    .f-d-row;
+}
+
+/*
+    Makes an element flexible but sizes to its own content.
+*/
+.f-none {
+    display: flex;
+    flex: none;
+}
+
+/*
+    Handle row and column directions.
+*/
+.f-none-column {
+    .f-none;
+    .f-d-column;
+}
+.f-none-row {
+    .f-none;
+    .f-d-row;
+}
+
+/*
+    Handle some special fill cases in rows and columns.
+    1) Placing in a column, fill width.
+    2) Placing in a row, fill height.
+*/
+.f-none-fill-horizonal {
+    .f-none;
+    .w-100;
+}
+.f-none-fill-vertical {
+    .f-none;
+    .h-100;
+}

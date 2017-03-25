@@ -1,23 +1,17 @@
 ﻿/* 
-    Z-index values.
-*/
-@z-base:              950;
+    Z-index values
 
-.zindex-procs(@iterator:1) when (@iterator <= 8) {
-    .z@{iterator} {
+    These range from -1 to 10; anything more than this is likely overkill.
+*/
+@z-base:              0;
+@z-min:              -1;
+@z-max:              10;
+
+.zindex-procs(@iterator: @z-min) when (@iterator <= @z-max) {
+    .z-@{iterator} {
         z-index: @z-base + @iterator;
     }
 
     .zindex-procs(@iterator + 1);
 }
 .zindex-procs();
-
-/*
-    Special z-index classes.
-*/
-.z-dialog {
-    z-index: @z-base + 8;
-}
-.z-abovedialog {
-    z-index: @z-base + 9;
-}

@@ -1,37 +1,39 @@
 ﻿/*
-    Handle typography styles.
+    Various typographic mixins.
     Classes are taken from font-family.less, font-sizes.less, font-spacing.less, etc.   
+    
+    This is built to a certain preference; override these styles as required.
 */
 
 html {
     .system-serif;
 }
 
-/* Setup font sizes and other specific typographic properties */
+/* 
+    Setup font sizes and other specific typographic properties 
+*/
 h1 {
     .f1;
 }
-
 h2 {
     .f2;
 }
-
 h3 {
     .f3;
 }
-
 h4 {
     .f4;
 }
-
 h5 {
     .f5;
 }
 
-/* Heading styles */
+/* 
+    Consistent heading styles. 
+*/
 h1, h2, h3, h4, h5, h6 {
-    .fw1;
-    .f-normal;
+    .fw-1;
+    .fw-normal;
     .m-none;
 }
 
@@ -46,15 +48,14 @@ pre {
     .c-gray-ll-bg;
 }
 
+/*
+    Code and monospace classes.
+    code is applied globally, mono must be applied as required.
+*/
 code {
     .c-gray-ll-bg;
     .p-horizontal-nano;
 }
-
 .mono {
     font-family: monospace;
-}
-
-.resize-none {
-    resize: none;
 }

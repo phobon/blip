@@ -1,0 +1,31 @@
+/*
+    Basic grid layout.
+    This creates grid sizes based on the standard sizing set in sizes.less.
+    This will probably become redundant when CSS grid implementation becomes more widespread.
+*/
+
+@column-sizes: @s-100, @s-90, @s-80, @s-70, @s-60, @s-50, @s-40, @s-30, @s-25, @s-20, @s-15, @s-10;
+
+/* Grid sizing */
+.grid-proc(@label, @size) {
+    .w-@{label} {
+        width: @size;
+    }
+    .w-max-@{label} {
+        max-width: @size;
+    }
+    .h-@{label} {
+        height: @size;
+    }
+    .h-max-@{label} {
+        max-height: @size;
+    }
+}
+.grid-procs(@iterator:1) when (@iterator <= length(@column-sizes)) {
+    @label: extract(@column-sizes, @iterator);
+    @size: (@label * 1%);
+    .grid-proc(@label, @size);
+    .grid-procs((@iterator + 1));
+}
+.grid-procs();
+.grid-proc(33, @s-33);

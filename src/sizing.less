@@ -46,8 +46,6 @@
 @s-15:          15;
 @s-10:          10;
 
-@column-sizes: @s-100, @s-90, @s-80, @s-70, @s-60, @s-50, @s-40, @s-30, @s-25, @s-20, @s-15, @s-10;
-
 .sizing-procs(@iterator:1) when (@iterator <= length(@sizes)) {
     @label: extract(extract(@sizes, @iterator), 1);
     @size: extract(extract(@sizes, @iterator), 2);
@@ -119,27 +117,3 @@
     .sizing-procs(@iterator + 1);
 }
 .sizing-procs();
-
-/* Grid sizing */
-.grid-proc(@label, @size) {
-    .w-@{label} {
-        width: @size;
-    }
-    .w-max-@{label} {
-        max-width: @size;
-    }
-    .h-@{label} {
-        height: @size;
-    }
-    .h-max-@{label} {
-        max-height: @size;
-    }
-}
-.grid-procs(@iterator:1) when (@iterator <= length(@column-sizes)) {
-    @label: extract(@column-sizes, @iterator);
-    @size: (@label * 1%);
-    .grid-proc(@label, @size);
-    .grid-procs((@iterator + 1));
-}
-.grid-procs();
-.grid-proc(33, @s-33);
