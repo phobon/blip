@@ -1,5 +1,5 @@
 ﻿/*
-    A collection of colours used in boab. These may change in the future depending on how we do our bundling and build process.
+    A set of colours and colour procs.
     This file will generate a series of lightweight classes for each of the colours below:
 
     .@{color} : foreground colour
@@ -9,6 +9,7 @@
     .@{color}-br : border colour
 
     .@{color}-l | -bg | -f | -t : light
+    .@{color}-m | -bg | -f | -t : medium
     .@{color}-h | -bg | -f | -t : heavy
 */
 
@@ -16,58 +17,23 @@
 @c-black:                       #000;
 @c-white:                       #FFF;
 
-@c-blue:                        #1BA1E2;
-@c-green:                       #339933;
-@c-magenta:                     #FF0097;
-@c-orange:                      #F09609;
-@c-red:                         #E51400;
-
-@c-brown:                       #A05000;
-@c-emerald:                     #008a00;
-@c-lime:                        #8CBF26;
-@c-mustard:                     #d7c000;
-@c-pink:                        #E671B8;
-@c-purple:                      #A200FF;
-@c-teal:                        #00ABA9;
-
-@c-pastelblue:                  #54b3e3;
-@c-pastelgreen:                 #75a842;
-@c-pastelorange:                #fa8d3e;
-@c-pastelred:                   #e64839;
-
-@c-gray-ll:                     #f2f2f2;
-@c-gray-l:                      #e0e0e0;
-@c-gray-m:                      #a0a0a0;
-@c-gray-h:                      #606060;
-@c-gray-hh:                     #373737;
+@c-gray-l:                      #d7d7d7;
+@c-gray-m:                      #929292;
+@c-gray-h:                      #4f4f4f;
 
 @c-transparent:                 rgba(0, 0, 0, 0);
 
 @colours: 
     black @c-black, 
     white @c-white, 
-    blue @c-blue, 
-    green @c-green, 
-    magenta @c-magenta, 
-    orange @c-orange, 
-    red @c-red,
-    brown @c-brown,
-    emerald @c-emerald,
-    lime @c-lime,
-    mustard @c-mustard,
-    pink @c-pink,
-    purple @c-purple,
-    teal @c-teal,
-    pastelblue @c-pastelblue,
-    pastelgreen @c-pastelgreen,
-    pastelorange @c-pastelorange,
-    pastelred @c-pastelred,
-    gray-ll @c-gray-ll,
     gray-l @c-gray-l,
     gray-m @c-gray-m,
     gray-h @c-gray-h,
-    gray-hh @c-gray-hh,
     transparent @c-transparent;
+
+.bg-none {
+    background: none;
+}
 
 .color-proc(@label, @color) {
     /* Generic - color, background, fill and transparent */
@@ -84,10 +50,7 @@
     }
 
     .c-@{label}-t-bg {
-        background-color: fadeout(@color, 30%);
-    }
-    .c-@{label}-tt-bg {
-        background-color: fadeout(@color, 60%);
+        background-color: fadeout(@color, 50%);
     }
 
     /* Lights, darks and corresponding transparents */
@@ -106,10 +69,7 @@
     }
 
     .c-@{label}-l-t-bg {
-        background-color: fadeout(@color-l, 30%);
-    }
-    .c-@{label}-l-tt-bg {
-        background-color: fadeout(@color-l, 60%);
+        background-color: fadeout(@color-l, 50%);
     }
 
     .c-@{label}-h {
@@ -125,10 +85,7 @@
     }
 
     .c-@{label}-h-t-bg {
-        background-color: fadeout(@color-h, 30%);
-    }
-    .c-@{label}-h-tt-bg {
-        background-color: fadeout(@color-h, 60%);
+        background-color: fadeout(@color-h, 50%);
     }
     /* Border colours */
     .c-@{label}-br {
@@ -151,6 +108,3 @@
 }
 .color-procs();
 
-.bg-none {
-    background: none;
-}
