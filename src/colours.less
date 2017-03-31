@@ -13,9 +13,9 @@
     .@{color}-h | -bg | -f | -t : heavy
 */
 
-/* Colors */
-@c-black:                       #000;
-@c-white:                       #FFF;
+/* Colours */
+@c-black:                       #000000;
+@c-white:                       #FFFFFF;
 
 @c-gray-l:                      #d7d7d7;
 @c-gray-m:                      #929292;
@@ -23,19 +23,18 @@
 
 @c-transparent:                 rgba(0, 0, 0, 0);
 
-@colours: 
+@basic-colours: 
     black @c-black, 
     white @c-white, 
     gray-l @c-gray-l,
     gray-m @c-gray-m,
-    gray-h @c-gray-h,
-    transparent @c-transparent;
+    gray-h @c-gray-h;
 
 .bg-none {
     background: none;
 }
 
-.color-proc(@label, @color) {
+.basic-color-proc(@label, @color) {
     /* Generic - color, background, fill and transparent */
     .c-@{label} {
         color: @color;
@@ -50,8 +49,16 @@
     }
 
     .c-@{label}-t-bg {
-        background-color: fadeout(@color, 50%);
+        background-color: fade(@color, 50%);
     }
+
+    .c-@{label}-br {
+        border-color: @color;
+    }
+}
+
+.color-proc(@label, @color) {
+    .basic-color-proc(@label, @color);
 
     /* Lights, darks and corresponding transparents */
     @color-l: lighten(@color, 5%);
@@ -69,7 +76,7 @@
     }
 
     .c-@{label}-l-t-bg {
-        background-color: fadeout(@color-l, 50%);
+        background-color: fade(@color-l, 50%);
     }
 
     .c-@{label}-h {
@@ -85,26 +92,34 @@
     }
 
     .c-@{label}-h-t-bg {
-        background-color: fadeout(@color-h, 50%);
+        background-color: fade(@color-h, 50%);
     }
-    /* Border colours */
-    .c-@{label}-br {
-        border-color: @color;
-    }
+    
     .c-@{label}-l-br {
         border-color: @color-l;
     }
     .c-@{label}-h-br {
         border-color: @color-h;
     }
-}
-.color-procs(@iterator:1) when (@iterator <= length(@colours)) {
-    @label: extract(extract(@colours, @iterator), 1);
-    @color: extract(extract(@colours, @iterator), 2);
+};
+
+/* Standard colour procs */
+.color-procs(@c, @isbasic:false, @iterator:1) when (@iterator <= length(@c)) {
+    @label: extract(extract(@c, @iterator), 1);
+    @color: extract(extract(@c, @iterator), 2);
 
     .color-proc(@label, @color);
 
-    .color-procs((@iterator + 1));
-}
-.color-procs();
+    .color-procs(@c, false, (@iterator + 1));
+};
 
+.color-procs(@c, @isbasic:false, @iterator:1) when (@iterator <= length(@c)) and (@isbasic = true) {
+    @label: extract(extract(@c, @iterator), 1);
+    @color: extract(extract(@c, @iterator), 2);
+
+    .basic-color-proc(@label, @color);
+
+    .color-procs(@c, true, (@iterator + 1));
+};
+
+.color-procs(@basic-colours, true);
