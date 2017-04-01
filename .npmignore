@@ -1,0 +1,5 @@
+gulpfile.js
+yarn.lock
+.vscode
+node_modules
+.npmignore
