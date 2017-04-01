@@ -1,8 +1,14 @@
 {
-  "name": "blip",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {},
+  "name": "phobon-blip",
+  "version": "1.0.0",
+  "description": "Lightweight, visually-semantic, atomic css framework",
+  "homepage": "https://github.com/phobon/blip",
+  "license": "MIT",
+  "author": "Ben McCormick <noumenon@chifra.net> (http://phobon.io/)",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/phobon/blip.git"
+  },
   "devDependencies": {
     "autoprefixer": "^6.5.3",
     "cssnano": "^3.8.2",
@@ -11,5 +17,8 @@
     "gulp-less": "^3.3.0",
     "gulp-postcss": "^6.2.0",
     "gulp-rename": "^1.2.2"
+  },
+  "bugs": {
+    "url": "https://github.com/phobon/blip/issues"
   }
 }
