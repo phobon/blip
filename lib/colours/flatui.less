@@ -1,3 +1,10 @@
+/*
+    A set of colours inspired by flatuicolors.com.
+    These are treated as a separate module to blip, so are handled separately.
+ */
+
+@import "../colour-procs.less";
+
 @c-turquoise:       #1abc9c;
 @c-greensea:        #16a085;
 
@@ -28,7 +35,7 @@
 @c-concrete:        #95a5a6;
 @c-asbestos:        #7f8c8d;
 
-@flatuicolors:
+@colors:
     turquoise @c-turquoise,
     greensea @c-greensea,
     emerald @c-emerald,
@@ -50,4 +57,4 @@
     concrete @c-concrete,
     asbestos @c-asbestos;
 
-.color-procs(@flatuicolors);
+.color-procs(@colors, false);

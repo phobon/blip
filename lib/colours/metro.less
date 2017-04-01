@@ -1,0 +1,59 @@
+/*
+    A set of colours inspired by materialui.co/metrocolors.
+    These are treated as a separate module to blip, so are handled separately.
+ */
+
+@import "../colour-procs.less";
+
+@c-lime:        #a4c400;
+@c-green:       #60a917;
+@c-emerald:     #008a00;
+@c-teal:        #00aba9;
+
+@c-cyan:        #1ba1e2;
+@c-cobalt:      #0050ef;
+
+@c-indigo:      #6a00ff;
+@c-violet:      #aa00ff;
+
+@c-pink:        #f472d0;
+@c-magenta:     #d80073;
+
+@c-crimson:     #a20025;
+@c-red:         #e51400;
+
+@c-orange:      #fa6800;
+@c-amber:       #f0a30a;
+
+@c-yellow:      #e3c800;
+@c-brown:       #825a2c;
+
+@c-olive:       #6d8764;
+@c-steel:       #647687;
+
+@c-mauve:       #76608a;
+@c-sienna:      #a0522d;
+
+@colors:
+    lime @c-lime,
+    green @c-green,
+    emerald @c-emerald,
+    teal @c-teal,
+    cyan @c-cyan,
+    cobalt @c-cobalt,
+    indigo @c-indigo,
+    violet @c-violet,
+    pink @c-pink,
+    magenta @c-magenta,
+    crimson @c-crimson,
+    red @c-red,
+    orange @c-orange,
+    amber @c-amber,
+    yellow @c-yellow,
+    brown @c-brown,
+    olive @c-olive,
+    steel @c-steel,
+    mauve @c-mauve,
+    sienna @c-sienna;
+
+.color-procs(@colors, false);

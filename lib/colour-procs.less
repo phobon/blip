@@ -1,6 +1,7 @@
-﻿/*
-    A set of colours and colour procs.
+ /*
     This file will generate a series of lightweight classes for each of the colours below:
+
+    Colour swatches are not core to blip, so these are handled as separate files.
 
     .@{color} : foreground colour
     .@{color}-bg : background colour
@@ -12,27 +13,6 @@
     .@{color}-m | -bg | -f | -t : medium
     .@{color}-h | -bg | -f | -t : heavy
 */
-
-/* Colours */
-@c-black:                       #000000;
-@c-white:                       #FFFFFF;
-
-@c-gray-l:                      #d7d7d7;
-@c-gray-m:                      #929292;
-@c-gray-h:                      #4f4f4f;
-
-@c-transparent:                 rgba(0, 0, 0, 0);
-
-@basic-colours: 
-    black @c-black, 
-    white @c-white, 
-    gray-l @c-gray-l,
-    gray-m @c-gray-m,
-    gray-h @c-gray-h;
-
-.bg-none {
-    background: none;
-}
 
 .basic-color-proc(@label, @color) {
     /* Generic - color, background, fill and transparent */
@@ -98,28 +78,26 @@
     .c-@{label}-l-br {
         border-color: @color-l;
     }
+
     .c-@{label}-h-br {
         border-color: @color-h;
     }
 };
 
-/* Standard colour procs */
-.color-procs(@c, @isbasic:false, @iterator:1) when (@iterator <= length(@c)) {
+.color-procs(@c, @basic, @iterator:1) when (@iterator <= length(@c)) and (@basic = false) {
     @label: extract(extract(@c, @iterator), 1);
     @color: extract(extract(@c, @iterator), 2);
 
     .color-proc(@label, @color);
 
-    .color-procs(@c, false, (@iterator + 1));
+    .color-procs(@c, @basic, (@iterator + 1));
 };
 
-.color-procs(@c, @isbasic:false, @iterator:1) when (@iterator <= length(@c)) and (@isbasic = true) {
+.color-procs(@c, @basic, @iterator:1) when (@iterator <= length(@c)) and (@basic = true) {
     @label: extract(extract(@c, @iterator), 1);
     @color: extract(extract(@c, @iterator), 2);
 
     .basic-color-proc(@label, @color);
 
-    .color-procs(@c, true, (@iterator + 1));
+    .color-procs(@c, @basic, (@iterator + 1));
 };
-
-.color-procs(@basic-colours, true);
