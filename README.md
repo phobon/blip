@@ -1,5 +1,5 @@
 # blip
-Blip is a lightweight, visually-semantic css framework built in less
+Blip is a lightweight, visually-semantic css framework built in ~~less~~ sass
 
 ## why is this a thing?
 I've spent many years trying to manage extreme amounts of custom css in enterprise situations and become incredibly frustrated with trying to not only **maintain** an incredibly complex cascade, but also **teach** others how the thing actually works, and it's completely unsustainable. I was just so sick of writing new css, and then I read an article that really resonated with me:
@@ -27,4 +27,4 @@ I created **blip** as an academic exercise, mainly because I'm a software develo
 
 **Compile it yourself:**
 
-Files found in _lib_ are core less files that can be extended and compiled. _blip.less_ is the core file.
+Files found in _lib_ are core sass files that can be extended and compiled. _blip.scss_ is the core file.
