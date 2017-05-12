@@ -8,16 +8,19 @@
 /* 
     Handle flex grow and shrink extents 
 */
-.f-grow-shrink-procs(@iterator: 0) when (@iterator <= 4) {
-    .f-grow-@{iterator} {
-        flex-grow: @iterator;
+@mixin f-grow-shrink-proc {
+    @for $i from 0 through 5 {
+        .f-grow-#{$i} {
+            flex-grow: $i;
+        }
+
+        .f-shrink-#{$i} {
+            flex-grow: $i;
+        }
     }
-    .f-shrink-@{iterator} {
-        flex-shrink: @iterator;
-    }
-    .f-grow-shrink-procs(@iterator + 1);
 }
-.f-grow-shrink-procs();
+
+@include f-grow-shrink-proc;
 
 /* 
     Flex alignment and justification 
@@ -92,12 +95,12 @@
     Handle row and column directions.
 */
 .f-column {
-    .f;
-    .f-d-column;
+    @extend .f;
+    @extend .f-d-column;
 }
 .f-row {
-    .f;
-    .f-d-row;
+    @extend .f;
+    @extend .f-d-row;
 }
 
 /*
@@ -112,12 +115,12 @@
     Handle row and column directions.
 */
 .f-none-column {
-    .f-none;
-    .f-d-column;
+    @extend .f-none;
+    @extend .f-d-column;
 }
 .f-none-row {
-    .f-none;
-    .f-d-row;
+    @extend .f-none;
+    @extend .f-d-row;
 }
 
 /*
@@ -126,10 +129,10 @@
     2) Placing in a row, fill height.
 */
 .f-none-fill-horizonal {
-    .f-none;
-    .w-100;
+    @extend .f-none;
+    @extend .w-100;
 }
 .f-none-fill-vertical {
-    .f-none;
-    .h-100;
+    @extend .f-none;
+    @extend .h-100;
 }

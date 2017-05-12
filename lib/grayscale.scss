@@ -1,0 +1,30 @@
+﻿/* 
+    Set of grayscales.
+    These are considered core to blip 
+*/
+
+@import "colour-procs";
+
+$c-black:                       #000000;
+$c-white:                       #FFFFFF;
+
+$c-gray-l:                      #d7d7d7;
+$c-gray-m:                      #929292;
+$c-gray-h:                      #4f4f4f;
+
+$c-transparent:                 rgba(0, 0, 0, 0);
+
+$grayscale: (
+    black: $c-black, 
+    white: $c-white, 
+    gray-l: $c-gray-l,
+    gray-m: $c-gray-m,
+    gray-h: $c-gray-h,
+    transparent: $c-transparent
+);
+
+.bg-none {
+    background: none;
+}
+
+@include basic-color-proc($grayscale);

@@ -10,7 +10,7 @@
     Basic style for lists with no adornment.
 */
 ul {
-    .ls-none;
-    .m-none;
-    .p-none;
+    @extend .ls-none;
+    @extend .m-none;
+    @extend .p-none;
 }

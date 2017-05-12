@@ -16,13 +16,12 @@
     font-weight: bolder;
 }
 
-@fw-base:       100;
-
-.fw-procs(@iterator: 0) when (@iterator <= 4) {
-    .fw-@{iterator} {
-        z-index: @fw-base + @iterator * 100;
+@mixin fw-proc {
+    @for $i from 0 through 5 {
+        .fw-#{$i} {
+            z-index: 100 + $i * 100;
+        }
     }
-
-    .fw-procs(@iterator + 1);
 }
-.fw-procs();
+
+@include fw-proc;

@@ -1,0 +1,31 @@
+/*
+    Core, modular styles.
+*/
+@import "depths";
+
+@import "borders";
+
+@import "box-sizing";
+@import "display";
+@import "positions";
+@import "overflow";
+
+@import "opacity";
+
+@import "cursor";
+@import "pointer-events";
+
+/* Fonts and typography */
+@import "font-family", "font-size", "font-style", "font-weight", "typography";
+@import "text-align", "text-decoration", "text-transform", "line-height";
+
+/* Sizing, flex and grid */
+@import "sizing", "grid", "layout", "flex";
+
+@import "lists";
+
+/* Transition base and animations */
+@import "transform-origin", "transitions", "animations";
+
+/* Grayscale palette */
+@import "grayscale";

@@ -1,0 +1,60 @@
+/*
+    A set of colours inspired by materialui.co/metrocolors.
+    These are treated as a separate module to blip, so are handled separately.
+ */
+
+@import "../colour-procs";
+
+$c-m-lime:        #a4c400;
+$c-m-green:       #60a917;
+$c-m-emerald:     #008a00;
+$c-m-teal:        #00aba9;
+
+$c-m-cyan:        #1ba1e2;
+$c-m-cobalt:      #0050ef;
+
+$c-m-indigo:      #6a00ff;
+$c-m-violet:      #aa00ff;
+
+$c-m-pink:        #f472d0;
+$c-m-magenta:     #d80073;
+
+$c-m-crimson:     #a20025;
+$c-m-red:         #e51400;
+
+$c-m-orange:      #fa6800;
+$c-m-amber:       #f0a30a;
+
+$c-m-yellow:      #e3c800;
+$c-m-brown:       #825a2c;
+
+$c-m-olive:       #6d8764;
+$c-m-steel:       #647687;
+
+$c-m-mauve:       #76608a;
+$c-m-sienna:      #a0522d;
+
+$c-metro: (
+    lime: $c-m-lime,
+    green: $c-m-green,
+    emerald: $c-m-emerald,
+    teal: $c-m-teal,
+    cyan: $c-m-cyan,
+    cobalt: $c-m-cobalt,
+    indigo: $c-m-indigo,
+    violet: $c-m-violet,
+    pink: $c-m-pink,
+    magenta: $c-m-magenta,
+    crimson: $c-m-crimson,
+    red: $c-m-red,
+    orange: $c-m-orange,
+    amber: $c-m-amber,
+    yellow: $c-m-yellow,
+    brown: $c-m-brown,
+    olive: $c-m-olive,
+    steel: $c-m-steel,
+    mauve: $c-m-mauve,
+    sienna: $c-m-sienna
+);
+
+@include color-proc($c-metro);

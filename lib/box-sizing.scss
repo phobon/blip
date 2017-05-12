@@ -17,6 +17,14 @@
 /*
     Default everything to .border-box - it just makes everything simpler.
 */
-html, body, div, article, section, main, footer, header, form, fieldset, pre, code, p, ul, ol, li, dl, dt, dd, textarea, input[type="text"], input[type="tel"], input[type="email"], input[type="url"], input[type="password"] {
-    .border-box;
+html, body, 
+div, article, section, main, footer, header, 
+form, fieldset, 
+pre, code, 
+p, 
+ul, ol, li, 
+dl, dt, dd, 
+textarea, 
+input[type="text"], input[type="tel"], input[type="email"], input[type="url"], input[type="password"] {
+    @extend .border-box;
 }

@@ -1,0 +1,18 @@
+﻿/*
+    Element opacity
+    This function will create classes corresponding to opacity values: 1 through to 0
+*/
+
+@mixin opacity-proc {
+    $i: 0;
+    @while $i <= 1 {
+        $o: $i * 100;
+        .o-#{$o} {
+            opacity: $i;
+        }
+
+        $i: $i + .1;
+    }
+}
+
+@include opacity-proc;

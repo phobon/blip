@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var clean = require('gulp-clean');
 
 // Stylesheet transpiling
-var less = require('gulp-less');
+var sass = require('gulp-sass');
 var postcss = require('gulp-postcss');
 var nano = require('cssnano');
 var autoprefixer = require('autoprefixer');
@@ -17,8 +17,8 @@ gulp.task('clean', function() {
 // Compile less files (css preprocessor)
 gulp.task('minify', function() {
     var processors = [autoprefixer, nano];    
-    return gulp.src('./lib/blip.less')
-        .pipe(less())
+    return gulp.src('./lib/blip.scss')
+        .pipe(sass())
         .pipe(postcss(processors))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('./bin'))
@@ -26,16 +26,16 @@ gulp.task('minify', function() {
 
 gulp.task('verbose', function() {
     var processors = [autoprefixer];    
-    return gulp.src('./lib/blip.less')
-        .pipe(less())
+    return gulp.src('./lib/blip.scss')
+        .pipe(sass())
         .pipe(postcss(processors))
         .pipe(gulp.dest('./bin'))
 });
 
 gulp.task('minify-colours', function() {
     var processors = [autoprefixer, nano];    
-    return gulp.src('./lib/colours/*.less')
-        .pipe(less())
+    return gulp.src('./lib/colours/*.scss')
+        .pipe(sass())
         .pipe(postcss(processors))
         .pipe(rename({ prefix: 'blip.c.', suffix: '.min' }))
         .pipe(gulp.dest('./bin/colours'))
@@ -43,13 +43,13 @@ gulp.task('minify-colours', function() {
 
 gulp.task('verbose-colours', function() {    
     var processors = [autoprefixer];    
-    return gulp.src('./lib/colours/*.less')
-        .pipe(less())
+    return gulp.src('./lib/colours/*.scss')
+        .pipe(sass())
         .pipe(postcss(processors))
         .pipe(rename({ prefix: 'blip.colours.' }))
         .pipe(gulp.dest('./bin/colours'))
 });
 
 gulp.task('transpile', ['clean', 'minify', 'verbose']);
-gulp.task('transpile-full', ['transpile', 'minify-colours', 'verbose-colours']);
+gulp.task('dev', ['clean', 'verbose', 'verbose-colours']);
 gulp.task('release', ['clean', 'minify', 'minify-colours']);

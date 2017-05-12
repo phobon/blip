@@ -1,0 +1,113 @@
+﻿/* 
+    Modular css to define sizing-related classes - not to be confused with layout.     
+
+    This will generate classes that represent margins, paddings, widths and heights.
+
+    .m-none: no margin
+    .m-[size] : margin on all sides
+    .m-l-[size] : left margin
+    .m-r-[size] : right margin
+    .m-t-[size] : top margin
+    .m-b-[size] : bottom margin
+    .m-horizontal-[size] : left and right margin
+    .m-vertical-[size]: top and bottom margin
+
+    .p- | none | l | r | t | b | horizontal | vertical | - [size] : paddings
+
+    .w-[size] : width
+    .w-min-[size] : min-width
+    .h-[size] : height
+    .h-min-[size] : min-height
+*/
+
+$s-auto:        auto;
+$s-none:        0rem;
+$s-nano:        0.25rem;
+$s-tiny:        0.5rem;
+$s-small:       1rem;
+$s-medium:      1.5rem;
+$s-large:       2rem;
+$s-huge:        3rem;
+$s-massive:     4rem;
+
+$sizes: (
+    auto: $s-auto,
+    none: $s-none,
+    nano: $s-nano,
+    tiny: $s-tiny,
+    small: $s-small,
+    medium: $s-medium,
+    large: $s-large,
+    huge: $s-huge,
+    massive: $s-massive
+);
+
+@mixin sizing-proc {
+    @each $label, $size in $sizes {
+        /* Margins */
+        .m-#{$label} {
+            margin: $size;
+        }   
+        .m-l-#{$label} {
+            margin-left: $size;
+        }
+        .m-r-#{$label} {
+            margin-right: $size;
+        }
+        .m-horizontal-#{$label} {
+            margin-left: $size;
+            margin-right: $size;
+        }
+        .m-t-#{$label} {
+            margin-top: $size;
+        }
+        .m-b-#{$label} {
+            margin-bottom: $size;
+        }
+        .m-vertical-#{$label} {
+            margin-top: $size;
+            margin-bottom: $size;
+        }
+
+        /* Paddings */
+        .p-#{$label} {
+            padding: $size;
+        }
+        .p-l-#{$label} {
+            padding-left: $size;
+        }
+        .p-r-#{$label} {
+            padding-right: $size;
+        }
+        .p-horizontal-#{$label} {
+            padding-left: $size;
+            padding-right: $size;
+        }   
+        .p-t-#{$label} {
+            padding-top: $size;
+        }
+        .p-b-#{$label} {
+            padding-bottom: $size;
+        }
+        .p-vertical-#{$label} {
+            padding-top: $size;
+            padding-bottom: $size;
+        }
+
+        /* Height & Width */
+        .h-#{$label} {
+            height: $size;
+        }
+        .h-min-#{$label} {
+            min-height: $size;
+        }
+        .w-#{$label} {
+            width: $size;
+        }
+        .w-min-#{$label} {
+            min-width: $size;
+        }
+    }
+}
+
+@include sizing-proc;

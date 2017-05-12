@@ -1,0 +1,18 @@
+﻿/* 
+    Z-index values
+    These range from -1 to 10; anything more than this is likely overkill.
+*/
+
+@mixin zindex-proc {
+    @for $i from 0 through 10 {
+        .z-#{$i} {
+            z-index: $i;
+        }
+    }
+}
+
+@include zindex-proc;
+
+.z-below {
+    z-index: -1;
+}

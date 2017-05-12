@@ -1,0 +1,61 @@
+/*
+    A set of colours inspired by flatuicolors.com.
+    These are treated as a separate module to blip, so are handled separately.
+ */
+
+@import "../colour-procs";
+
+$c-f-turquoise:       #1abc9c;
+$c-f-greensea:        #16a085;
+
+$c-f-emerald:         #2ecc71;
+$c-f-nephritis:       #27ae60;
+
+$c-f-peterriver:      #3498db;
+$c-f-belizehole:      #2980b9;
+
+$c-f-amethyst:        #9b59b6;
+$c-f-wisteria:        #8e44ad;
+
+$c-f-wetasphalt:      #34495e;
+$c-f-midnightblue:    #2c3e50;
+
+$c-f-sunflower:       #f1c40f;
+$c-f-orange:          #f39c12;
+
+$c-f-carrot:          #e67e22;
+$c-f-pumpkin:         #d35400;
+
+$c-f-alizarin:        #e74c3c;
+$c-f-pomegranate:     #c0392b;
+
+$c-f-clouds:          #ecf0f1;
+$c-f-silver:          #bdc3c7;
+
+$c-f-concrete:        #95a5a6;
+$c-f-asbestos:        #7f8c8d;
+
+$flat: (
+    turquoise: $c-f-turquoise,
+    greensea: $c-f-greensea,
+    emerald: $c-f-emerald,
+    nephritis: $c-f-nephritis,
+    peterriver: $c-f-peterriver,
+    belizehole: $c-f-belizehole,
+    amethyst: $c-f-amethyst,
+    wisteria: $c-f-wisteria,
+    wetasphalt: $c-f-wetasphalt,
+    midnightblue: $c-f-midnightblue,
+    sunflower: $c-f-sunflower,
+    orange: $c-f-orange,
+    carrot: $c-f-carrot,
+    pumpkin: $c-f-pumpkin,
+    alizarin: $c-f-alizarin,
+    pomegranate: $c-f-pomegranate,
+    clouds: $c-f-clouds,
+    silver: $c-f-silver,
+    concrete: $c-f-concrete,
+    asbestos: $c-f-asbestos
+);
+
+@include color-proc($flat);

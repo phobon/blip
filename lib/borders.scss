@@ -1,0 +1,107 @@
+﻿/*
+    Modular css to handle various border styles.
+    border-radius styles correspond in size to things found in sizing.less (ie: for a perfectly round element, pick the same border radius as its size)
+*/
+
+$br-s-none:               0;
+$br-s-nano:               0.125rem;
+$br-s-tiny:               0.25rem;
+$br-s-small:              0.5rem;
+$br-s-medium:             1rem;
+$br-s-large:              1.5rem;
+$br-s-huge:               2rem;
+$br-s-massive:            3rem;
+$br-s-max:                100%;
+
+$br-sizes: (
+    none: $br-s-none,
+    nano: $br-s-nano,
+    tiny: $br-s-tiny,
+    small: $br-s-small,
+    medium: $br-s-medium,
+    large: $br-s-large,
+    huge: $br-s-huge,
+    massive: $br-s-massive,
+    max: $br-s-max
+);
+
+@mixin border-ra-proc {
+    @each $label, $size in $br-sizes {
+        .br-ra-#{$label} {
+            border-radius: $size;
+        }
+
+        .br-ra-tl-#{$label} {
+            border-top-left-radius: $size;
+        }
+
+        .br-ra-tr-#{$label} {
+            border-top-right-radius: $size;
+        }
+
+        .br-ra-bl-#{$label} {
+            border-bottom-left-radius: $size;
+        }
+
+        .br-ra-br-#{$label} {
+            border-bottom-right-radius: $size;
+        }
+    }
+}
+
+@include border-ra-proc;
+
+$br-sizes-subset: (
+    none: $br-s-none,
+    nano: $br-s-nano,
+    tiny: $br-s-tiny,
+    small: $br-s-small
+);
+
+@mixin border-proc {
+    @each $label, $size in $br-sizes-subset {
+        %br-base {
+            border-style: solid;
+        }
+
+        .br-#{$label} {            
+            @extend %br-base;
+            border-width: $size;
+        }
+        .br-t-#{$label} {
+            @extend %br-base;
+            border-top: $size;
+        }
+        .br-b-#{$label} {
+            @extend %br-base;
+            border-bottom: $size;
+        }
+        .br-l-#{$label} {
+            @extend %br-base;
+            border-left: $size;
+        }
+        .br-r-#{$label} {
+            @extend %br-base;
+            border-right: $size;
+        }
+        .br-horizontal-#{$label} {
+            @extend %br-base;
+            border-left: $size;
+            border-right: $size;
+        }
+        .br-vertical-#{$label} {
+            @extend %br-base;
+            border-left: $size;
+            border-right: $size;
+        }
+    }
+}
+
+@include border-proc;
+
+.br-solid {
+    border-style: solid;
+}
+.br-dashed {
+    border-style: dashed;
+}

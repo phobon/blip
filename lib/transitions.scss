@@ -1,0 +1,34 @@
+﻿/*
+    Transition classes. 
+    Note: This is a bit of a sledgehammer case here; it doesn't handle all of the cases I want.
+*/
+$transition-s:  0.25s;
+$transition-m:  0.5s;
+$transition-l:  0.75s;
+$transition-xl: 1s;
+
+$transitions: (
+    s: $transition-s,
+    m: $transition-m,
+    l: $transition-l,
+    xl: $transition-xl);
+
+@mixin transition-procs {
+    @each $label, $length in $transitions {
+        .transition-#{$label} {
+            transition: opacity $length ease-out, fill $length ease-out, color $length ease-out, background-color $length ease-out;
+        }
+        .transition-all-#{$label} {
+            transition: all $length ease-out;
+        }
+    }
+}
+
+/*
+    Include our transition procs now.
+*/
+@include transition-procs;
+
+.transition-none {
+    transition: none !important;
+}
