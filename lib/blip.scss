@@ -1,6 +1,7 @@
 /*
     Core, modular styles.
 */
+
 @import "depths";
 
 @import "borders";
@@ -17,7 +18,7 @@
 
 /* Fonts and typography */
 @import "font-family", "font-size", "font-style", "font-weight", "typography";
-@import "text-align", "text-decoration", "text-transform", "line-height";
+@import "text-align", "text-decoration", "text-transform", "line-height", "word-wrap";
 
 /* Sizing, flex and grid */
 @import "sizing", "grid", "layout", "flex";
