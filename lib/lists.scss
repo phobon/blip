@@ -9,7 +9,7 @@
 /*
     Basic style for lists with no adornment.
 */
-ul {
+ul, ol {
     @extend .ls-none;
     @extend .m-none;
     @extend .p-none;
