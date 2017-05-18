@@ -23,3 +23,22 @@ textarea,
 input[type="text"], input[type="tel"], input[type="email"], input[type="url"], input[type="password"] {
     @extend .border-box;
 }
+
+/* Set the base font size on our html element. */
+html {
+    font-size: $base-font-size;
+}
+
+/* Set the font size again as we want it to be slightly smaller than the base font size. */
+body {
+    @extend .f-6;
+}
+
+/*
+    Responsive media query for mobile devices.
+*/
+@media only screen and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    html {
+        font-size: $base-font-size-responsive !important;
+    }
+}

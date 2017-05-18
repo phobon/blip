@@ -13,19 +13,19 @@ html {
     Setup font sizes and other specific typographic properties 
 */
 h1 {
-    @extend .f1;
+    @extend .f-1;
 }
 h2 {
-    @extend .f2;
+    @extend .f-2;
 }
 h3 {
-    @extend .f3;
+    @extend .f-3;
 }
 h4 {
-    @extend .f4;
+    @extend .f-4;
 }
 h5 {
-    @extend .f5;
+    @extend .f-5;
 }
 
 /* 

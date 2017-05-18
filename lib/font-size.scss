@@ -9,49 +9,30 @@ $base-font-size-responsive:     32px;
 
 $font-factor:       0.85rem;
 
-$f1:                5 * $font-factor;
-$f2:                4 * $font-factor;
-$f3:                3 * $font-factor;
-$f4:                2 * $font-factor;
-$f5:                1 * $font-factor;
-$f6:                0.875rem;
-$f7:                0.75rem;
+$f-1:                5 * $font-factor;
+$f-2:                4 * $font-factor;
+$f-3:                3 * $font-factor;
+$f-4:                2 * $font-factor;
+$f-5:                1 * $font-factor;
+$f-6:                0.875rem;
+$f-7:                0.75rem;
 
 $font-sizes: (
-    1: $f1, 
-    2: $f2, 
-    3: $f3, 
-    4: $f4,
-    5: $f5, 
-    6: $f6, 
-    7: $f7
+    1: $f-1, 
+    2: $f-2, 
+    3: $f-3, 
+    4: $f-4,
+    5: $f-5, 
+    6: $f-6, 
+    7: $f-7
 );
 
 @mixin font-size-proc {
     @each $i, $size in $font-sizes {
-        .f#{$i} {
+        .f-#{$i} {
             font-size: $size;
         }
     }
 }
 
 @include font-size-proc;
-
-/* Set the base font size on our html element. */
-html {
-    font-size: $base-font-size;
-}
-
-/* Set the font size again as we want it to be slightly smaller than the base font size. */
-body {
-    @extend .f6;
-}
-
-/*
-    Responsive media query for mobile devices.
-*/
-@media only screen and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-    html {
-        font-size: $base-font-size-responsive !important;
-    }
-}
