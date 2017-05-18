@@ -4,7 +4,6 @@
     This will probably become redundant when CSS grid implementation becomes more widespread.
 */
 
-$s-100:         100%;
 $s-90:          90%;
 $s-80:          80%;
 $s-70:          70%;
@@ -19,7 +18,6 @@ $s-15:          15%;
 $s-10:          10%;
 
 $grid-sizes: (
-    100: $s-100, 
     90: $s-90, 
     80: $s-80, 
     70: $s-70, 
@@ -38,14 +36,8 @@ $grid-sizes: (
         .w-#{$l} {
             width: $s;
         }
-        .w-max-#{$l} {
-            max-width: $s;
-        }
         .h-#{$l} {
             height: $s;
-        }
-        .h-max-#{$l} {
-            max-height: $s;
         }
     }    
 }

@@ -29,6 +29,7 @@ $s-medium:      1.5rem;
 $s-large:       2rem;
 $s-huge:        3rem;
 $s-massive:     4rem;
+$s-max:         100%;
 
 $sizes: (
     auto: $s-auto,
@@ -41,6 +42,28 @@ $sizes: (
     huge: $s-huge,
     massive: $s-massive
 );
+
+@mixin dimension-proc($label, $size) {
+    /* Height & Width */
+    .h-#{$label} {
+        height: $size;
+    }
+    .h-min-#{$label} {
+        min-height: $size;
+    }
+    .h-max-#{$label} {
+        max-height: $size;
+    }
+    .w-#{$label} {
+        width: $size;
+    }
+    .w-min-#{$label} {
+        min-width: $size;
+    }
+    .w-max-#{$label} {
+        max-width: $size;
+    }
+}
 
 @mixin sizing-proc {
     @each $label, $size in $sizes {
@@ -94,20 +117,11 @@ $sizes: (
             padding-bottom: $size;
         }
 
-        /* Height & Width */
-        .h-#{$label} {
-            height: $size;
-        }
-        .h-min-#{$label} {
-            min-height: $size;
-        }
-        .w-#{$label} {
-            width: $size;
-        }
-        .w-min-#{$label} {
-            min-width: $size;
-        }
+        @include dimension-proc($label, $size);
     }
 }
 
 @include sizing-proc;
+
+
+@include dimension-proc(100, 100%);

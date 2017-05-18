@@ -11,7 +11,7 @@ $br-s-medium:             1rem;
 $br-s-large:              1.5rem;
 $br-s-huge:               2rem;
 $br-s-massive:            3rem;
-$br-s-max:                100%;
+$br-s-100:                100%;
 
 $br-sizes: (
     none: $br-s-none,
@@ -22,7 +22,7 @@ $br-sizes: (
     large: $br-s-large,
     huge: $br-s-huge,
     massive: $br-s-massive,
-    max: $br-s-max
+    100: $br-s-100
 );
 
 @mixin border-ra-proc {
