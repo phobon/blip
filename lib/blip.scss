@@ -21,9 +21,12 @@
 @import "text-align", "text-decoration", "text-transform", "line-height", "word-wrap";
 
 /* Sizing, flex and grid */
-@import "sizing", "grid", "layout", "flex";
+@import "sizing", "grid", "flex", "resize";
 
 @import "lists";
+
+/* Resets */
+@import "reset";
 
 /* Transition base and animations */
 @import "transform-origin", "transitions", "animations";

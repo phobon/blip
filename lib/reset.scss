@@ -1,0 +1,25 @@
+/* 
+    Basic reset-like functionality.
+*/
+
+html, body {
+    @extend .w-100;
+    @extend .h-100;
+    @extend .m-none;
+    @extend .p-none;
+}
+
+/*
+    Default everything to .border-box - it just makes everything simpler.
+*/
+html, body, 
+div, article, section, main, footer, header, 
+form, fieldset, 
+pre, code, 
+p, 
+ul, ol, li, 
+dl, dt, dd, 
+textarea, 
+input[type="text"], input[type="tel"], input[type="email"], input[type="url"], input[type="password"] {
+    @extend .border-box;
+}
