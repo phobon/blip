@@ -9,27 +9,27 @@ $base-font-size-responsive:     32px;
 
 $font-factor:       0.85rem;
 
-$f-1:                5 * $font-factor;
-$f-2:                4 * $font-factor;
-$f-3:                3 * $font-factor;
-$f-4:                2 * $font-factor;
-$f-5:                1 * $font-factor;
-$f-6:                0.875rem;
-$f-7:                0.75rem;
+$fs-1:                5 * $font-factor;
+$fs-2:                4 * $font-factor;
+$fs-3:                3 * $font-factor;
+$fs-4:                2 * $font-factor;
+$fs-5:                1 * $font-factor;
+$fs-6:                0.875rem;
+$fs-7:                0.75rem;
 
 $font-sizes: (
-    1: $f-1, 
-    2: $f-2, 
-    3: $f-3, 
-    4: $f-4,
-    5: $f-5, 
-    6: $f-6, 
-    7: $f-7
+    1: $fs-1, 
+    2: $fs-2, 
+    3: $fs-3, 
+    4: $fs-4,
+    5: $fs-5, 
+    6: $fs-6, 
+    7: $fs-7
 );
 
 @mixin font-size-proc {
     @each $i, $size in $font-sizes {
-        .f-#{$i} {
+        .fs-#{$i} {
             font-size: $size;
         }
     }
