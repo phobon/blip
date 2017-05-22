@@ -3,7 +3,7 @@
     border-radius styles correspond in size to things found in sizing.less (ie: for a perfectly round element, pick the same border radius as its size)
 */
 
-$br-s-none:               0;
+$br-s-0:                  0;
 $br-s-nano:               0.125rem;
 $br-s-tiny:               0.25rem;
 $br-s-small:              0.5rem;
@@ -14,7 +14,7 @@ $br-s-massive:            3rem;
 $br-s-100:                100%;
 
 $br-sizes: (
-    none: $br-s-none,
+    0: $br-s-0,
     nano: $br-s-nano,
     tiny: $br-s-tiny,
     small: $br-s-small,
@@ -52,7 +52,7 @@ $br-sizes: (
 @include border-ra-proc;
 
 $br-sizes-subset: (
-    none: $br-s-none,
+    0: $br-s-0,
     nano: $br-s-nano,
     tiny: $br-s-tiny,
     small: $br-s-small

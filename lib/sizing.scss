@@ -56,6 +56,12 @@ $sizes: (
     .co-b-#{$label} {
         bottom: $pos;
     }
+    .co-all-#{$label} {
+        left: $pos;
+        top: $pos;
+        bottom: $pos;
+        right: $pos;
+    }
 }
 
 @mixin dimension-proc($label, $size) {
