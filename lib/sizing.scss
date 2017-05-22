@@ -43,6 +43,21 @@ $sizes: (
     massive: $s-massive
 );
 
+@mixin coord-proc($label, $pos) {
+    .co-l-#{$label} {
+        left: $pos;
+    }
+    .co-t-#{$label} {
+        top: $pos;
+    }
+    .co-r-#{$label} {
+        right: $pos;
+    }
+    .co-b-#{$label} {
+        bottom: $pos;
+    }
+}
+
 @mixin dimension-proc($label, $size) {
     /* Height & Width */
     .h-#{$label} {
@@ -118,6 +133,7 @@ $sizes: (
         }
 
         @include dimension-proc($label, $size);
+        @include coord-proc($label, $size);
     }
 }
 
