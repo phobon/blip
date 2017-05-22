@@ -3,26 +3,14 @@
     border-radius styles correspond in size to things found in sizing.less (ie: for a perfectly round element, pick the same border radius as its size)
 */
 
-$br-s-0:                  0;
-$br-s-nano:               0.125rem;
-$br-s-tiny:               0.25rem;
-$br-s-small:              0.5rem;
-$br-s-medium:             1rem;
-$br-s-large:              1.25rem;
-$br-s-huge:               1.5rem;
-$br-s-massive:            1.75rem;
-$br-s-100:                100%;
-
 $br-sizes: (
-    0: $br-s-0,
-    nano: $br-s-nano,
-    tiny: $br-s-tiny,
-    small: $br-s-small,
-    medium: $br-s-medium,
-    large: $br-s-large,
-    huge: $br-s-huge,
-    massive: $br-s-massive,
-    100: $br-s-100
+    0: $s-0,
+    quarterrem: $s-quarterrem,
+    halfrem: $s-halfrem,
+    1rem: $s-1rem,
+    2rem: $s-2rem,
+    3rem: $s-3rem,
+    100: $s-100
 );
 
 @mixin border-ra-proc {
@@ -51,15 +39,8 @@ $br-sizes: (
 
 @include border-ra-proc;
 
-$br-sizes-subset: (
-    0: $br-s-0,
-    nano: $br-s-nano,
-    tiny: $br-s-tiny,
-    small: $br-s-small
-);
-
 @mixin border-proc {
-    @each $label, $size in $br-sizes-subset {
+    @each $label, $size in $br-sizes {
         %br-base {
             border-style: solid;
         }

@@ -4,8 +4,6 @@
 
 @import "depths";
 
-@import "borders";
-
 @import "box-sizing";
 @import "display";
 @import "positions";
@@ -21,7 +19,7 @@
 @import "text-align", "text-decoration", "text-transform", "line-height", "word-wrap";
 
 /* Sizing, flex and grid */
-@import "sizing", "grid", "flex", "resize";
+@import "sizing", "grid", "flex", "resize", "borders";
 
 @import "lists";
 

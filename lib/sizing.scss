@@ -21,26 +21,27 @@
 */
 
 $s-auto:        auto;
-$s-0:           0rem;
-$s-nano:        0.5rem;
-$s-tiny:        1rem;
-$s-small:       2rem;
-$s-medium:      3rem;
-$s-large:       4rem;
-$s-huge:        5rem;
-$s-massive:     6rem;
-$s-max:         100%;
+$s-0:           0;
+$s-quarterrem:  0.25rem;
+$s-halfrem:     0.5rem;
+$s-1rem:        1rem;
+$s-2rem:        2rem;
+$s-3rem:        3rem;
+$s-4rem:        4rem;
+$s-5rem:        5rem;
+$s-6rem:        6rem;
+$s-100:         100%;
 
 $sizes: (
     auto: $s-auto,
     0: $s-0,
-    nano: $s-nano,
-    tiny: $s-tiny,
-    small: $s-small,
-    medium: $s-medium,
-    large: $s-large,
-    huge: $s-huge,
-    massive: $s-massive
+    halfrem: $s-halfrem,
+    1rem: $s-1rem,
+    2rem: $s-2rem,
+    3rem: $s-3rem,
+    4rem: $s-4rem,
+    5rem: $s-5rem,
+    6rem: $s-6rem
 );
 
 @mixin coord-proc($label, $pos) {
@@ -146,4 +147,4 @@ $sizes: (
 @include sizing-proc;
 
 
-@include dimension-proc(100, 100%);
+@include dimension-proc(100, $s-100);
