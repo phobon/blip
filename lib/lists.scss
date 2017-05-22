@@ -11,6 +11,6 @@
 */
 ul, ol {
     @extend .ls-none;
-    @extend .m-none;
-    @extend .p-none;
+    @extend .m-0;
+    @extend .p-0;
 }

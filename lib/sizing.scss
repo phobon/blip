@@ -3,7 +3,7 @@
 
     This will generate classes that represent margins, paddings, widths and heights.
 
-    .m-none: no margin
+    .m-0: no margin
     .m-[size] : margin on all sides
     .m-l-[size] : left margin
     .m-r-[size] : right margin
@@ -21,7 +21,7 @@
 */
 
 $s-auto:        auto;
-$s-none:        0rem;
+$s-0:           0rem;
 $s-nano:        0.25rem;
 $s-tiny:        0.5rem;
 $s-small:       1rem;
@@ -33,7 +33,7 @@ $s-max:         100%;
 
 $sizes: (
     auto: $s-auto,
-    none: $s-none,
+    0: $s-0,
     nano: $s-nano,
     tiny: $s-tiny,
     small: $s-small,
