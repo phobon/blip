@@ -1,0 +1,16 @@
+﻿/*
+    Cursor-style atoms.
+*/
+$cursors: (
+    default, pointer, move
+);
+
+@mixin cursor-proc($cursors) {
+    @each $c in $cursors {
+        .cur-#{$c} {
+            cursor: $c;
+        }
+    }    
+}
+
+@include cursor-proc($cursors);

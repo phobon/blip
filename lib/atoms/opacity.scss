@@ -1,6 +1,8 @@
 ﻿/*
-    Element opacity
+    Mixin to build opacity atoms.
     This function will create classes corresponding to opacity values: 1 through to 0
+
+    .o-[percentage]:        Opacity based on percentage (ie: o-50: 50% or 0.5)
 */
 
 @mixin opacity-proc {

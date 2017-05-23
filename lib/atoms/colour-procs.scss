@@ -1,17 +1,17 @@
  /*
-    This file will generate a series of lightweight classes for each of the colours below:
+    Mixins to build colour atoms.
 
-    Colour swatches are not core to blip, so these are handled as separate files.
+    NOTE: Colour swatches are not native to blip, these are handled separately.
 
-    .@{color} : foreground colour
-    .@{color}-bg : background colour
-    .@{color}-f : fill colour
-    .@{color}-t-bg : transparent background colour
-    .@{color}-br : border colour
+    .c-[color] : foreground colour
+    .c-[color]-bg : background colour
+    .c-[color]-f : fill colour
+    .c-[color]-t-bg : transparent background colour
+    .c-[color]-br : border colour
 
-    .@{color}-l | -bg | -f | -t : light
-    .@{color}-m | -bg | -f | -t : medium
-    .@{color}-h | -bg | -f | -t : heavy
+    .c-[color]-l | -bg | -f | -t | -br : light
+    .c-[color]-m | -bg | -f | -t | -br : medium
+    .c-[color]-h | -bg | -f | -t | -br : heavy
 */
 
 @mixin basic-color-proc($colormap) {
@@ -20,19 +20,15 @@
         .c-#{$label} {
             color: $color;
         }
-
         .c-#{$label}-bg {
             background-color: $color;
         }
-
         .c-#{$label}-f {
             fill: $color;
         }
-
         .c-#{$label}-t-bg {
             background-color: fade($color, 50%);
         }
-
         .c-#{$label}-br {
             border-color: $color;
         }
@@ -47,42 +43,34 @@
     @each $label, $color in $colormap {
         $color-l: lighten($color, 5%);
         $color-h: darken($color, 5%);    
+
         .c-#{$label}-l {
             color: $color-l;
         }
-
         .c-#{$label}-l-bg {
             background-color: $color-l;
         }
-
         .c-#{$label}-l-f {
             fill: $color-l;
         }
-
         .c-#{$label}-l-t-bg {
             background-color: fade($color-l, 50%);
         }
-
         .c-#{$label}-h {
             color: $color-h;
         }
-
         .c-#{$label}-h-bg {
             background-color: $color-h;
         }
-
         .c-#{$label}-h-f {
             fill: $color-h;
         }
-
         .c-#{$label}-h-t-bg {
             background-color: fade($color-h, 50%);
-        }
-        
+        }        
         .c-#{$label}-l-br {
             border-color: $color-l;
         }
-
         .c-#{$label}-h-br {
             border-color: $color-h;
         }

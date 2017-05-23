@@ -1,0 +1,17 @@
+/*
+    List-style atoms.
+*/
+
+$ls-types: (
+    none, circle, square
+);
+
+@mixin ls-proc {
+    @each $ls in $ls-types {
+        .ls-#{$ls} {
+            list-style: $ls;
+        }
+    }
+}
+
+@include ls-proc;

@@ -1,0 +1,17 @@
+﻿/*
+    Display atoms.
+*/
+
+$d-types: (
+    block, inline, none, flex, inline-flex, table, table-cell
+);
+
+@mixin d-proc($types) {
+    @each $d in $types {
+        .d-#{$d} {
+            display: $d;
+        }
+    }
+}
+
+@include d-proc($d-types);

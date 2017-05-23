@@ -1,11 +1,10 @@
 ﻿/*
-    Some atomic classes for box-sizing.
+    Box-sizing atoms.
 */
 
 .border-box { 
     box-sizing: border-box; 
 }
-
 .content-box { 
     box-sizing: content-box; 
 }

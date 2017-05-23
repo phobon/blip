@@ -1,0 +1,17 @@
+﻿/*
+    Resize atoms.
+*/
+
+$resize-types: (
+    none, both, horizontal, vertical
+);
+
+@mixin resize-proc {
+    @each $r in $resize-types {
+        .resize-#{$r} {
+            resize: $r;
+        }
+    }
+}
+
+@include resize-proc;

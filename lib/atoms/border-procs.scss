@@ -1,0 +1,90 @@
+﻿/*
+    Mixins to build border atoms.
+
+    .br-[size] : Solid border of [size]
+
+    .br-l-[size] : Solid left border of [size]
+    .br-r-[size] : Solid right border of [size]
+    .br-b-[size] : Solid bottom border of [size]
+    .br-t-[size] : Solid top border of [size]
+
+    .br-horizontal-[size] : Solid horizontal (left & right) border of [size]
+    .br-vertical-[size] : Solid vertical (top & bottom) border of [size]
+
+    .br-ra-[size]: Border radius of [size]
+    .br-ra-tl-[size]: Top-left border radius of [size]
+    .br-ra-tr-[size]: Top-right border radius of [size]
+    .br-ra-bl-[size]: Bottom-left border radius of [size]
+    .br-ra-br-[size]: Bottom-right border radius of [size]
+*/
+
+$br-sizes: (
+    0: $s-0,
+    quarterrem: $s-quarterrem,
+    halfrem: $s-halfrem,
+    1rem: $s-1rem,
+    2rem: $s-2rem,
+    3rem: $s-3rem
+);
+
+@mixin border-proc($sizes) {
+    @each $label, $size in $sizes {
+        %br-base {
+            border-style: solid;
+        }
+
+        .br-#{$label} {            
+            @extend %br-base;
+            border-width: $size;
+        }
+        .br-t-#{$label} {
+            @extend %br-base;
+            border-top: $size;
+        }
+        .br-b-#{$label} {
+            @extend %br-base;
+            border-bottom: $size;
+        }
+        .br-l-#{$label} {
+            @extend %br-base;
+            border-left: $size;
+        }
+        .br-r-#{$label} {
+            @extend %br-base;
+            border-right: $size;
+        }
+        .br-horizontal-#{$label} {
+            @extend %br-base;
+            border-left: $size;
+            border-right: $size;
+        }
+        .br-vertical-#{$label} {
+            @extend %br-base;
+            border-left: $size;
+            border-right: $size;
+        }
+
+        .br-ra-#{$label} {
+            border-radius: $size;
+        }
+        .br-ra-tl-#{$label} {
+            border-top-left-radius: $size;
+        }
+        .br-ra-tr-#{$label} {
+            border-top-right-radius: $size;
+        }
+        .br-ra-bl-#{$label} {
+            border-bottom-left-radius: $size;
+        }
+        .br-ra-br-#{$label} {
+            border-bottom-right-radius: $size;
+        }
+    }
+}
+
+@include border-proc($br-sizes);
+
+// Circular border radius.
+.br-ra-100 {
+    border-radius: $s-100;
+}

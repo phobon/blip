@@ -1,30 +1,33 @@
 /*
-    Core, modular styles.
+    Blip, atomic css framework.
 */
 
-@import "depths";
-
-@import "box-sizing";
-@import "display";
-@import "positions";
-@import "overflow";
-
-@import "opacity";
-
-@import "cursor";
-@import "pointer-events";
+@import "atoms/z-index";
+@import "atoms/box-sizing";
+@import "atoms/display";
+@import "atoms/positions";
+@import "atoms/overflow";
+@import "atoms/opacity";
+@import "atoms/cursor";
+@import "atoms/pointer-events";
+@import "atoms/resize";
+@import "atoms/user-select";
+@import "atoms/visibility";
+@import "atoms/list-style";
 
 /* Fonts and typography */
-@import "font-family", "font-size", "font-style", "font-weight", "typography";
-@import "text-align", "text-decoration", "text-transform", "line-height", "word-wrap";
+@import "atoms/font-family", "atoms/font-size", "atoms/font-style", "atoms/font-weight", "atoms/typography";
+@import "atoms/text-align", "atoms/text-decoration", "atoms/text-transform", "atoms/line-height", "atoms/word-wrap";
 
 /* Sizing, flex and grid */
-@import "sizing", "grid", "flex", "resize", "borders";
+@import "atoms/sizing", "atoms/grid-procs", "atoms/flex", "atoms/resize";
+@import "atoms/border-procs", "atoms/border-style";
 
-@import "lists";
-
-/* Resets */
-@import "reset";
+/* Colour procs */
+@import "atoms/colour-procs";
 
 /* Transition base and animations */
-@import "transform-origin", "transitions", "animations";
+@import "atoms/transform-origin", "atoms/transitions", "atoms/animations";
+
+/* Resets */
+@import "atoms/reset";

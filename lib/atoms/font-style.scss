@@ -1,0 +1,17 @@
+﻿/*
+    Font-style atoms.
+*/
+
+$fs-types: (
+    italic, normal, oblique
+);
+
+@mixin fs-proc {
+    @each $s in $fs-types {
+        .fs-#{$s} {
+            font-style: $s;
+        }
+    }
+}
+
+@include fs-proc;

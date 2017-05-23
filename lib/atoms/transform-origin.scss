@@ -1,0 +1,23 @@
+﻿/*
+    Transform-origin atoms.
+*/
+
+$to-types: (
+    l: left,
+    r: right,
+    center: center,
+    l-t: left top,
+    l-b: left bottom,
+    r-t: right top,
+    r-b: right bottom,
+);
+
+@mixin to-proc {
+    @each $l, $v in $to-types {
+        .to-#{$l} {
+            transform-origin: $v;
+        }
+    }
+}
+
+@include to-proc;

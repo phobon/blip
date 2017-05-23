@@ -1,12 +1,29 @@
 /* 
-    Basic reset-like functionality.
+    Resets for blip design system.
 */
+
+$base-font-size:                8px;
+$base-font-size-responsive:     16px;
+
+/* 
+    Set the base font size on our html element. 
+*/
+html {
+    font-size: $base-font-size;
+}
 
 html, body {
     @extend .w-100;
     @extend .h-100;
     @extend .m-0;
     @extend .p-0;
+}
+
+/* 
+    Set the font size again as we want it to be slightly smaller than the base font size. 
+*/
+body {
+    @extend .fs-6;
 }
 
 /*
@@ -24,14 +41,13 @@ input[type="text"], input[type="tel"], input[type="email"], input[type="url"], i
     @extend .border-box;
 }
 
-/* Set the base font size on our html element. */
-html {
-    font-size: $base-font-size;
-}
-
-/* Set the font size again as we want it to be slightly smaller than the base font size. */
-body {
-    @extend .fs-6;
+/*
+    Basic style for lists with no adornment.
+*/
+ul, ol {
+    @extend .ls-none;
+    @extend .m-0;
+    @extend .p-0;
 }
 
 /*

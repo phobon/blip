@@ -1,11 +1,11 @@
 ﻿/*
-    Font sizes.
-    The base font sizes are extremely important, because it handles all sizing. We use rem for our sizing to create a consistent experience
-    across responsive environments.
-*/
+    Font-size atoms.
 
-$base-font-size:                8px;
-$base-font-size-responsive:     16px;
+    The font-size system is based around rems; so the base font-size of the site is extremely important. We use rem for sizing to create a consitent
+    experience across responsive environments.
+
+    .fs-[size]:     Descending font-size. The larger the number, the smaller the font-size is; to match header styles.
+*/
 
 $font-factor:           1.75rem;
 

@@ -1,5 +1,5 @@
 /*
-    Flexbox model classes
+    Flexbox model atoms
 
     This is the engine-room for a lot of what blip is about - the flexbox layout model.
     This class contains a set of modular classes that are designed to live on their to handle the majority of layout.
@@ -25,63 +25,76 @@
 /* 
     Flex alignment and justification 
 */
-.f-ai-start {
-    align-items: flex-start;
-}
-.f-ai-center {
-    align-items: center;
-}
-.f-ai-end {
-    align-items: flex-end;
-}
-.f-ai-stretch {
-    align-items: stretch;
+$f-standard: (
+    flex-start, center, flex-end
+);
+$f-ai: (
+    stretch
+);
+$f-j: (
+    space-around, space-between
+);
+
+@mixin f-ai-as-j-proc {
+    @each $v in $f-standard {
+        .f-ai-#{$v} {
+            align-items: $v;
+        }
+        .f-as-#{$v} {
+            align-self: $v;
+        }
+        .f-j-#{$v} {
+            justify-content: $v;
+        }
+    }
+
+    @each $v in $f-ai {
+        .f-ai-#{$v} {
+            align-items: $v;
+        }
+    }
+    @each $v in $f-j {
+        .f-j-#{$v} {
+            justify-content: $v;
+        }
+    }
 }
 
-.f-as-start {
-    align-self: flex-start;
-}
-.f-as-center {
-    align-self: center;
-}
-.f-as-end {
-    align-self: flex-end;
+@include f-ai-as-j-proc;
+
+/* 
+    Flex wrapping 
+*/
+$f-w: (
+    wrap, nowrap, wrap-reverse
+);
+
+@mixin f-w-proc {
+    @each $v in $f-w {
+        .f-w-#{$v} {
+            flex-wrap: $v;
+        }
+    }
 }
 
-.f-j-start {
-    justify-content: flex-start;
-}
-.f-j-center {
-    justify-content: center;
-}
-.f-j-end {
-    justify-content: flex-end;
-}
-.f-j-spacearound {
-    justify-content: space-around;
-}
-.f-j-spacebetween {
-    justify-content: space-between;
+@include f-w-proc;
+
+/* 
+    Direction 
+*/
+$f-d: (
+    row, column
+);
+
+@mixin f-d-proc {
+    @each $v in $f-d {
+        .f-d-#{$v} {
+            flex-direction: $v;
+        }
+    }
 }
 
-/* Flex wrapping */
-.f-w {
-    flex-wrap: wrap;
-}
-.f-w-none {
-    flex-wrap: nowrap;
-}
-.f-w-reverse {
-    flex-wrap: wrap-reverse;
-}
-
-/* Direction */
-.f-d-row {
-    flex-direction: row;
-}
-.f-d-column {
-    flex-direction: column;
-}
+@include f-d-proc;
 
 /*
     Makes an element flexible and fills a container.

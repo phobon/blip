@@ -1,0 +1,22 @@
+﻿/*
+    Overflow atoms.
+*/
+$of-types: (
+    auto, visible, hidden, scroll
+);
+
+@mixin of-proc {
+    @each $of in $of-types {
+        .of-#{$of} {
+            overflow: $of;
+        }
+        .of-x-#{$of} {
+            overflow-x: $of;
+        }
+        .of-y-#{$of} {
+            overflow-y: $of;
+        }
+    }
+}
+
+@include of-proc;

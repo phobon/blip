@@ -1,0 +1,17 @@
+/*
+    Border-style atoms.
+*/
+
+$br-styles: (
+    solid, dashed, dotted
+);
+
+@mixin br-proc($styles) {
+    @each $s in $styles {
+        .br-st-#{$s} {
+            border-style: $s;
+        }
+    }
+}
+
+@include br-proc($br-styles);
