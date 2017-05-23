@@ -26,7 +26,9 @@
     Flex alignment and justification 
 */
 $f-standard: (
-    flex-start, center, flex-end
+    start: flex-start, 
+    center: center, 
+    end: flex-end
 );
 $f-ai: (
     stretch
@@ -36,14 +38,14 @@ $f-j: (
 );
 
 @mixin f-ai-as-j-proc {
-    @each $v in $f-standard {
-        .f-ai-#{$v} {
+    @each $l, $v in $f-standard {
+        .f-ai-#{$l} {
             align-items: $v;
         }
-        .f-as-#{$v} {
+        .f-as-#{$l} {
             align-self: $v;
         }
-        .f-j-#{$v} {
+        .f-j-#{$l} {
             justify-content: $v;
         }
     }
