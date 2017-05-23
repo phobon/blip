@@ -1,5 +1,5 @@
 /*
-    A set of colours inspired by materialui.co/metrocolors.
+    A set of colours inspired by materialui.co/metrocolours.
     These are treated as a separate module to blip, so are handled separately.
  */
 
@@ -57,4 +57,4 @@ $c-metro: (
     sienna: $c-m-sienna
 );
 
-@include color-proc($c-metro);
+@include colour-proc($c-metro);

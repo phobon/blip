@@ -1,5 +1,5 @@
 /*
-    A set of colours inspired by flatuicolors.com.
+    A set of colours inspired by flatuicolours.com.
     These are treated as a separate module to blip, so are handled separately.
  */
 
@@ -58,4 +58,4 @@ $flat: (
     asbestos: $c-f-asbestos
 );
 
-@include color-proc($flat);
+@include colour-proc($flat);

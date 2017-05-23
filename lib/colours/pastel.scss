@@ -1,5 +1,5 @@
 /*
-    A set of pastel colours inspired by flatuicolors.com.
+    A set of pastel colours inspired by flatuicolours.com.
     These are treated as a separate module to blip, so are handled separately.
  */
 
@@ -33,4 +33,4 @@ $pastel: (
     p-asbestos: $c-p-asbestos
 );
 
-@include color-proc($pastel);
+@include colour-proc($pastel);

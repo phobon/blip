@@ -3,76 +3,76 @@
 
     NOTE: Colour swatches are not native to blip, these are handled separately.
 
-    .c-[color] : foreground colour
-    .c-[color]-bg : background colour
-    .c-[color]-f : fill colour
-    .c-[color]-t-bg : transparent background colour
-    .c-[color]-br : border colour
+    .c-[colour] : foreground colour
+    .c-[colour]-bg : background colour
+    .c-[colour]-f : fill colour
+    .c-[colour]-t-bg : transparent background colour
+    .c-[colour]-br : border colour
 
-    .c-[color]-l | -bg | -f | -t | -br : light
-    .c-[color]-m | -bg | -f | -t | -br : medium
-    .c-[color]-h | -bg | -f | -t | -br : heavy
+    .c-[colour]-l | -bg | -f | -t | -br : light
+    .c-[colour]-m | -bg | -f | -t | -br : medium
+    .c-[colour]-h | -bg | -f | -t | -br : heavy
 */
 
-@mixin basic-color-proc($colormap) {
-    @each $label, $color in $colormap {
-        /* Generic - color, background, fill and transparent */
+@mixin basic-colour-proc($colourmap) {
+    @each $label, $colour in $colourmap {
+        /* Generic - colour, background, fill and transparent */
         .c-#{$label} {
-            color: $color;
+            color: $colour;
         }
         .c-#{$label}-bg {
-            background-color: $color;
+            background-color: $colour;
         }
         .c-#{$label}-f {
-            fill: $color;
+            fill: $colour;
         }
         .c-#{$label}-t-bg {
-            background-color: fade($color, 50%);
+            background-color: fade($colour, 50%);
         }
         .c-#{$label}-br {
-            border-color: $color;
+            border-color: $colour;
         }
     }
 }
 
-@mixin color-proc($colormap) {
-    // Include the basic color procs.
-    @include basic-color-proc($colormap);
+@mixin colour-proc($colourmap) {
+    // Include the basic colour procs.
+    @include basic-colour-proc($colourmap);
 
     /* Lights, darks and corresponding transparents */
-    @each $label, $color in $colormap {
-        $color-l: lighten($color, 5%);
-        $color-h: darken($color, 5%);    
+    @each $label, $colour in $colourmap {
+        $colour-l: lighten($colour, 5%);
+        $colour-h: darken($colour, 5%);    
 
         .c-#{$label}-l {
-            color: $color-l;
+            color: $colour-l;
         }
         .c-#{$label}-l-bg {
-            background-color: $color-l;
+            background-color: $colour-l;
         }
         .c-#{$label}-l-f {
-            fill: $color-l;
+            fill: $colour-l;
         }
         .c-#{$label}-l-t-bg {
-            background-color: fade($color-l, 50%);
+            background-color: fade($colour-l, 50%);
         }
         .c-#{$label}-h {
-            color: $color-h;
+            color: $colour-h;
         }
         .c-#{$label}-h-bg {
-            background-color: $color-h;
+            background-color: $colour-h;
         }
         .c-#{$label}-h-f {
-            fill: $color-h;
+            fill: $colour-h;
         }
         .c-#{$label}-h-t-bg {
-            background-color: fade($color-h, 50%);
+            background-color: fade($colour-h, 50%);
         }        
         .c-#{$label}-l-br {
-            border-color: $color-l;
+            border-color: $colour-l;
         }
         .c-#{$label}-h-br {
-            border-color: $color-h;
+            border-color: $colour-h;
         }
     }    
 }
