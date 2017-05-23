@@ -3,7 +3,7 @@
 */
 
 $d-types: (
-    block, inline, none, flex, inline-flex, table, table-cell
+    block, inline, inline-block, none, flex, inline-flex, table, table-cell
 );
 
 @mixin d-proc($types) {
