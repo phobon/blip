@@ -8,7 +8,7 @@
     .row-[count]:       Row based on size of count with vertical gutter
 */
 
-$gutter:    $s-halfrem;
+$default-gutter:    $s-halfrem;
 
 $grid-sizes: (
     1: $s-100,
@@ -18,19 +18,24 @@ $grid-sizes: (
     5: $s-20
 );
 
-@mixin grid-proc($g) {
-    @each $l, $s in $grid-sizes {
-        .col-#{$l} {
+@mixin grid-proc($cols, $gutter) {
+    $cell: 100% / $cols;
+
+    @for $i from 1 through $cols {
+        $s: $cell * $i;
+        
+        .col-#{$i} {
             width: $s;
-            padding-left: $g;
-            padding-right: $g;
+            padding-left: $gutter;
+            padding-right: $gutter;
         }
-        .row-#{$l} {
+        .row-#{$i} {
             height: $s;
-            padding-top: $g;
-            padding-bottom: $g;
+            padding-top: $gutter;
+            padding-bottom: $gutter;
         }
     }    
 }
 
-@include grid-proc($gutter);
+// Basic 8 cell grid.
+@include grid-proc(8, $default-gutter);
