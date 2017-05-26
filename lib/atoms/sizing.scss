@@ -31,6 +31,7 @@ $s-5rem:        5rem;
 $s-6rem:        6rem;
 
 $s-0:           0;
+$s-1:           1px;
 $s-90:          90%;
 $s-80:          80%;
 $s-70:          70%;
@@ -48,6 +49,7 @@ $s-100:         100%;
 $sizes: (
     auto: $s-auto,
     0: $s-0,
+    1: $s-1,
     halfrem: $s-halfrem,
     1rem: $s-1rem,
     2rem: $s-2rem,
