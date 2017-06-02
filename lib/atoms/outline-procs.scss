@@ -1,0 +1,30 @@
+/*
+    Mixins to build outline atoms.
+
+    .oline-[size] : Solid outline of [size]
+*/
+
+$oline-sizes: (
+    0: $s-0,
+    1: $s-1,
+    quarterrem: $s-quarterrem,
+    halfrem: $s-halfrem,
+    1rem: $s-1rem,
+    2rem: $s-2rem,
+    3rem: $s-3rem
+);
+
+@mixin oline-proc($sizes) {
+    @each $label, $size in $sizes {
+        %oline-base {
+            outline-style: solid;
+        }
+
+        .oline-#{$label} {            
+            @extend %oline-base;
+            outline-width: $size;
+        }
+    }
+}
+
+@include oline-proc($oline-sizes);

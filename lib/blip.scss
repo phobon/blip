@@ -22,6 +22,7 @@
 /* Sizing, flex and grid */
 @import "atoms/sizing", "atoms/grid-procs", "atoms/flex", "atoms/resize";
 @import "atoms/border-procs", "atoms/border-style";
+@import "atoms/outline-procs", "atoms/outline-offset", "atoms/outline-style";
 
 /* Colour procs */
 @import "atoms/colour-procs";

@@ -32,6 +32,9 @@
         .c-#{$label}-br {
             border-color: $colour;
         }
+        .c-#{$label}-oline {
+            outline-color: $colour;
+        }
     }
 }
 
@@ -73,6 +76,12 @@
         }
         .c-#{$label}-h-br {
             border-color: $colour-h;
+        }
+        .c-#{$label}-l-oline {
+            outline-color: $colour-l;
+        }
+        .c-#{$label}-h-oline {
+            outline-color: $colour-h;
         }
     }    
 }
