@@ -48,16 +48,25 @@ $f-j: (
         .f-j-#{$l} {
             justify-content: $v;
         }
+        .f-ac-#{$l} {
+            align-content: $v;
+        }
     }
 
     @each $v in $f-ai {
         .f-ai-#{$v} {
             align-items: $v;
         }
+        .f-ac-#{$v} {
+            align-content: $v;
+        }
     }
     @each $v in $f-j {
         .f-j-#{$v} {
             justify-content: $v;
+        }
+        .f-ac-#{$v} {
+            align-content: $v;
         }
     }
 }

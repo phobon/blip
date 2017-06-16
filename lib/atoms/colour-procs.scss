@@ -26,6 +26,9 @@
         .c-#{$label}-f {
             fill: $colour;
         }
+        .c-#{$label}-str {
+            stroke: $colour;
+        }
         .c-#{$label}-t-bg {
             background-color: fade($colour, 50%);
         }
@@ -67,6 +70,9 @@
         }
         .c-#{$label}-h-f {
             fill: $colour-h;
+        }
+        .c-#{$label}-h-str {
+            stroke: $colour-h;
         }
         .c-#{$label}-h-t-bg {
             background-color: fade($colour-h, 50%);
