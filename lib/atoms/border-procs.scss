@@ -18,16 +18,6 @@
     .br-ra-br-[size]: Bottom-right border radius of [size]
 */
 
-$br-sizes: (
-    0: $s-0,
-    1: $s-1,
-    quarterrem: $s-quarterrem,
-    halfrem: $s-halfrem,
-    1rem: $s-1rem,
-    2rem: $s-2rem,
-    3rem: $s-3rem
-);
-
 @mixin border-proc($sizes) {
     @each $label, $size in $sizes {
         %br-base {
@@ -83,9 +73,7 @@ $br-sizes: (
     }
 }
 
-@include border-proc($br-sizes);
-
 // Circular border radius.
 .br-ra-100 {
-    border-radius: $s-100;
+    border-radius: 100%;
 }

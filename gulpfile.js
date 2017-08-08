@@ -15,18 +15,35 @@ gulp.task('clean', function() {
 });
 
 // Compile less files (css preprocessor)
-gulp.task('minify', function() {
+gulp.task('full:minify', function() {
     var processors = [autoprefixer, nano];    
-    return gulp.src('./lib/blip.scss')
+    return gulp.src('./lib/blip-full.scss')
         .pipe(sass())
         .pipe(postcss(processors))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('./bin'))
 });
 
-gulp.task('verbose', function() {
+gulp.task('full:verbose', function() {
     var processors = [autoprefixer];    
-    return gulp.src('./lib/blip.scss')
+    return gulp.src('./lib/blip-full.scss')
+        .pipe(sass())
+        .pipe(postcss(processors))
+        .pipe(gulp.dest('./bin'))
+});
+
+gulp.task('cutdown:minify', function() {
+    var processors = [autoprefixer, nano];    
+    return gulp.src('./lib/blip-cutdown.scss')
+        .pipe(sass())
+        .pipe(postcss(processors))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest('./bin'))
+});
+
+gulp.task('cutdown:verbose', function() {
+    var processors = [autoprefixer];    
+    return gulp.src('./lib/blip-cutdown.scss')
         .pipe(sass())
         .pipe(postcss(processors))
         .pipe(gulp.dest('./bin'))
@@ -50,6 +67,6 @@ gulp.task('verbose-colours', function() {
         .pipe(gulp.dest('./bin/colours'))
 });
 
-gulp.task('transpile', ['clean', 'minify', 'verbose']);
-gulp.task('dev', ['clean', 'verbose', 'verbose-colours']);
-gulp.task('release', ['clean', 'minify', 'minify-colours']);
+gulp.task('transpile', ['clean', 'full:minify', 'full:verbose']);
+gulp.task('dev', ['clean', 'full:verbose', 'cutdown:verbose', 'verbose-colours']);
+gulp.task('release', ['clean', 'full:minify', 'cutdown:minify','minify-colours']);

@@ -1,9 +1,6 @@
 ﻿/*
     Cursor-style atoms.
 */
-$cursors: (
-    default, pointer, move
-);
 
 @mixin cursor-proc($cursors) {
     @each $c in $cursors {
@@ -13,4 +10,6 @@ $cursors: (
     }    
 }
 
-@include cursor-proc($cursors);
+@include cursor-proc((
+    default, pointer, move
+));

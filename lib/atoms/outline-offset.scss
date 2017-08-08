@@ -2,15 +2,6 @@
     Outline-offset atoms.
 */
 
-$oline-offset-sizes: (
-    0: $s-0,
-    1: $s-1,
-    quarterrem: $s-quarterrem,
-    halfrem: $s-halfrem,
-    1rem: $s-1rem,
-    2rem: $s-2rem
-);
-
 @mixin oline-offset-proc($sizes) {
     @each $label, $size in $sizes {
         .oline-offset-#{$label} {
@@ -18,5 +9,3 @@ $oline-offset-sizes: (
         }
     }
 }
-
-@include oline-offset-proc($oline-offset-sizes);

@@ -2,10 +2,6 @@
     Outline-style atoms.
 */
 
-$oline-styles: (
-    solid, dashed, dotted
-);
-
 @mixin oline-style-proc($styles) {
     @each $s in $styles {
         .oline-st-#{$s} {
@@ -14,4 +10,6 @@ $oline-styles: (
     }
 }
 
-@include oline-style-proc($oline-styles);
+@include oline-style-proc((
+    solid, dashed, dotted
+));

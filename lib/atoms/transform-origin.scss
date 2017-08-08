@@ -2,7 +2,15 @@
     Transform-origin atoms.
 */
 
-$to-types: (
+@mixin to-proc($types) {
+    @each $l, $v in $types {
+        .to-#{$l} {
+            transform-origin: $v;
+        }
+    }
+}
+
+@include to-proc((
     l: left,
     r: right,
     center: center,
@@ -10,14 +18,4 @@ $to-types: (
     l-b: left bottom,
     r-t: right top,
     r-b: right bottom,
-);
-
-@mixin to-proc {
-    @each $l, $v in $to-types {
-        .to-#{$l} {
-            transform-origin: $v;
-        }
-    }
-}
-
-@include to-proc;
+));

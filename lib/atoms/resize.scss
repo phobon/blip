@@ -2,16 +2,14 @@
     Resize atoms.
 */
 
-$resize-types: (
-    none, both, horizontal, vertical
-);
-
-@mixin resize-proc {
-    @each $r in $resize-types {
+@mixin resize-proc($types) {
+    @each $r in $types {
         .resize-#{$r} {
             resize: $r;
         }
     }
 }
 
-@include resize-proc;
+@include resize-proc((
+    none, both, horizontal, vertical
+));

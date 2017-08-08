@@ -1,19 +1,18 @@
 ﻿/*
     Text-alignment atoms.
 */
-$ta-types: (
-    justify: justify,
-    center: center,
-    l: left,
-    r: right
-);
 
-@mixin ta-proc {
-    @each $l, $v in $ta-types {
+@mixin ta-proc($types) {
+    @each $l, $v in $types {
         .ta-#{$l} {
             text-align: $l;
         }
     }
 }
 
-@include ta-proc;
+@include ta-proc((
+    justify: justify,
+    center: center,
+    l: left,
+    r: right
+));

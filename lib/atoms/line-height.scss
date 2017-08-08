@@ -2,20 +2,10 @@
     Line-height atoms.
 */
 
-$lh-solid:            1;
-$lh-title:          1.3;
-$lh-copy:           1.6;
-
-$line-heights: (
-    solid: $lh-solid, title: $lh-title, copy: $lh-copy
-);
-
-@mixin line-height-proc {
-    @each $label, $size in $line-heights {
+@mixin line-height-proc($heights) {
+    @each $label, $size in $heights {
         .lh-#{$label} {
             line-height: $size;
         }
     }
 }
-
-@include line-height-proc;

@@ -2,10 +2,6 @@
     Display atoms.
 */
 
-$d-types: (
-    block, inline, inline-block, none, flex, inline-flex, table, table-cell
-);
-
 @mixin d-proc($types) {
     @each $d in $types {
         .d-#{$d} {
@@ -14,4 +10,6 @@ $d-types: (
     }
 }
 
-@include d-proc($d-types);
+@include d-proc((
+    block, inline, inline-block, none, flex, inline-flex, table, table-cell
+));

@@ -2,16 +2,14 @@
     List-style atoms.
 */
 
-$ls-types: (
-    none, circle, square
-);
-
-@mixin ls-proc {
-    @each $ls in $ls-types {
+@mixin ls-proc($types) {
+    @each $ls in $types {
         .ls-#{$ls} {
             list-style: $ls;
         }
     }
 }
 
-@include ls-proc;
+@include ls-proc((
+    none, circle, square
+));

@@ -2,10 +2,6 @@
     Border-style atoms.
 */
 
-$br-styles: (
-    solid, dashed, dotted
-);
-
 @mixin br-proc($styles) {
     @each $s in $styles {
         .br-st-#{$s} {
@@ -14,4 +10,6 @@ $br-styles: (
     }
 }
 
-@include br-proc($br-styles);
+@include br-proc((
+    solid, dashed, dotted
+));
