@@ -6,7 +6,7 @@
 */
 
 @mixin opacity-proc($divisions) {
-    $division: (1 / $divisions) * 100;
+    $division: (1 / $divisions) * 1000;
     
     $i: 0;
     @while $i <= 1 {
