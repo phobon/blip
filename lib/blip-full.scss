@@ -185,3 +185,11 @@ $font-factor:           1.75rem;
     Note that this will probably become irrelevant the more CSS Grid support picks up.
 */
 @include grid-proc(8, $s-halfrem);
+
+/*
+    Box shadows.
+    Simple box shadow classes with default values.
+*/
+@include bshad-proc((
+    halfrem: $s-halfrem
+));
