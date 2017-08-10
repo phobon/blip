@@ -8,7 +8,7 @@
 
 @mixin tt-procs($types) {
     @each $l, $v in $types {
-        .td-#{$l} {
+        .tt-#{$l} {
             @include tt($v);
         }
     }
