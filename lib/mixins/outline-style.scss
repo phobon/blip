@@ -1,0 +1,6 @@
+/*
+    Outline-style mixins
+*/
+@mixin oline-st($type) {
+    outline-style: $type;
+}

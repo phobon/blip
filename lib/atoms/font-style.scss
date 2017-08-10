@@ -2,10 +2,6 @@
     Font-style atoms.
 */
 
-@mixin f-st($type) {
-    font-style: $type;
-}
-
 @mixin f-st-proc($types) {
     @each $s in $types {
         .f-st-#{$s} {

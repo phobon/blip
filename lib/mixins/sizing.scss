@@ -1,0 +1,88 @@
+﻿/* 
+    Sizing mixins
+*/
+@mixin co-l($pos) {
+    left: $pos;
+}
+@mixin co-t($pos) {
+    top: $pos;
+}
+@mixin co-r($pos) {
+    right: $pos;
+}
+@mixin co-b($pos) {
+    bottom: $pos;
+}
+@mixin co-all($pos) {
+    left: $pos;
+    top: $pos;
+    bottom: $pos;
+    right: $pos;
+}
+
+@mixin h($size) {
+    height: $size;
+}
+@mixin h-min($size) {
+    min-height: $size;
+}
+@mixin h-max($size) {
+    max-height: $size;
+}
+@mixin w($size) {
+    width: $size;
+}
+@mixin w-min($size) {
+    min-width: $size;
+}
+@mixin w-max($size) {
+    max-width: $size;
+}
+
+@mixin m($size) {
+    margin: $size;
+}
+@mixin m-l($size) {
+    margin-left: $size;
+}
+@mixin m-r($size) {
+    margin-right: $size;
+}
+@mixin m-horizontal($size) {
+    margin-left: $size;
+    margin-right: $size;
+}
+@mixin m-t($size) {
+    margin-top: $size;
+}
+@mixin m-b($size) {
+    margin-bottom: $size;
+}
+@mixin m-vertical($size) {
+    margin-top: $size;
+    margin-bottom: $size;
+}
+
+@mixin p($size) {
+    padding: $size;
+}
+@mixin p-l($size) {
+    padding-left: $size;
+}
+@mixin p-r($size) {
+    padding-right: $size;
+}
+@mixin p-horizontal($size) {
+    padding-left: $size;
+    padding-right: $size;
+}   
+@mixin p-t($size) {
+    padding-top: $size;
+}
+@mixin p-b($size) {
+    padding-bottom: $size;
+}
+@mixin p-vertical($size) {
+    padding-top: $size;
+    padding-bottom: $size;
+}

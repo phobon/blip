@@ -2,10 +2,6 @@
     User-select atoms.
 */
 
-@mixin us($type) {
-    user-select: $type;
-}
-
 @mixin us-proc($types) {
     @each $us in $types {
         .us-#{$us} {

@@ -1,0 +1,59 @@
+/*
+    Flexbox model mixins.
+*/
+
+/* 
+    Handle flex grow and shrink extents 
+*/
+@mixin f-grow($amount) {
+    flex-grow: $amount;
+}
+@mixin f-shrink($amount) {
+    flex-shrink: $amount;
+}
+
+/* 
+    Flex alignment and justification 
+*/
+@mixin f-ai($type) {
+    align-items: $type;
+}
+@mixin f-as($type) {
+    align-self: $type;
+}
+@mixin f-j($type) {
+    justify-content: $type;
+}
+@mixin f-ac($type) {
+    align-content: $type;
+}
+
+/* 
+    Flex wrapping 
+*/
+@mixin f-w($type) {
+    flex-wrap: $type;
+}
+
+/* 
+    Direction 
+*/
+@mixin f-d($type) {
+    flex-direction: $type;
+}
+
+/*
+    Makes an element flexible and fills a container.
+*/
+@mixin f() {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+/*
+    Makes an element flexible but sizes to its own content.
+*/
+@mixin f-none() {
+    display: flex;
+    flex: none;
+}

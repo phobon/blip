@@ -1,0 +1,6 @@
+/*
+    List-style atoms.
+*/
+@mixin ls($type) {
+    list-style: $type;
+}

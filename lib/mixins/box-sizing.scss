@@ -1,0 +1,6 @@
+﻿/*
+    Box-sizing mixins.
+*/
+@mixin bs($type) {
+    box-sizing: $type;
+}

@@ -1,0 +1,6 @@
+﻿/*
+    Pointer-events mixins.
+*/
+@mixin pe($type) {
+    pointer-events: $type;
+}

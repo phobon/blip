@@ -1,0 +1,6 @@
+﻿/*
+    Font-style mixins.
+*/
+@mixin f-st($type) {
+    font-style: $type;
+}

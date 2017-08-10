@@ -2,10 +2,6 @@
     List-style atoms.
 */
 
-@mixin ls($type) {
-    list-style: $type;
-}
-
 @mixin ls-proc($types) {
     @each $ls in $types {
         .ls-#{$ls} {

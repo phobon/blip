@@ -1,0 +1,6 @@
+﻿/*
+    Transform-origin mixins.
+*/
+@mixin to($pos) {
+    transform-origin: $pos;
+}

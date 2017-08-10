@@ -1,0 +1,42 @@
+﻿/*
+    Mixins to build border atoms
+*/
+@mixin br($size) {
+    border-width: $size;
+}
+@mixin br-t($size) {
+    border-top-width: $size;
+}
+@mixin br-b($size) {
+    border-bottom-width: $size;
+}
+@mixin br-l($size) {
+    border-left-width: $size;
+}
+@mixin br-r($size) {
+    border-right-width: $size;
+}
+@mixin br-horizontal($size) {
+    border-left-width: $size;
+    border-right-width: $size;
+}
+@mixin br-vertical($size) {
+    border-top-width: $size;
+    border-bottom-width: $size;
+}
+
+@mixin br-ra($size) {
+    border-radius: $size;
+}
+@mixin br-ra-tl($size) {
+    border-top-left-radius: $size;
+}
+@mixin br-ra-tr($size) {
+    border-top-right-radius: $size;
+}
+@mixin br-ra-bl($size) {
+    border-bottom-left-radius: $size;
+}
+@mixin br-ra-br($size) {
+    border-bottom-right-radius: $size;
+}

@@ -1,0 +1,39 @@
+/*
+    Blip, atomic css framework mixins
+    This file contains the core mixins for the system.
+*/
+
+@import "mixins/border-procs";
+@import "mixins/border-style";
+@import "mixins/box-shadow";
+@import "mixins/box-sizing";
+@import "mixins/colour-procs";
+@import "mixins/cursor";
+@import "mixins/display";
+@import "mixins/flex";
+@import "mixins/font-family";
+@import "mixins/font-size";
+@import "mixins/font-style";
+@import "mixins/font-weight";
+@import "mixins/line-height";
+@import "mixins/list-style";
+@import "mixins/opacity";
+@import "mixins/outline-offset";
+@import "mixins/outline-procs";
+@import "mixins/outline-style";
+@import "mixins/overflow";
+@import "mixins/pointer-events";
+@import "mixins/positions";
+@import "mixins/resize";
+@import "mixins/sizing";
+@import "mixins/text-align";
+@import "mixins/text-decoration";
+@import "mixins/text-overflow";
+@import "mixins/text-transform";
+@import "mixins/transform-origin";
+@import "mixins/transitions";
+@import "mixins/user-select";
+@import "mixins/visibility";
+@import "mixins/white-space";
+@import "mixins/word-wrap";
+@import "mixins/z-index";

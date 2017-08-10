@@ -8,12 +8,6 @@
 /* 
     Handle flex grow and shrink extents 
 */
-@mixin f-grow($amount) {
-    flex-grow: $amount;
-}
-@mixin f-shrink($amount) {
-    flex-shrink: $amount;
-}
 
 @mixin f-grow-shrink-proc($min: 0, $max: 5) {
     @for $i from 0 through 5 {
@@ -43,19 +37,6 @@ $f-ai: (
 $f-j: (
     space-around, space-between
 );
-
-@mixin f-ai($type) {
-    align-items: $type;
-}
-@mixin f-as($type) {
-    align-self: $type;
-}
-@mixin f-j($type) {
-    justify-content: $type;
-}
-@mixin f-ac($type) {
-    align-content: $type;
-}
 
 @mixin f-ai-as-j-proc() {
     @each $l, $v in $f-standard {
@@ -100,10 +81,6 @@ $f-w: (
     wrap, nowrap, wrap-reverse
 );
 
-@mixin f-w($type) {
-    flex-wrap: $type;
-}
-
 @mixin f-w-proc($types) {
     @each $v in $f-w {
         .f-w-#{$v} {
@@ -121,10 +98,6 @@ $f-d: (
     row, column
 );
 
-@mixin f-d($type) {
-    flex-direction: $type;
-}
-
 @mixin f-d-proc() {
     @each $v in $f-d {
         .f-d-#{$v} {
@@ -138,11 +111,6 @@ $f-d: (
 /*
     Makes an element flexible and fills a container.
 */
-@mixin f() {
-    display: flex;
-    flex: 1 1 auto;
-}
-
 .f {
     @include f();
 }
@@ -162,11 +130,6 @@ $f-d: (
 /*
     Makes an element flexible but sizes to its own content.
 */
-@mixin f-none() {
-    display: flex;
-    flex: none;
-}
-
 .f-none {
     @include f-none();
 }

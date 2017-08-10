@@ -2,10 +2,6 @@
     Resize atoms.
 */
 
-@mixin resize($type) {
-    resize: $type;
-}
-
 @mixin resize-proc($types) {
     @each $r in $types {
         .resize-#{$r} {

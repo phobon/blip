@@ -4,15 +4,6 @@
     .oline-[size] : Solid outline of [size]
 */
 
-%oline-base {
-    outline-style: solid;
-}
-
-@mixin oline($size) {
-    @extend %oline-base;
-    outline-width: $size;
-}
-
 @mixin oline-proc($sizes) {
     @each $label, $size in $sizes {
         .oline-#{$label} {        

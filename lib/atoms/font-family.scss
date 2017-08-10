@@ -10,10 +10,6 @@ $sans-serif:                -apple-system, BlinkMacSystemFont, "Segoe UI", "Robo
 $serif:                     georgia, times, serif;
 $monospace:                 Consolas, monaco, monospace;
 
-@mixin font-family($type) {
-    font-family: $type;
-}
-
 .sans-serif { 
     @include font-family($sans-serif);
 }

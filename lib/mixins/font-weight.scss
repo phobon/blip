@@ -1,0 +1,6 @@
+﻿/*
+    Font-weight mixins.
+*/
+@mixin fw($weight) {
+    font-weight: $weight;
+}

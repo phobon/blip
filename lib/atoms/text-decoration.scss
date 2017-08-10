@@ -2,10 +2,6 @@
     Text-decoration atoms.
 */
 
-@mixin td($type) {
-    text-decoration: $type;
-}
-
 @mixin td-procs($types) {
     @each $t in $types {
         .td-#{$t} {

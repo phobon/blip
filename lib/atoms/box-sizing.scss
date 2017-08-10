@@ -2,10 +2,6 @@
     Box-sizing atoms.
 */
 
-@mixin bs($type) {
-    box-sizing: $type;
-}
-
 @mixin bs-proc($types) {
     @each $l, $v in $types {
         .bs-#{$l} {

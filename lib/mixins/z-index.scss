@@ -1,0 +1,6 @@
+﻿/* 
+    Z-index mixins
+*/
+@mixin z($depth) {
+    z-index: $depth;
+}

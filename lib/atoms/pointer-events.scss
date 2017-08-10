@@ -2,10 +2,6 @@
     Pointer-events atoms.
 */
 
-@mixin pe($type) {
-    pointer-events: $type;
-}
-
 @mixin pe-proc($types) {
     @each $t in $types {
         .pe-#{$t} {

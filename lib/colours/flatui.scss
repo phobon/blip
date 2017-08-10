@@ -3,6 +3,7 @@
     These are treated as a separate module to blip, so are handled separately.
  */
 
+@import "../mixins/colour-procs";
 @import "../atoms/colour-procs";
 
 $c-f-turquoise:       #1abc9c;

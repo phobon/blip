@@ -2,10 +2,6 @@
     Word-wrap atoms.
 */
 
-@mixin ww($type) {
-    word-wrap: $type;
-}
-
 @mixin ww-proc($types) {
     @each $us in $types {
         .ww-#{$us} {

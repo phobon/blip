@@ -1,0 +1,6 @@
+﻿/*
+    Cursor-style mixins.
+*/
+@mixin cur($type) {
+    cursor: $type;
+}

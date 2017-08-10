@@ -1,0 +1,6 @@
+﻿/*
+    Opacity mixins
+*/
+@mixin o($a) {
+    opacity: $a;
+}

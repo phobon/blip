@@ -2,10 +2,6 @@
     Position atoms.
 */
 
-@mixin pos($type) {
-    position: $type;
-}
-
 @mixin pos-procs($types) {
     @each $t in $types {
         .pos-#{$t} {

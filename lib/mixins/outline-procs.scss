@@ -1,0 +1,7 @@
+/*
+    Outline mixins
+*/
+@mixin oline($size) {
+    outline-style: solid;
+    outline-width: $size;
+}

@@ -2,10 +2,6 @@
     Simple text transforms.
 */
 
-@mixin tt($type) {
-    text-transform: $type;
-}
-
 @mixin tt-procs($types) {
     @each $l, $v in $types {
         .tt-#{$l} {

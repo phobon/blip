@@ -1,0 +1,6 @@
+/*
+    Border-style mixins.
+*/
+@mixin br-st($style) {
+    border-style: $style;
+}

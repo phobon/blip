@@ -1,0 +1,6 @@
+﻿/*
+    Text-alignment mixins.
+*/
+@mixin ta($type) {
+    text-align: $type;
+}

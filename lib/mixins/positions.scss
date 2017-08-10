@@ -1,0 +1,6 @@
+/*
+    Position mixins
+*/
+@mixin pos($type) {
+    position: $type;
+}

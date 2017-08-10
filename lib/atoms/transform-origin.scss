@@ -2,10 +2,6 @@
     Transform-origin atoms.
 */
 
-@mixin to($pos) {
-    transform-origin: $pos;
-}
-
 @mixin to-proc($types) {
     @each $l, $v in $types {
         .to-#{$l} {

@@ -1,0 +1,9 @@
+﻿/*
+    Transitions mixins
+*/
+@mixin transition($length) {
+    transition: opacity $length ease-out, fill $length ease-out, color $length ease-out, background-color $length ease-out, stroke $length ease-out;
+}
+@mixin transition-all($length) {
+    transition: all $length ease-out;
+}

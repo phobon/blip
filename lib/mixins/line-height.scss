@@ -1,0 +1,6 @@
+﻿/*
+    Line-height atoms.
+*/
+@mixin lh($size) {
+    line-height: $size;
+}

@@ -1,0 +1,24 @@
+ /*
+    Mixins to build colour atoms
+*/
+@mixin c($colour) {
+    color: $colour;
+}
+@mixin c-bg($colour) {
+    background-color: $colour;
+}
+@mixin c-f($colour) {
+    fill: $colour;
+}
+@mixin c-str($colour) {
+    stroke: $colour;
+}
+@mixin c-t-bg($colour) {
+    background-color: fade($colour, 50%);
+}
+@mixin c-br($colour) {
+    border-color: $colour;
+}
+@mixin c-oline($colour) {
+    outline-color: $colour;
+}

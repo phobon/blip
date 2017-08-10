@@ -1,0 +1,6 @@
+﻿/*
+    Font-size mixins
+*/
+@mixin fs($size) {
+    font-size: $size;
+}

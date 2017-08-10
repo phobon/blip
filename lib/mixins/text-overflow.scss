@@ -1,0 +1,6 @@
+/*
+    Text-overflow mixins.
+*/
+@mixin t-oflow($type) {
+    text-overflow: $type;
+}

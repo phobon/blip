@@ -2,10 +2,6 @@
     Display atoms.
 */
 
-@mixin d($type) {
-    display: $type;
-}
-
 @mixin d-proc($types) {
     @each $d in $types {
         .d-#{$d} {

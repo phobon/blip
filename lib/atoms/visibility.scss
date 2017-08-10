@@ -2,10 +2,6 @@
     Visibility atoms.
 */
 
-@mixin vis($type) {
-    visibility: $type;
-}
-
 @mixin vis-proc($types) {
     @each $us in $types {
         .vis-#{$us} {

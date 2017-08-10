@@ -1,0 +1,6 @@
+﻿/*
+    Text-decoration mixins.
+*/
+@mixin td($type) {
+    text-decoration: $type;
+}

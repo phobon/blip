@@ -1,0 +1,12 @@
+﻿/*
+    Overflow mixins.
+*/
+@mixin of($type) {
+    overflow: $type;
+}
+@mixin of-x($type) {
+    overflow-x: $type;
+}
+@mixin of-y($type) {
+    overflow-y: $type;
+}

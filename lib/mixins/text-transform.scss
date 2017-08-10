@@ -1,0 +1,6 @@
+﻿/*
+    Simple text mixins.
+*/
+@mixin tt($type) {
+    text-transform: $type;
+}

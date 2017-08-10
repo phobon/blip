@@ -2,10 +2,6 @@
     Text-overflow atoms.
 */
 
-@mixin t-oflow($type) {
-    text-overflow: $type;
-}
-
 @mixin t-oflow-procs($types) {
     @each $t in $types {
         .t-oflow-#{$t} {

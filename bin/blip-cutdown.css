@@ -1,4 +1,128 @@
 /*
+    Blip, atomic css framework mixins
+    This file contains the core mixins for the system.
+*/
+/*
+    Mixins to build border atoms
+*/
+/*
+    Border-style mixins.
+*/
+/*
+    Box-shadow mixins.
+*/
+/*
+    Box-sizing mixins.
+*/
+/*
+    Mixins to build colour atoms
+*/
+/*
+    Cursor-style mixins.
+*/
+/*
+    Display mixins.
+*/
+/*
+    Flexbox model mixins.
+*/
+/* 
+    Handle flex grow and shrink extents 
+*/
+/* 
+    Flex alignment and justification 
+*/
+/* 
+    Flex wrapping 
+*/
+/* 
+    Direction 
+*/
+/*
+    Makes an element flexible and fills a container.
+*/
+/*
+    Makes an element flexible but sizes to its own content.
+*/
+/*
+    Font-family mixins
+*/
+/*
+    Font-size mixins
+*/
+/*
+    Font-style mixins.
+*/
+/*
+    Font-weight mixins.
+*/
+/*
+    Line-height atoms.
+*/
+/*
+    List-style atoms.
+*/
+/*
+    Opacity mixins
+*/
+/*
+    Outline-offset atoms.
+*/
+/*
+    Outline mixins
+*/
+/*
+    Outline-style mixins
+*/
+/*
+    Overflow mixins.
+*/
+/*
+    Pointer-events mixins.
+*/
+/*
+    Position mixins
+*/
+/*
+    Resize mixins
+*/
+/* 
+    Sizing mixins
+*/
+/*
+    Text-alignment mixins.
+*/
+/*
+    Text-decoration mixins.
+*/
+/*
+    Text-overflow mixins.
+*/
+/*
+    Simple text mixins.
+*/
+/*
+    Transform-origin mixins.
+*/
+/*
+    Transitions mixins
+*/
+/*
+    User-select mixins.
+*/
+/*
+    Visibility mixins.
+*/
+/*
+    White-space mixins.
+*/
+/*
+    Word-wrap mixins.
+*/
+/* 
+    Z-index mixins
+*/
+/*
     Blip, atomic css framework.
     This file contains the core files and procs for the system.
     This can be included in a project and customised further.

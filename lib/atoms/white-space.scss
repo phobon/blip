@@ -2,10 +2,6 @@
     White-space atoms.
 */
 
-@mixin ws($type) {
-    white-space: $type;
-}
-
 @mixin ws-procs($types) {
     @each $t in $types {
         .ws-#{$t} {

@@ -1,0 +1,6 @@
+/*
+    User-select mixins.
+*/
+@mixin us($type) {
+    user-select: $type;
+}

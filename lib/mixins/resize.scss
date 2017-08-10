@@ -1,0 +1,7 @@
+﻿/*
+    Resize mixins
+*/
+
+@mixin resize($type) {
+    resize: $type;
+}

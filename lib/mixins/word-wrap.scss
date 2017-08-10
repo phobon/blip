@@ -1,0 +1,6 @@
+/*
+    Word-wrap mixins.
+*/
+@mixin ww($type) {
+    word-wrap: $type;
+}

@@ -1,0 +1,8 @@
+/*
+    Box-shadow mixins.
+*/
+@mixin bshad($size, $spread: 2rem, $colour: rgba(0,0,0,0.3)) {
+    -webkit-box-shadow: 0 $size $spread $size $colour;
+    -moz-box-shadow: 0 $size $spread $size $colour;
+    box-shadow: 0 $size $spread $size $colour;
+}

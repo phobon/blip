@@ -1,0 +1,6 @@
+﻿/*
+    Display mixins.
+*/
+@mixin d($type) {
+    display: $type;
+}

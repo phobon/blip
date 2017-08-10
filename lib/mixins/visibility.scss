@@ -1,0 +1,6 @@
+/*
+    Visibility mixins.
+*/
+@mixin vis($type) {
+    visibility: $type;
+}

@@ -1,0 +1,6 @@
+﻿/*
+    Font-family mixins
+*/
+@mixin font-family($type) {
+    font-family: $type;
+}

@@ -1,0 +1,6 @@
+/*
+    White-space mixins.
+*/
+@mixin ws($type) {
+    white-space: $type;
+}
