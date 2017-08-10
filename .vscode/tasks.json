@@ -8,7 +8,7 @@
     "showOutput": "always",
     "tasks": [
         {
-            "taskName": "dev",
+            "taskName": "release",
             "showOutput": "always",
             "isBuildCommand": true
         }

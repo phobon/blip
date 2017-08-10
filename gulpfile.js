@@ -7,6 +7,7 @@ var postcss = require('gulp-postcss');
 var nano = require('cssnano');
 var autoprefixer = require('autoprefixer');
 var rename = require('gulp-rename');
+var runSequence = require('run-sequence');
 
 // Clean all of our old css files
 gulp.task('clean', function() {    
@@ -69,4 +70,6 @@ gulp.task('verbose-colours', function() {
 
 gulp.task('transpile', ['clean', 'full:minify', 'full:verbose']);
 gulp.task('dev', ['clean', 'full:verbose', 'cutdown:verbose', 'verbose-colours']);
-gulp.task('release', ['clean', 'full:minify', 'cutdown:minify','minify-colours']);
+gulp.task('release', function() {
+    runSequence('clean', ['full:minify', 'cutdown:minify','minify-colours'], ['full:verbose', 'cutdown:verbose', 'verbose-colours']);
+});

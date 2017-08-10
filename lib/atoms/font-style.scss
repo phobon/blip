@@ -6,7 +6,7 @@
     font-style: $type;
 }
 
-@mixin fs-proc($types) {
+@mixin f-st-proc($types) {
     @each $s in $types {
         .f-st-#{$s} {
             @include f-st($s);

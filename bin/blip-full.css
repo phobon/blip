@@ -122,23 +122,11 @@
 /*
     Pointer-events atoms.
 */
-.of-all {
-  overflow: all; }
+.pe-all {
+  pointer-events: all; }
 
-.of-x-all {
-  overflow-x: all; }
-
-.of-y-all {
-  overflow-y: all; }
-
-.of-none {
-  overflow: none; }
-
-.of-x-none {
-  overflow-x: none; }
-
-.of-y-none {
-  overflow-y: none; }
+.pe-none {
+  pointer-events: none; }
 
 /*
     Resize atoms.
@@ -394,12 +382,16 @@
     Direction 
 */
 .f-d-row {
-  -ms-flex-wrap: row;
-      flex-wrap: row; }
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
 
 .f-d-column {
-  -ms-flex-wrap: column;
-      flex-wrap: column; }
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
 
 /*
     Makes an element flexible and fills a container.
@@ -603,13 +595,13 @@
 /*
     Simple text transforms.
 */
-.td-none {
+.tt-none {
   text-transform: none; }
 
-.td-lc {
+.tt-lc {
   text-transform: lowercase; }
 
-.td-uc {
+.tt-uc {
   text-transform: uppercase; }
 
 /*
@@ -687,14 +679,14 @@
 /*
     Font-style atoms.
 */
-.fs-italic {
-  font-stylse: italic; }
+.f-st-italic {
+  font-style: italic; }
 
-.fs-normal {
-  font-stylse: normal; }
+.f-st-normal {
+  font-style: normal; }
 
-.fs-oblique {
-  font-stylse: oblique; }
+.f-st-oblique {
+  font-style: oblique; }
 
 /*
     Font-weight atoms.
@@ -2451,43 +2443,43 @@ html {
     font-size: 16px !important; } }
 
 .fs-1 {
-  font-stylse: 8.75rem; }
+  font-size: 8.75rem; }
 
 .fs-2 {
-  font-stylse: 7rem; }
+  font-size: 7rem; }
 
 .fs-3 {
-  font-stylse: 5.25rem; }
+  font-size: 5.25rem; }
 
 .fs-4 {
-  font-stylse: 3.5rem; }
+  font-size: 3.5rem; }
 
 .fs-5 {
-  font-stylse: 1.75rem; }
+  font-size: 1.75rem; }
 
 .fs-6, body {
-  font-stylse: 1.75rem; }
+  font-size: 1.75rem; }
 
 .fs-7 {
-  font-stylse: 1.5rem; }
+  font-size: 1.5rem; }
 
 /* 
     Setup font sizes and other specific typographic properties 
 */
 h1 {
-  font-stylse: 8.75rem; }
+  font-size: 8.75rem; }
 
 h2 {
-  font-stylse: 7rem; }
+  font-size: 7rem; }
 
 h3 {
-  font-stylse: 5.25rem; }
+  font-size: 5.25rem; }
 
 h4 {
-  font-stylse: 3.5rem; }
+  font-size: 3.5rem; }
 
 h5 {
-  font-stylse: 1.75rem; }
+  font-size: 1.75rem; }
 
 .fw-bold {
   font-weight: bold; }
