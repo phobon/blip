@@ -2,10 +2,14 @@
     Line-height atoms.
 */
 
+@mixin lh($size) {
+    line-height: $size;
+}
+
 @mixin line-height-proc($heights) {
     @each $label, $size in $heights {
         .lh-#{$label} {
-            line-height: $size;
+            @include lh($size);
         }
     }
 }

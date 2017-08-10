@@ -5,6 +5,10 @@
     .o-[percentage]:        Opacity based on percentage (ie: o-50: 50% or 0.5)
 */
 
+@mixin o($a) {
+    opacity: $a;
+}
+
 @mixin opacity-proc($divisions) {
     $division: (1 / $divisions) * 1000;
     
@@ -12,7 +16,7 @@
     @while $i <= 1 {
         $o: $i * $division;
         .o-#{$o} {
-            opacity: $i;
+            @include o($i);
         }
 
         $i: $i + .1;

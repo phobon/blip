@@ -6,16 +6,20 @@ $fw-types: (
     bold, normal, lighter, bolder
 );
 
+@mixin fw($weight) {
+    font-weight: $weight;
+}
+
 @mixin fw-proc($weights) {
     @each $w in $fw-types {
         .fw-#{$w} {
-            font-weight: $w;
+            @include fw($w);
         }
     }
 
     @for $i from 0 through $weights {
         .fw-#{$i} {
-            font-weight: 100 + $i * 100;
+            @include fw(100 + $i * 100);
         }
     }
 }

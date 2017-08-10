@@ -6,45 +6,17 @@
 */
 
 /* 
-    Setup font sizes and other specific typographic properties 
-*/
-h1 {
-    @extend .fs-1;
-}
-h2 {
-    @extend .fs-2;
-}
-h3 {
-    @extend .fs-3;
-}
-h4 {
-    @extend .fs-4;
-}
-h5 {
-    @extend .fs-5;
-}
-
-/* 
     Consistent heading styles. 
 */
 h1, h2, h3, h4, h5, h6 {
-    @extend .fw-1; 
-    @extend .m-0;
+    @include m(0);
 }
 
 .nowrap {
-    white-space: nowrap;
+    @include ws(nowrap);
     text-overflow: ellipsis;
 }
 
 pre {
-    white-space: pre;
-}
-
-/*
-    Code and monospace classes.
-    code is applied globally, mono must be applied as required.
-*/
-.mono {
-    font-family: monospace;
+    @include ws(pre);
 }

@@ -2,9 +2,18 @@
     Visibility atoms.
 */
 
-.vis-hidden {
-    visibility: hidden;
+@mixin vis($type) {
+    visibility: $type;
 }
-.vis-visible {
-    visibility: visible;
+
+@mixin vis-proc($types) {
+    @each $us in $types {
+        .vis-#{$us} {
+            @include vis($us);
+        }
+    }
 }
+
+@include vis-proc((
+    hidden, visible
+));

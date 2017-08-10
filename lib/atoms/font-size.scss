@@ -7,10 +7,14 @@
     .fs-[size]:     Descending font-size. The larger the number, the smaller the font-size is; to match header styles.
 */
 
+@mixin fs($size) {
+    font-size: $size;
+}
+
 @mixin font-size-proc($sizes) {
     @each $i, $size in $sizes {
         .fs-#{$i} {
-            font-size: $size;
+            @include fs($size);
         }
     }
 }

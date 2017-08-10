@@ -14,29 +14,51 @@
     .c-[colour]-h | -bg | -f | -t | -br : heavy
 */
 
+@mixin c($colour) {
+    color: $colour;
+}
+@mixin c-bg($colour) {
+    background-color: $colour;
+}
+@mixin c-f($colour) {
+    fill: $colour;
+}
+@mixin c-str($colour) {
+    stroke: $colour;
+}
+@mixin c-t-bg($colour) {
+    background-color: fade($colour, 50%);
+}
+@mixin c-br($colour) {
+    border-color: $colour;
+}
+@mixin c-oline($colour) {
+    outline-color: $colour;
+}
+
 @mixin basic-colour-proc($colourmap) {
     @each $label, $colour in $colourmap {
         /* Generic - colour, background, fill and transparent */
         .c-#{$label} {
-            color: $colour;
+            @include c($colour);
         }
         .c-#{$label}-bg {
-            background-color: $colour;
+            @include c-bg($colour);
         }
         .c-#{$label}-f {
-            fill: $colour;
+            @include c-f($colour);
         }
         .c-#{$label}-str {
-            stroke: $colour;
+            @include c-str($colour);
         }
         .c-#{$label}-t-bg {
-            background-color: fade($colour, 50%);
+            @include c-t-bg($colour);
         }
         .c-#{$label}-br {
-            border-color: $colour;
+            @include c-br($colour);
         }
         .c-#{$label}-oline {
-            outline-color: $colour;
+            @include c-oline($colour);
         }
     }
 }
@@ -51,43 +73,47 @@
         $colour-h: darken($colour, 5%);    
 
         .c-#{$label}-l {
-            color: $colour-l;
+            @include c($colour-l);
         }
         .c-#{$label}-l-bg {
-            background-color: $colour-l;
+            @include c-bg($colour-l);
         }
         .c-#{$label}-l-f {
-            fill: $colour-l;
+            @include c-f($colour-l);
+        }
+        .c-#{$label}-l-str {
+            @include c-str($colour-l);
         }
         .c-#{$label}-l-t-bg {
-            background-color: fade($colour-l, 50%);
+            @include c-t-bg($colour-l);
         }
-        .c-#{$label}-h {
-            color: $colour-h;
-        }
-        .c-#{$label}-h-bg {
-            background-color: $colour-h;
-        }
-        .c-#{$label}-h-f {
-            fill: $colour-h;
-        }
-        .c-#{$label}-h-str {
-            stroke: $colour-h;
-        }
-        .c-#{$label}-h-t-bg {
-            background-color: fade($colour-h, 50%);
-        }        
         .c-#{$label}-l-br {
-            border-color: $colour-l;
-        }
-        .c-#{$label}-h-br {
-            border-color: $colour-h;
+            @include c-br($colour-l);
         }
         .c-#{$label}-l-oline {
-            outline-color: $colour-l;
+            @include c-oline($colour-l);
         }
+
+        .c-#{$label}-h {
+            @include c($colour-h);            
+        }
+        .c-#{$label}-h-bg {
+            @include c-bg($colour-h);
+        }
+        .c-#{$label}-h-f {
+            @include c-f($colour-h);
+        }
+        .c-#{$label}-h-str {
+            @include c-str($colour-h);
+        }
+        .c-#{$label}-h-t-bg {
+            @include c-t-bg($colour-h);
+        }                
+        .c-#{$label}-h-br {
+            @include c-br($colour-h);
+        }        
         .c-#{$label}-h-oline {
-            outline-color: $colour-h;
+            @include c-oline($colour-h);
         }
     }    
 }

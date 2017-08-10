@@ -2,10 +2,14 @@
     Outline-offset atoms.
 */
 
+@mixin oline-offset($size) {
+    outline-offset: $size;
+}
+
 @mixin oline-offset-proc($sizes) {
     @each $label, $size in $sizes {
         .oline-offset-#{$label} {
-            outline-offset: $size;
+            @include oline-offset($size);
         }
     }
 }

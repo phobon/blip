@@ -1,13 +1,22 @@
 ﻿/*
     Simple text transforms.
 */
-.tt-none {
-    text-transform: none;
+
+@mixin tt($type) {
+    text-transform: $type;
 }
-.tt-lc {
-    text-transform: lowercase;
+
+@mixin tt-procs($types) {
+    @each $l, $v in $types {
+        .td-#{$l} {
+            @include tt($v);
+        }
+    }
 }
-.tt-uc {
-    text-transform: uppercase;    
-}
+
+@include tt-procs((
+    none: none,
+    lc: lowercase,
+    uc: uppercase
+));
 

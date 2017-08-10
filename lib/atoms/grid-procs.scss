@@ -15,14 +15,12 @@
         $s: $cell * $i;
         
         .col-#{$i} {
-            width: $s;
-            padding-left: $gutter;
-            padding-right: $gutter;
+            @include w($s);
+            @include p-horizontal($gutter);
         }
         .row-#{$i} {
-            height: $s;
-            padding-top: $gutter;
-            padding-bottom: $gutter;
+            @include h($s);
+            @include p-vertical($gutter);
         }
     }    
 }

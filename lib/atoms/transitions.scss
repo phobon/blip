@@ -2,13 +2,21 @@
     Transition atoms.
     Note: This is a bit of a sledgehammer case here; it doesn't handle all of the cases I want.
 */
+
+@mixin transition($length) {
+    transition: opacity $length ease-out, fill $length ease-out, color $length ease-out, background-color $length ease-out, stroke $length ease-out;
+}
+@mixin transition-all($length) {
+    transition: all $length ease-out;
+}
+
 @mixin transition-procs($transitions) {
     @each $label, $length in $transitions {
         .transition-#{$label} {
-            transition: opacity $length ease-out, fill $length ease-out, color $length ease-out, background-color $length ease-out, stroke $length ease-out;
+            @include transition($length);
         }
         .transition-all-#{$label} {
-            transition: all $length ease-out;
+            @include transition-all($length);
         }
     }
 }

@@ -1,0 +1,19 @@
+/*
+    White-space atoms.
+*/
+
+@mixin ws($type) {
+    white-space: $type;
+}
+
+@mixin ws-procs($types) {
+    @each $t in $types {
+        .ws-#{$t} {
+            @include ws($t);
+        }
+    }
+}
+
+@include ws-procs((
+    initial, nowrap, pre, pre-line, pre-wrap
+));

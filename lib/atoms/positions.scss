@@ -2,12 +2,18 @@
     Position atoms.
 */
 
-.pos-fixed {
-    position: fixed;
+@mixin pos($type) {
+    position: $type;
 }
-.pos-absolute {
-    position: absolute;
+
+@mixin pos-procs($types) {
+    @each $t in $types {
+        .pos-#{$t} {
+            @include pos($t);
+        }
+    }
 }
-.pos-relative {
-    position: relative;
-}
+
+@include pos-procs((
+    fixed, absolute, relative
+));

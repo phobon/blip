@@ -1,0 +1,153 @@
+/* 
+    Set of grayscales.
+    These are considered core to blip 
+*/
+/*
+    Mixins to build colour atoms.
+
+    NOTE: Colour swatches are not native to blip, these are handled separately.
+
+    .c-[colour] : foreground colour
+    .c-[colour]-bg : background colour
+    .c-[colour]-f : fill colour
+    .c-[colour]-t-bg : transparent background colour
+    .c-[colour]-br : border colour
+
+    .c-[colour]-l | -bg | -f | -t | -br : light
+    .c-[colour]-m | -bg | -f | -t | -br : medium
+    .c-[colour]-h | -bg | -f | -t | -br : heavy
+*/
+.bg-none {
+  background: none; }
+
+/* Generic - colour, background, fill and transparent */
+.c-black {
+  color: #000000; }
+
+.c-black-bg {
+  background-color: #000000; }
+
+.c-black-f {
+  fill: #000000; }
+
+.c-black-str {
+  stroke: #000000; }
+
+.c-black-t-bg {
+  background-color: fade(#000000, 50%); }
+
+.c-black-br {
+  border-color: #000000; }
+
+.c-black-oline {
+  outline-color: #000000; }
+
+/* Generic - colour, background, fill and transparent */
+.c-white {
+  color: #FFFFFF; }
+
+.c-white-bg {
+  background-color: #FFFFFF; }
+
+.c-white-f {
+  fill: #FFFFFF; }
+
+.c-white-str {
+  stroke: #FFFFFF; }
+
+.c-white-t-bg {
+  background-color: fade(#FFFFFF, 50%); }
+
+.c-white-br {
+  border-color: #FFFFFF; }
+
+.c-white-oline {
+  outline-color: #FFFFFF; }
+
+/* Generic - colour, background, fill and transparent */
+.c-gray-l {
+  color: #d7d7d7; }
+
+.c-gray-l-bg {
+  background-color: #d7d7d7; }
+
+.c-gray-l-f {
+  fill: #d7d7d7; }
+
+.c-gray-l-str {
+  stroke: #d7d7d7; }
+
+.c-gray-l-t-bg {
+  background-color: fade(#d7d7d7, 50%); }
+
+.c-gray-l-br {
+  border-color: #d7d7d7; }
+
+.c-gray-l-oline {
+  outline-color: #d7d7d7; }
+
+/* Generic - colour, background, fill and transparent */
+.c-gray-m {
+  color: #929292; }
+
+.c-gray-m-bg {
+  background-color: #929292; }
+
+.c-gray-m-f {
+  fill: #929292; }
+
+.c-gray-m-str {
+  stroke: #929292; }
+
+.c-gray-m-t-bg {
+  background-color: fade(#929292, 50%); }
+
+.c-gray-m-br {
+  border-color: #929292; }
+
+.c-gray-m-oline {
+  outline-color: #929292; }
+
+/* Generic - colour, background, fill and transparent */
+.c-gray-h {
+  color: #4f4f4f; }
+
+.c-gray-h-bg {
+  background-color: #4f4f4f; }
+
+.c-gray-h-f {
+  fill: #4f4f4f; }
+
+.c-gray-h-str {
+  stroke: #4f4f4f; }
+
+.c-gray-h-t-bg {
+  background-color: fade(#4f4f4f, 50%); }
+
+.c-gray-h-br {
+  border-color: #4f4f4f; }
+
+.c-gray-h-oline {
+  outline-color: #4f4f4f; }
+
+/* Generic - colour, background, fill and transparent */
+.c-transparent {
+  color: transparent; }
+
+.c-transparent-bg {
+  background-color: transparent; }
+
+.c-transparent-f {
+  fill: transparent; }
+
+.c-transparent-str {
+  stroke: transparent; }
+
+.c-transparent-t-bg {
+  background-color: fade(transparent, 50%); }
+
+.c-transparent-br {
+  border-color: transparent; }
+
+.c-transparent-oline {
+  outline-color: transparent; }

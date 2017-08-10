@@ -2,10 +2,14 @@
     Cursor-style atoms.
 */
 
+@mixin cur($type) {
+    cursor: $type;
+}
+
 @mixin cursor-proc($cursors) {
     @each $c in $cursors {
         .cur-#{$c} {
-            cursor: $c;
+            @include cur($c);
         }
     }    
 }

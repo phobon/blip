@@ -2,10 +2,14 @@
     Font-style atoms.
 */
 
+@mixin fs($type) {
+    font-stylse: $type;
+}
+
 @mixin fs-proc($types) {
     @each $s in $types {
         .fs-#{$s} {
-            font-style: $s;
+            @include fs($s);
         }
     }
 }

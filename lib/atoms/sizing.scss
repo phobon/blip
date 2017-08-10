@@ -20,99 +20,178 @@
     .h-min-[size] : min-height
 */
 
+@mixin co-l($pos) {
+    left: $pos;
+}
+@mixin co-t($pos) {
+    top: $pos;
+}
+@mixin co-r($pos) {
+    right: $pos;
+}
+@mixin co-b($pos) {
+    bottom: $pos;
+}
+@mixin co-all($pos) {
+    left: $pos;
+    top: $pos;
+    bottom: $pos;
+    right: $pos;
+}
+
 @mixin coord-proc($label, $pos) {
     .co-l-#{$label} {
-        left: $pos;
+        @include co-l($pos);
     }
     .co-t-#{$label} {
-        top: $pos;
+        @include co-t($pos);
     }
     .co-r-#{$label} {
-        right: $pos;
+        @include co-r($pos);
     }
     .co-b-#{$label} {
-        bottom: $pos;
+        @include co-b($pos);
     }
     .co-all-#{$label} {
-        left: $pos;
-        top: $pos;
-        bottom: $pos;
-        right: $pos;
+        @include co-all($pos);
     }
+}
+
+@mixin h($size) {
+    height: $size;
+}
+@mixin h-min($size) {
+    height-min: $size;
+}
+@mixin h-max($size) {
+    height-max: $size;
+}
+@mixin w($size) {
+    width: $size;
+}
+@mixin w-min($size) {
+    width-min: $size;
+}
+@mixin w-max($size) {
+    width-max: $size;
 }
 
 @mixin dimension-proc($label, $size) {
     /* Height & Width */
     .h-#{$label} {
-        height: $size;
+        @include h($size);
     }
     .h-min-#{$label} {
-        min-height: $size;
+        @include h-min($size);
     }
     .h-max-#{$label} {
-        max-height: $size;
+        @include h-max($size);
     }
     .w-#{$label} {
-        width: $size;
+        @include w($size);
     }
     .w-min-#{$label} {
-        min-width: $size;
+        @include w-min($size);
     }
     .w-max-#{$label} {
-        max-width: $size;
+        @include w-max($size);
     }
+}
+
+@mixin m($size) {
+    margin: $size;
+}
+@mixin m-l($size) {
+    margin-left: $size;
+}
+@mixin m-r($size) {
+    margin-right: $size;
+}
+@mixin m-horizontal($size) {
+    margin-left: $size;
+    margin-right: $size;
+}
+@mixin m-t($size) {
+    margin-top: $size;
+}
+@mixin m-b($size) {
+    margin-bottom: $size;
+}
+@mixin m-vertical($size) {
+    margin-top: $size;
+    margin-bottom: $size;
+}
+
+@mixin p($size) {
+    padding: $size;
+}
+@mixin p-l($size) {
+    padding-left: $size;
+}
+@mixin p-r($size) {
+    padding-right: $size;
+}
+@mixin p-horizontal($size) {
+    padding-left: $size;
+    padding-right: $size;
+}   
+@mixin p-t($size) {
+    padding-top: $size;
+}
+@mixin p-b($size) {
+    padding-bottom: $size;
+}
+@mixin p-vertical($size) {
+    padding-top: $size;
+    padding-bottom: $size;
 }
 
 @mixin sizing-proc($sizes) {
     @each $label, $size in $sizes {
         /* Margins */
         .m-#{$label} {
-            margin: $size;
+            @include m($size);
         }   
         .m-l-#{$label} {
-            margin-left: $size;
+            @include m-l($size);
         }
         .m-r-#{$label} {
-            margin-right: $size;
+            @include m-r($size);
         }
         .m-horizontal-#{$label} {
-            margin-left: $size;
-            margin-right: $size;
+            @include m-horizontal($size);
         }
         .m-t-#{$label} {
-            margin-top: $size;
+            @include m-t($size);
         }
         .m-b-#{$label} {
-            margin-bottom: $size;
+            @include m-b($size);
         }
         .m-vertical-#{$label} {
-            margin-top: $size;
-            margin-bottom: $size;
+            @include m-vertical($size);
         }
 
         /* Paddings */
         .p-#{$label} {
-            padding: $size;
+            @include p($size);
         }
         .p-l-#{$label} {
-            padding-left: $size;
+            @include p-l($size);
         }
         .p-r-#{$label} {
-            padding-right: $size;
+            @include p-r($size);
         }
         .p-horizontal-#{$label} {
-            padding-left: $size;
-            padding-right: $size;
+            @include p-horizontal($size);
         }   
         .p-t-#{$label} {
-            padding-top: $size;
+            @include p-t($size);
         }
         .p-b-#{$label} {
-            padding-bottom: $size;
+            @include p-b($size);
         }
         .p-vertical-#{$label} {
-            padding-top: $size;
-            padding-bottom: $size;
+            @include p-vertical($size);
         }
 
         @include dimension-proc($label, $size);

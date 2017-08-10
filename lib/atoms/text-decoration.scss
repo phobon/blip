@@ -1,12 +1,19 @@
 ﻿/*
     Text-decoration atoms.
 */
-.td-none {
-    text-decoration: none;
+
+@mixin td($type) {
+    text-decoration: $type;
 }
-.td-ul {
-    text-decoration: underline;
+
+@mixin td-procs($types) {
+    @each $t in $types {
+        .td-#{$t} {
+            @include td($t);
+        }
+    }
 }
-.td-linethrough {
-    text-decoration: line-through;
-}
+
+@include td-procs((
+    none, underline, line-through
+));

@@ -3,17 +3,10 @@
 */
 
 html, body {
-    @extend .w-100;
-    @extend .h-100;
-    @extend .m-0;
-    @extend .p-0;
-}
-
-/* 
-    Set the font size again as we want it to be slightly smaller than the base font size. 
-*/
-body {
-    @extend .fs-6;
+    @include w(100%);
+    @include h(100%);
+    @include m(0);
+    @include p(0);
 }
 
 /*
@@ -28,14 +21,14 @@ ul, ol, li,
 dl, dt, dd, 
 textarea, 
 input[type="text"], input[type="tel"], input[type="email"], input[type="url"], input[type="password"] {
-    @extend .border-box;
+    @include bs(border-box);
 }
 
 /*
     Basic style for lists with no adornment.
 */
 ul, ol {
-    @extend .ls-none;
-    @extend .m-0;
-    @extend .p-0;
+    @include ls(none);
+    @include m(0);
+    @include p(0);
 }

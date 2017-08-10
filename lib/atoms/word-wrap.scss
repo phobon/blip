@@ -2,9 +2,18 @@
     Word-wrap atoms.
 */
 
-.ww-normal {
-    word-wrap: normal;
+@mixin ww($type) {
+    word-wrap: $type;
 }
-.ww-break-word {
-    word-wrap: break-word;
+
+@mixin ww-proc($types) {
+    @each $us in $types {
+        .ww-#{$us} {
+            @include ww($us);
+        }
+    }
 }
+
+@include ww-proc((
+    normal, break-word
+));

@@ -2,10 +2,14 @@
     Outline-style atoms.
 */
 
+@mixin oline-st($type) {
+    outline-style: $type;
+}
+
 @mixin oline-style-proc($styles) {
     @each $s in $styles {
         .oline-st-#{$s} {
-            outline-style: $s;
+            @include oline-st($s);
         }
     }
 }

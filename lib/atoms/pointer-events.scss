@@ -2,9 +2,18 @@
     Pointer-events atoms.
 */
 
-.pe-all {
-    pointer-events: all;
+@mixin pe($type) {
+    pointer-events: $type;
 }
-.pe-none {
-    pointer-events: none;
+
+@mixin pe-proc($types) {
+    @each $t in $types {
+        .pe-#{$t} {
+            @include pe($t);
+        }
+    }
 }
+
+@include of-proc((
+    all, none
+));

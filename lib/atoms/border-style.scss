@@ -2,10 +2,14 @@
     Border-style atoms.
 */
 
+@mixin br-st($style) {
+    border-style: $style;
+}
+
 @mixin br-proc($styles) {
     @each $s in $styles {
         .br-st-#{$s} {
-            border-style: $s;
+            @include br-st($s);
         }
     }
 }

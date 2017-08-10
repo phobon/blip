@@ -8,19 +8,26 @@
 /* 
     Handle flex grow and shrink extents 
 */
-@mixin f-grow-shrink-proc {
+@mixin f-grow($amount) {
+    flex-grow: $amount;
+}
+@mixin f-shrink($amount) {
+    flex-shrink: $amount;
+}
+
+@mixin f-grow-shrink-proc($min: 0, $max: 5) {
     @for $i from 0 through 5 {
         .f-grow-#{$i} {
-            flex-grow: $i;
+            @include f-grow($i);
         }
 
         .f-shrink-#{$i} {
-            flex-shrink: $i;
+            @include f-shrink($i);
         }
     }
 }
 
-@include f-grow-shrink-proc;
+@include f-grow-shrink-proc();
 
 /* 
     Flex alignment and justification 
@@ -37,41 +44,54 @@ $f-j: (
     space-around, space-between
 );
 
-@mixin f-ai-as-j-proc {
+@mixin f-ai($type) {
+    align-items: $type;
+}
+@mixin f-as($type) {
+    align-self: $type;
+}
+@mixin f-j($type) {
+    justify-content: $type;
+}
+@mixin f-ac($type) {
+    align-content: $type;
+}
+
+@mixin f-ai-as-j-proc() {
     @each $l, $v in $f-standard {
         .f-ai-#{$l} {
-            align-items: $v;
+            @include f-ai($v);
         }
         .f-as-#{$l} {
-            align-self: $v;
+            @include f-as($v);
         }
         .f-j-#{$l} {
-            justify-content: $v;
+            @include f-j($v);
         }
         .f-ac-#{$l} {
-            align-content: $v;
+            @include f-ac($v);
         }
     }
 
     @each $v in $f-ai {
         .f-ai-#{$v} {
-            align-items: $v;
+            @include f-ai($v);
         }
         .f-ac-#{$v} {
-            align-content: $v;
+            @include f-ac($v);
         }
     }
     @each $v in $f-j {
         .f-j-#{$v} {
-            justify-content: $v;
+            @include f-j($v);
         }
         .f-ac-#{$v} {
-            align-content: $v;
+            @include f-ac($v);
         }
     }
 }
 
-@include f-ai-as-j-proc;
+@include f-ai-as-j-proc();
 
 /* 
     Flex wrapping 
@@ -80,15 +100,19 @@ $f-w: (
     wrap, nowrap, wrap-reverse
 );
 
-@mixin f-w-proc {
+@mixin f-w($type) {
+    flex-wrap: $type;
+}
+
+@mixin f-w-proc($types) {
     @each $v in $f-w {
         .f-w-#{$v} {
-            flex-wrap: $v;
+            @include f-w($v);
         }
     }
 }
 
-@include f-w-proc;
+@include f-w-proc($f-w);
 
 /* 
     Direction 
@@ -97,54 +121,66 @@ $f-d: (
     row, column
 );
 
-@mixin f-d-proc {
+@mixin f-d($type) {
+    flex-direction: $type;
+}
+
+@mixin f-d-proc() {
     @each $v in $f-d {
         .f-d-#{$v} {
-            flex-direction: $v;
+            @include f-w($v);
         }
     }
 }
 
-@include f-d-proc;
+@include f-d-proc();
 
 /*
     Makes an element flexible and fills a container.
 */
-.f {
+@mixin f() {
     display: flex;
     flex: 1 1 auto;
+}
+
+.f {
+    @include f();
 }
 
 /*
     Handle row and column directions.
 */
 .f-column {
-    @extend .f;
-    @extend .f-d-column;
+    @include f();
+    @include f-d(column);
 }
 .f-row {
-    @extend .f;
-    @extend .f-d-row;
+    @include f();
+    @include f-d(row);
 }
 
 /*
     Makes an element flexible but sizes to its own content.
 */
-.f-none {
+@mixin f-none() {
     display: flex;
     flex: none;
+}
+
+.f-none {
+    @include f-none();
 }
 
 /*
     Handle row and column directions.
 */
 .f-none-column {
-    @extend .f-none;
-    @extend .f-d-column;
+    @include f-none();
+    @include f-d(column);
 }
 .f-none-row {
-    @extend .f-none;
-    @extend .f-d-row;
+    @include f-none();
+    @include f-d(row);
 }
 
 /*
@@ -153,10 +189,10 @@ $f-d: (
     2) Placing in a row, fill height.
 */
 .f-none-fill-horizonal {
-    @extend .f-none;
-    @extend .w-100;
+    @include f-none();
+    @include w(100%);
 }
 .f-none-fill-vertical {
-    @extend .f-none;
-    @extend .h-100;
+    @include f-none();
+    @include h(100%);
 }

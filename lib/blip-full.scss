@@ -90,6 +90,13 @@ html {
     font-size: $base-font-size;
 }
 
+/* 
+    Set the font size again as we want it to be slightly smaller than the base font size. 
+*/
+body {    
+    @extend .fs-6;
+}
+
 // Responsive media query for mobile devices.
 @media only screen and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
     html {
@@ -99,15 +106,42 @@ html {
 
 $font-factor:           1.75rem;
 
+$fs-1:                  5 * $font-factor;
+$fs-2:                  4 * $font-factor;
+$fs-3:                  3 * $font-factor;
+$fs-4:                  2 * $font-factor;
+$fs-5:                  1 * $font-factor;
+$fs-6:                  $font-factor;
+$fs-7:                  1.5rem;
+
 @include font-size-proc((
-    1: 5 * $font-factor, 
-    2: 4 * $font-factor, 
-    3: 3 * $font-factor, 
-    4: 2 * $font-factor,
-    5: 1 * $font-factor, 
-    6: 1.75rem, 
-    7: 1.5rem
+    1: $fs-1, 
+    2: $fs-2, 
+    3: $fs-3, 
+    4: $fs-4,
+    5: $fs-5, 
+    6: $fs-6, 
+    7: $fs-7
 ));
+
+/* 
+    Setup font sizes and other specific typographic properties 
+*/
+h1 {    
+    @include fs($fs-1);
+}
+h2 {
+    @include fs($fs-2);
+}
+h3 {
+    @include fs($fs-3);
+}
+h4 {
+    @include fs($fs-4);
+}
+h5 {
+    @include fs($fs-5);
+}
 
 // Font weight procs. The default here is 5 (ie: fw-100, fw-200, etc.)
 @include fw-proc(5);

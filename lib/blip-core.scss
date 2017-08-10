@@ -17,14 +17,14 @@
 @import "atoms/visibility";
 @import "atoms/list-style";
 
-/* Fonts and typography */
-@import "atoms/font-family", "atoms/font-size", "atoms/font-style", "atoms/font-weight", "atoms/typography";
-@import "atoms/text-align", "atoms/text-decoration", "atoms/text-transform", "atoms/line-height", "atoms/word-wrap";
-
 /* Sizing, flex and grid */
 @import "atoms/sizing", "atoms/grid-procs", "atoms/flex", "atoms/resize";
 @import "atoms/border-procs", "atoms/border-style";
 @import "atoms/outline-procs", "atoms/outline-offset", "atoms/outline-style";
+
+/* Fonts and typography */
+@import "atoms/text-align", "atoms/text-decoration", "atoms/text-transform", "atoms/line-height", "atoms/word-wrap", "atoms/white-space";
+@import "atoms/font-family", "atoms/font-size", "atoms/font-style", "atoms/font-weight", "atoms/typography";
 
 /* Colour procs */
 @import "atoms/colour-procs";

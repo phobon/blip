@@ -3,16 +3,20 @@
     These are typically lightweight classes that might require customisation at some point.
 */
 
-.bshad-0 {
-    box-shadow: none;
+@mixin bshad($size, $spread, $colour) {
+    -webkit-box-shadow: 0 $size $spread $size $colour;
+    -moz-box-shadow: 0 $size $spread $size $colour;
+    box-shadow: 0 $size $spread $size $colour;
 }
 
 @mixin bshad-proc($depths, $spread: 2rem, $colour: rgba(0,0,0,0.3)) {
     @each $label, $size in $depths {
         .bshad-#{$label} {
-            -webkit-box-shadow: 0 $size $spread $size $colour;
-            -moz-box-shadow: 0 $size $spread $size $colour;
-            box-shadow: 0 $size $spread $size $colour;
+            @include bshad($size, $spread, $colour);
         }
     }
+}
+
+.bshad-0 {
+    box-shadow: none;
 }

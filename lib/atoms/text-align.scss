@@ -2,10 +2,14 @@
     Text-alignment atoms.
 */
 
+@mixin ta($type) {
+    text-align: $type;
+}
+
 @mixin ta-proc($types) {
     @each $l, $v in $types {
         .ta-#{$l} {
-            text-align: $l;
+            @include ta($v);
         }
     }
 }

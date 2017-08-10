@@ -2,9 +2,19 @@
     Box-sizing atoms.
 */
 
-.border-box { 
-    box-sizing: border-box; 
+@mixin bs($type) {
+    box-sizing: $type;
 }
-.content-box { 
-    box-sizing: content-box; 
+
+@mixin bs-proc($types) {
+    @each $l, $v in $types {
+        .bs-#{$l} {
+            @include bs($v);
+        }
+    }
 }
+
+@include bs-proc((
+    border: border-box,
+    content: content-box
+));

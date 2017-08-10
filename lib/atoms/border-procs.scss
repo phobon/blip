@@ -18,57 +18,95 @@
     .br-ra-br-[size]: Bottom-right border radius of [size]
 */
 
+@mixin br($size) {
+    border-width: $size;
+}
+@mixin br-t($size) {
+    border-top-width: $size;
+}
+@mixin br-b($size) {
+    border-bottom-width: $size;
+}
+@mixin br-l($size) {
+    border-left-width: $size;
+}
+@mixin br-r($size) {
+    border-right-width: $size;
+}
+@mixin br-horizontal($size) {
+    border-left-width: $size;
+    border-right-width: $size;
+}
+@mixin br-vertical($size) {
+    border-top-width: $size;
+    border-bottom-width: $size;
+}
+
+@mixin br-ra($size) {
+    border-radius: $size;
+}
+@mixin br-ra-tl($size) {
+    border-top-left-radius: $size;
+}
+@mixin br-ra-tr($size) {
+    border-top-right-radius: $size;
+}
+@mixin br-ra-bl($size) {
+    border-bottom-left-radius: $size;
+}
+@mixin br-ra-br($size) {
+    border-bottom-right-radius: $size;
+}
+
 @mixin border-proc($sizes) {
     @each $label, $size in $sizes {
-        %br-base {
+        @mixin br-base() {
             border-style: solid;
         }
 
         .br-#{$label} {            
-            @extend %br-base;
-            border-width: $size;
+            @include br-base();
+            @include br($size);
         }
         .br-t-#{$label} {
-            @extend %br-base;
-            border-top: $size;
+            @include br-base();
+            @include br-t($size);
         }
         .br-b-#{$label} {
-            @extend %br-base;
-            border-bottom: $size;
+            @include br-base();
+            @include br-b($size);
         }
         .br-l-#{$label} {
-            @extend %br-base;
-            border-left: $size;
+            @include br-base();
+            @include br-l($size);
         }
         .br-r-#{$label} {
-            @extend %br-base;
-            border-right: $size;
+            @include br-base();
+            @include br-r($size);
         }
         .br-horizontal-#{$label} {
-            @extend %br-base;
-            border-left: $size;
-            border-right: $size;
+            @include br-base();
+            @include br-horizontal($size);
         }
         .br-vertical-#{$label} {
-            @extend %br-base;
-            border-left: $size;
-            border-right: $size;
+            @include br-base();
+            @include br-vertical($size);
         }
 
         .br-ra-#{$label} {
-            border-radius: $size;
+            @include br-ra($size);
         }
         .br-ra-tl-#{$label} {
-            border-top-left-radius: $size;
+            @include br-ra-tl($size);
         }
         .br-ra-tr-#{$label} {
-            border-top-right-radius: $size;
+            @include br-ra-tr($size);
         }
         .br-ra-bl-#{$label} {
-            border-bottom-left-radius: $size;
+            @include br-ra-bl($size);
         }
         .br-ra-br-#{$label} {
-            border-bottom-right-radius: $size;
+            @include br-ra-br($size);
         }
     }
 }
