@@ -128,7 +128,7 @@ $f-d: (
 @mixin f-d-proc() {
     @each $v in $f-d {
         .f-d-#{$v} {
-            @include f-w($v);
+            @include f-d($v);
         }
     }
 }
