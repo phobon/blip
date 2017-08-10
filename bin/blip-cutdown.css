@@ -640,6 +640,18 @@
   white-space: pre-wrap; }
 
 /*
+    Text-overflow atoms.
+*/
+.t-oflow-initial {
+  text-overflow: initial; }
+
+.t-oflow-ellipsis {
+  text-overflow: ellipsis; }
+
+.t-oflow-clip {
+  text-overflow: clip; }
+
+/*
     Modular css for font families.
     We went maximum compatibility here and speed here - we don't want to use web fonts at all. So we're utilizing system fonts where we can
     This code is taken specifically from tachyons https://github.com/tachyons-css/tachyons
