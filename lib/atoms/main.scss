@@ -1,32 +1,32 @@
-@import "atoms/z-index";
-@import "atoms/box-sizing";
-@import "atoms/display";
-@import "atoms/positions";
-@import "atoms/overflow";
-@import "atoms/opacity";
-@import "atoms/cursor";
-@import "atoms/pointer-events";
-@import "atoms/resize";
-@import "atoms/user-select";
-@import "atoms/visibility";
-@import "atoms/list-style";
+@import "z-index";
+@import "box-sizing";
+@import "display";
+@import "positions";
+@import "overflow";
+@import "opacity";
+@import "cursor";
+@import "pointer-events";
+@import "resize";
+@import "user-select";
+@import "visibility";
+@import "list-style";
 
 /* Sizing, flex and grid */
-@import "atoms/sizing", "atoms/flex-grid", "atoms/flex", "atoms/resize";
-@import "atoms/border", "atoms/border-style";
-@import "atoms/outline", "atoms/outline-offset", "atoms/outline-style";
+@import "sizing", "flex-grid", "flex", "resize";
+@import "border", "border-style";
+@import "outline", "outline-offset", "outline-style";
 
 /* Fonts and typography */
-@import "atoms/text-align", "atoms/text-decoration", "atoms/text-transform", "atoms/line-height", "atoms/word-wrap", "atoms/white-space", "atoms/text-overflow";
-@import "atoms/font-family", "atoms/font-size", "atoms/font-style", "atoms/font-weight", "atoms/typography";
+@import "text-align", "text-decoration", "text-transform", "line-height", "word-wrap", "white-space", "text-overflow";
+@import "font-family", "font-size", "font-style", "font-weight", "typography";
 
 /* Colour procs */
-@import "atoms/colour";
+@import "colour";
 
 /* Transition base and animations */
-@import "atoms/transform-origin", "atoms/transitions", "atoms/animations";
+@import "transform-origin", "transitions", "animations";
 
-@import "atoms/box-shadow";
+@import "box-shadow";
 
 /* Resets */
-@import "atoms/reset";
+@import "reset";
