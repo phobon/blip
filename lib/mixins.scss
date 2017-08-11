@@ -1,0 +1,6 @@
+/*
+    Generative mixins for blip framework.
+    To be used in conjunction with blip core mixins; these will not generate concrete atomic classes.
+    NOTE: Can be used in a more traditional, cascade-based system.
+*/
+@import "mixins/main";

@@ -1,5 +1,5 @@
 # blip
-Blip is a lightweight, visually-semantic css framework built in ~~less~~ sass
+Blip is a lightweight, visually-semantic, functional css framework built in ~~less~~ sass
 
 ## why is this a thing?
 I've spent many years trying to manage extreme amounts of custom css in enterprise situations and become incredibly frustrated with trying to not only **maintain** an incredibly complex cascade, but also **teach** others how the thing actually works, and it's completely unsustainable. I was just so sick of writing new css, and then I read an article that really resonated with me:
@@ -22,9 +22,20 @@ I created **blip** as an academic exercise, mainly because I'm a software develo
 
 **Including in a web page:**
 
-* bin\blip.min.css (autoprefixed and minified)
+* bin\blip.full.min.css (autoprefixed and minified)
+* bin\blip.cutdown.min.css (autoprefixed and minified)
+
 * bin\colours\*.min.css (autoprefixed and minified)
 
-**Compile it yourself:**
+## extending
 
-Files found in _lib_ are core sass files that can be extended and compiled. _blip.scss_ is the core file.
+**Build your own version of blip:**
+
+The simplest way to compile your own version of blip is to copy _blip-full.scss_ to wherever you're compiling your Sass, extend and prune the mixins and go from there.
+
+**Structure:**
+
+* Mixins found in the _core.scss_ imports will generate atomic classes
+* Mixins found in the _mixins.scss_ imports are fillers
+* _core.scss_ requires _mixins.scss_ but not the other way around
+* _variables.scss_ are not required, but make things a lot simpler

@@ -1,6 +1,10 @@
 /*
-    Blip, atomic css framework mixins
-    This file contains the core mixins for the system.
+    Full-fat blip functional CSS framework.
+*/
+/*
+    Generative mixins for blip framework.
+    To be used in conjunction with blip core mixins; these will not generate concrete atomic classes.
+    NOTE: Can be used in a more traditional, cascade-based system.
 */
 /*
     Mixins to build border atoms
@@ -123,9 +127,12 @@
     Z-index mixins
 */
 /*
-    Blip, atomic css framework.
-    This file contains the core files and procs for the system.
-    This can be included in a project and customised further.
+    Set of important variables to be used with blip.
+*/
+/*
+    Core mixins for the blip framework.
+    This will generate a set of generic atomic classes for use with blip implementations.
+    NOTE: Should be used in conjunction with mixins.
 */
 /* 
     Z-index values
@@ -146,34 +153,6 @@
 /*
     Display atoms.
 */
-.d-block {
-  display: block; }
-
-.d-inline {
-  display: inline; }
-
-.d-inline-block {
-  display: inline-block; }
-
-.d-none {
-  display: none; }
-
-.d-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
-.d-inline-flex {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex; }
-
-.d-table {
-  display: table; }
-
-.d-table-cell {
-  display: table-cell; }
-
 /*
     Position atoms.
 */
@@ -812,6 +791,18 @@
 /*
     Font-weight atoms.
 */
+.fw-bold {
+  font-weight: bold; }
+
+.fw-normal {
+  font-weight: normal; }
+
+.fw-lighter {
+  font-weight: lighter; }
+
+.fw-bolder {
+  font-weight: bolder; }
+
 /*
     Various typographic mixins.
     Classes are taken from font-family, font-sizes, font-spacing, etc.   
@@ -916,7 +907,7 @@ pre {
     Box-shadow atoms.
     These are typically lightweight classes that might require customisation at some point.
 */
-.bshad-0 {
+.bshad-none {
   box-shadow: none; }
 
 /* Resets */
@@ -2493,6 +2484,25 @@ ul, ol {
   max-width: 30%; }
 
 /* Height & Width */
+.h-25 {
+  height: 25%; }
+
+.h-min-25 {
+  min-height: 25%; }
+
+.h-max-25 {
+  max-height: 25%; }
+
+.w-25 {
+  width: 25%; }
+
+.w-min-25 {
+  min-width: 25%; }
+
+.w-max-25 {
+  max-width: 25%; }
+
+/* Height & Width */
 .h-20 {
   height: 20%; }
 
@@ -2550,19 +2560,40 @@ ul, ol {
   max-width: 10%; }
 
 /*
+    Displays.    
+*/
+.d-block {
+  display: block; }
+
+.d-inline {
+  display: inline; }
+
+.d-inline-block {
+  display: inline-block; }
+
+.d-none {
+  display: none; }
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.d-inline-flex {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex; }
+
+.d-table {
+  display: table; }
+
+.d-table-cell {
+  display: table-cell; }
+
+/*
     Fonts and Typography.
     Another core part of the system that initializes the relative sizes of fonts and headers.
 */
-html {
-  font-size: 8px; }
-
-/* 
-    Set the font size again as we want it to be slightly smaller than the base font size. 
-*/
-@media only screen and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  html {
-    font-size: 16px !important; } }
-
 .fs-1 {
   font-size: 8.75rem; }
 
@@ -2602,17 +2633,17 @@ h4 {
 h5 {
   font-size: 1.75rem; }
 
-.fw-bold {
-  font-weight: bold; }
+.fw-5 {
+  font-weight: 5; }
 
-.fw-normal {
-  font-weight: normal; }
+.lh-solid {
+  line-height: 1; }
 
-.fw-lighter {
-  font-weight: lighter; }
+.lh-title {
+  line-height: 1.3; }
 
-.fw-bolder {
-  font-weight: bolder; }
+.lh-copy {
+  line-height: 1.6; }
 
 .fw-0 {
   font-weight: 100; }
@@ -2631,15 +2662,6 @@ h5 {
 
 .fw-5 {
   font-weight: 600; }
-
-.lh-solid {
-  line-height: 1; }
-
-.lh-title {
-  line-height: 1.3; }
-
-.lh-copy {
-  line-height: 1.6; }
 
 /*
     Opacity.
@@ -2926,6 +2948,21 @@ h5 {
 
 .transition-all-xl {
   transition: all 1s ease-out; }
+
+/*
+    ---------------------
+            Resets
+    ---------------------
+*/
+html {
+  font-size: 8px; }
+
+/* 
+    Set the font size again as we want it to be slightly smaller than the base font size. 
+*/
+@media only screen and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  html {
+    font-size: 16px !important; } }
 
 /*
     -------------------------------

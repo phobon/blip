@@ -3,8 +3,8 @@
     These are treated as a separate module to blip, so are handled separately.
  */
 
-@import "../mixins/colour-procs";
-@import "../atoms/colour-procs";
+@import "../mixins/colour";
+@import "../atoms/colour";
 
 $c-p-greensea:        #50a191;
 $c-p-nephritis:       #57ad7b;
@@ -19,7 +19,7 @@ $c-p-silver:          #bdc3c7;
 $c-p-concrete:        #95a5a6;
 $c-p-asbestos:        #7f8c8d;
 
-$pastel: (
+@include colour-proc((
     p-greensea: $c-p-greensea,
     p-nephritis: $c-p-nephritis,
     p-belizehole: $c-p-belizehole,
@@ -32,6 +32,4 @@ $pastel: (
     p-silver: $c-p-silver,
     p-concrete: $c-p-concrete,
     p-asbestos: $c-p-asbestos
-);
-
-@include colour-proc($pastel);
+));

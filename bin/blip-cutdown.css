@@ -1,6 +1,10 @@
 /*
-    Blip, atomic css framework mixins
-    This file contains the core mixins for the system.
+    A cutdown set of blip atomic classes.
+*/
+/*
+    Generative mixins for blip framework.
+    To be used in conjunction with blip core mixins; these will not generate concrete atomic classes.
+    NOTE: Can be used in a more traditional, cascade-based system.
 */
 /*
     Mixins to build border atoms
@@ -123,9 +127,12 @@
     Z-index mixins
 */
 /*
-    Blip, atomic css framework.
-    This file contains the core files and procs for the system.
-    This can be included in a project and customised further.
+    Set of important variables to be used with blip.
+*/
+/*
+    Core mixins for the blip framework.
+    This will generate a set of generic atomic classes for use with blip implementations.
+    NOTE: Should be used in conjunction with mixins.
 */
 /* 
     Z-index values
@@ -146,34 +153,6 @@
 /*
     Display atoms.
 */
-.d-block {
-  display: block; }
-
-.d-inline {
-  display: inline; }
-
-.d-inline-block {
-  display: inline-block; }
-
-.d-none {
-  display: none; }
-
-.d-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
-.d-inline-flex {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex; }
-
-.d-table {
-  display: table; }
-
-.d-table-cell {
-  display: table-cell; }
-
 /*
     Position atoms.
 */
@@ -812,6 +791,18 @@
 /*
     Font-weight atoms.
 */
+.fw-bold {
+  font-weight: bold; }
+
+.fw-normal {
+  font-weight: normal; }
+
+.fw-lighter {
+  font-weight: lighter; }
+
+.fw-bolder {
+  font-weight: bolder; }
+
 /*
     Various typographic mixins.
     Classes are taken from font-family, font-sizes, font-spacing, etc.   
@@ -916,7 +907,7 @@ pre {
     Box-shadow atoms.
     These are typically lightweight classes that might require customisation at some point.
 */
-.bshad-0 {
+.bshad-none {
   box-shadow: none; }
 
 /* Resets */
@@ -1215,91 +1206,6 @@ ul, ol {
   top: 1px;
   bottom: 1px;
   right: 1px; }
-
-/* Margins */
-.m-2 {
-  margin: 2px; }
-
-.m-l-2 {
-  margin-left: 2px; }
-
-.m-r-2 {
-  margin-right: 2px; }
-
-.m-horizontal-2 {
-  margin-left: 2px;
-  margin-right: 2px; }
-
-.m-t-2 {
-  margin-top: 2px; }
-
-.m-b-2 {
-  margin-bottom: 2px; }
-
-.m-vertical-2 {
-  margin-top: 2px;
-  margin-bottom: 2px; }
-
-/* Paddings */
-.p-2 {
-  padding: 2px; }
-
-.p-l-2 {
-  padding-left: 2px; }
-
-.p-r-2 {
-  padding-right: 2px; }
-
-.p-horizontal-2 {
-  padding-left: 2px;
-  padding-right: 2px; }
-
-.p-t-2 {
-  padding-top: 2px; }
-
-.p-b-2 {
-  padding-bottom: 2px; }
-
-.p-vertical-2 {
-  padding-top: 2px;
-  padding-bottom: 2px; }
-
-/* Height & Width */
-.h-2 {
-  height: 2px; }
-
-.h-min-2 {
-  min-height: 2px; }
-
-.h-max-2 {
-  max-height: 2px; }
-
-.w-2 {
-  width: 2px; }
-
-.w-min-2 {
-  min-width: 2px; }
-
-.w-max-2 {
-  max-width: 2px; }
-
-.co-l-2 {
-  left: 2px; }
-
-.co-t-2 {
-  top: 2px; }
-
-.co-r-2 {
-  right: 2px; }
-
-.co-b-2 {
-  bottom: 2px; }
-
-.co-all-2 {
-  left: 2px;
-  top: 2px;
-  bottom: 2px;
-  right: 2px; }
 
 /* Margins */
 .m-quarterrem {
@@ -1811,6 +1717,91 @@ ul, ol {
   bottom: 4rem;
   right: 4rem; }
 
+/* Margins */
+.m-5rem {
+  margin: 5rem; }
+
+.m-l-5rem {
+  margin-left: 5rem; }
+
+.m-r-5rem {
+  margin-right: 5rem; }
+
+.m-horizontal-5rem {
+  margin-left: 5rem;
+  margin-right: 5rem; }
+
+.m-t-5rem {
+  margin-top: 5rem; }
+
+.m-b-5rem {
+  margin-bottom: 5rem; }
+
+.m-vertical-5rem {
+  margin-top: 5rem;
+  margin-bottom: 5rem; }
+
+/* Paddings */
+.p-5rem {
+  padding: 5rem; }
+
+.p-l-5rem {
+  padding-left: 5rem; }
+
+.p-r-5rem {
+  padding-right: 5rem; }
+
+.p-horizontal-5rem {
+  padding-left: 5rem;
+  padding-right: 5rem; }
+
+.p-t-5rem {
+  padding-top: 5rem; }
+
+.p-b-5rem {
+  padding-bottom: 5rem; }
+
+.p-vertical-5rem {
+  padding-top: 5rem;
+  padding-bottom: 5rem; }
+
+/* Height & Width */
+.h-5rem {
+  height: 5rem; }
+
+.h-min-5rem {
+  min-height: 5rem; }
+
+.h-max-5rem {
+  max-height: 5rem; }
+
+.w-5rem {
+  width: 5rem; }
+
+.w-min-5rem {
+  min-width: 5rem; }
+
+.w-max-5rem {
+  max-width: 5rem; }
+
+.co-l-5rem {
+  left: 5rem; }
+
+.co-t-5rem {
+  top: 5rem; }
+
+.co-r-5rem {
+  right: 5rem; }
+
+.co-b-5rem {
+  bottom: 5rem; }
+
+.co-all-5rem {
+  left: 5rem;
+  top: 5rem;
+  bottom: 5rem;
+  right: 5rem; }
+
 /* Height & Width */
 .h-100 {
   height: 100%; }
@@ -1829,25 +1820,6 @@ ul, ol {
 
 .w-max-100 {
   max-width: 100%; }
-
-/* Height & Width */
-.h-90 {
-  height: 90%; }
-
-.h-min-90 {
-  min-height: 90%; }
-
-.h-max-90 {
-  max-height: 90%; }
-
-.w-90 {
-  width: 90%; }
-
-.w-min-90 {
-  min-width: 90%; }
-
-.w-max-90 {
-  max-width: 90%; }
 
 /* Height & Width */
 .h-80 {
@@ -1869,44 +1841,6 @@ ul, ol {
   max-width: 80%; }
 
 /* Height & Width */
-.h-70 {
-  height: 70%; }
-
-.h-min-70 {
-  min-height: 70%; }
-
-.h-max-70 {
-  max-height: 70%; }
-
-.w-70 {
-  width: 70%; }
-
-.w-min-70 {
-  min-width: 70%; }
-
-.w-max-70 {
-  max-width: 70%; }
-
-/* Height & Width */
-.h-60 {
-  height: 60%; }
-
-.h-min-60 {
-  min-height: 60%; }
-
-.h-max-60 {
-  max-height: 60%; }
-
-.w-60 {
-  width: 60%; }
-
-.w-min-60 {
-  min-width: 60%; }
-
-.w-max-60 {
-  max-width: 60%; }
-
-/* Height & Width */
 .h-50 {
   height: 50%; }
 
@@ -1924,25 +1858,6 @@ ul, ol {
 
 .w-max-50 {
   max-width: 50%; }
-
-/* Height & Width */
-.h-40 {
-  height: 40%; }
-
-.h-min-40 {
-  min-height: 40%; }
-
-.h-max-40 {
-  max-height: 40%; }
-
-.w-40 {
-  width: 40%; }
-
-.w-min-40 {
-  min-width: 40%; }
-
-.w-max-40 {
-  max-width: 40%; }
 
 /* Height & Width */
 .h-33 {
@@ -1964,23 +1879,23 @@ ul, ol {
   max-width: 33.33333%; }
 
 /* Height & Width */
-.h-30 {
-  height: 30%; }
+.h-25 {
+  height: 25%; }
 
-.h-min-30 {
-  min-height: 30%; }
+.h-min-25 {
+  min-height: 25%; }
 
-.h-max-30 {
-  max-height: 30%; }
+.h-max-25 {
+  max-height: 25%; }
 
-.w-30 {
-  width: 30%; }
+.w-25 {
+  width: 25%; }
 
-.w-min-30 {
-  min-width: 30%; }
+.w-min-25 {
+  min-width: 25%; }
 
-.w-max-30 {
-  max-width: 30%; }
+.w-max-25 {
+  max-width: 25%; }
 
 /* Height & Width */
 .h-20 {
@@ -2001,58 +1916,26 @@ ul, ol {
 .w-max-20 {
   max-width: 20%; }
 
-/* Height & Width */
-.h-15 {
-  height: 15%; }
+/*
+    Displays.    
+*/
+.d-none {
+  display: none; }
 
-.h-min-15 {
-  min-height: 15%; }
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
-.h-max-15 {
-  max-height: 15%; }
-
-.w-15 {
-  width: 15%; }
-
-.w-min-15 {
-  min-width: 15%; }
-
-.w-max-15 {
-  max-width: 15%; }
-
-/* Height & Width */
-.h-10 {
-  height: 10%; }
-
-.h-min-10 {
-  min-height: 10%; }
-
-.h-max-10 {
-  max-height: 10%; }
-
-.w-10 {
-  width: 10%; }
-
-.w-min-10 {
-  min-width: 10%; }
-
-.w-max-10 {
-  max-width: 10%; }
+.d-inline-flex {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex; }
 
 /*
     Fonts and Typography.
     Another core part of the system that initializes the relative sizes of fonts and headers.
 */
-html {
-  font-size: 8px; }
-
-/* 
-    Set the font size again as we want it to be slightly smaller than the base font size. 
-*/
-@media only screen and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  html {
-    font-size: 16px !important; } }
-
 .fs-1 {
   font-size: 8.75rem; }
 
@@ -2092,36 +1975,6 @@ h4 {
 h5 {
   font-size: 1.75rem; }
 
-.fw-bold {
-  font-weight: bold; }
-
-.fw-normal {
-  font-weight: normal; }
-
-.fw-lighter {
-  font-weight: lighter; }
-
-.fw-bolder {
-  font-weight: bolder; }
-
-.fw-0 {
-  font-weight: 100; }
-
-.fw-1 {
-  font-weight: 200; }
-
-.fw-2 {
-  font-weight: 300; }
-
-.fw-3 {
-  font-weight: 400; }
-
-.fw-4 {
-  font-weight: 500; }
-
-.fw-5 {
-  font-weight: 600; }
-
 .lh-solid {
   line-height: 1; }
 
@@ -2138,34 +1991,34 @@ h5 {
 .o-0 {
   opacity: 0; }
 
-.o-20 {
+.o-25 {
   opacity: 0.1; }
 
-.o-40 {
+.o-50 {
   opacity: 0.2; }
 
-.o-60 {
+.o-75 {
   opacity: 0.3; }
 
-.o-80 {
+.o-100 {
   opacity: 0.4; }
 
-.o-100 {
+.o-125 {
   opacity: 0.5; }
 
-.o-120 {
+.o-150 {
   opacity: 0.6; }
 
-.o-140 {
+.o-175 {
   opacity: 0.7; }
 
-.o-160 {
+.o-200 {
   opacity: 0.8; }
 
-.o-180 {
+.o-225 {
   opacity: 0.9; }
 
-.o-200 {
+.o-250 {
   opacity: 1; }
 
 /*
@@ -2299,50 +2152,95 @@ h5 {
 .br-ra-br-1 {
   border-bottom-right-radius: 1px; }
 
-.br-2 {
+.br-quarterrem {
   border-style: solid;
-  border-width: 2px; }
+  border-width: 0.25rem; }
 
-.br-t-2 {
+.br-t-quarterrem {
   border-style: solid;
-  border-top-width: 2px; }
+  border-top-width: 0.25rem; }
 
-.br-b-2 {
+.br-b-quarterrem {
   border-style: solid;
-  border-bottom-width: 2px; }
+  border-bottom-width: 0.25rem; }
 
-.br-l-2 {
+.br-l-quarterrem {
   border-style: solid;
-  border-left-width: 2px; }
+  border-left-width: 0.25rem; }
 
-.br-r-2 {
+.br-r-quarterrem {
   border-style: solid;
-  border-right-width: 2px; }
+  border-right-width: 0.25rem; }
 
-.br-horizontal-2 {
+.br-horizontal-quarterrem {
   border-style: solid;
-  border-left-width: 2px;
-  border-right-width: 2px; }
+  border-left-width: 0.25rem;
+  border-right-width: 0.25rem; }
 
-.br-vertical-2 {
+.br-vertical-quarterrem {
   border-style: solid;
-  border-top-width: 2px;
-  border-bottom-width: 2px; }
+  border-top-width: 0.25rem;
+  border-bottom-width: 0.25rem; }
 
-.br-ra-2 {
-  border-radius: 2px; }
+.br-ra-quarterrem {
+  border-radius: 0.25rem; }
 
-.br-ra-tl-2 {
-  border-top-left-radius: 2px; }
+.br-ra-tl-quarterrem {
+  border-top-left-radius: 0.25rem; }
 
-.br-ra-tr-2 {
-  border-top-right-radius: 2px; }
+.br-ra-tr-quarterrem {
+  border-top-right-radius: 0.25rem; }
 
-.br-ra-bl-2 {
-  border-bottom-left-radius: 2px; }
+.br-ra-bl-quarterrem {
+  border-bottom-left-radius: 0.25rem; }
 
-.br-ra-br-2 {
-  border-bottom-right-radius: 2px; }
+.br-ra-br-quarterrem {
+  border-bottom-right-radius: 0.25rem; }
+
+.br-halfrem {
+  border-style: solid;
+  border-width: 0.5rem; }
+
+.br-t-halfrem {
+  border-style: solid;
+  border-top-width: 0.5rem; }
+
+.br-b-halfrem {
+  border-style: solid;
+  border-bottom-width: 0.5rem; }
+
+.br-l-halfrem {
+  border-style: solid;
+  border-left-width: 0.5rem; }
+
+.br-r-halfrem {
+  border-style: solid;
+  border-right-width: 0.5rem; }
+
+.br-horizontal-halfrem {
+  border-style: solid;
+  border-left-width: 0.5rem;
+  border-right-width: 0.5rem; }
+
+.br-vertical-halfrem {
+  border-style: solid;
+  border-top-width: 0.5rem;
+  border-bottom-width: 0.5rem; }
+
+.br-ra-halfrem {
+  border-radius: 0.5rem; }
+
+.br-ra-tl-halfrem {
+  border-top-left-radius: 0.5rem; }
+
+.br-ra-tr-halfrem {
+  border-top-right-radius: 0.5rem; }
+
+.br-ra-bl-halfrem {
+  border-bottom-left-radius: 0.5rem; }
+
+.br-ra-br-halfrem {
+  border-bottom-right-radius: 0.5rem; }
 
 /*
     Transitions.
@@ -2354,8 +2252,29 @@ h5 {
 .transition-all-s {
   transition: all 0.25s ease-out; }
 
-.transition-m {
-  transition: opacity 0.5s ease-out, fill 0.5s ease-out, color 0.5s ease-out, background-color 0.5s ease-out, stroke 0.5s ease-out; }
+/*
+    ---------------------
+            Resets
+    ---------------------
+*/
+html {
+  font-size: 8px; }
 
-.transition-all-m {
-  transition: all 0.5s ease-out; }
+/* 
+    Set the font size again as we want it to be slightly smaller than the base font size. 
+*/
+@media only screen and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  html {
+    font-size: 16px !important; } }
+
+/*
+    -------------------------------
+            Optional mixins
+    -------------------------------
+*/
+/*
+    Box shadows.
+    Simple box shadow classes with default values.
+*/
+.bshad-halfrem {
+  box-shadow: 0 0.5rem 2rem 0.5rem rgba(0, 0, 0, 0.3); }

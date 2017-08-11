@@ -1,5 +1,10 @@
-@import "blip-mixins";
-@import "blip-core";
+/*
+    Full-fat blip functional CSS framework.
+*/
+
+@import "mixins";
+@import "variables";
+@import "core";
 
 /*
     -------------------------------------
@@ -12,23 +17,6 @@
     These are absolutely essential to the flexible, responsive layout system in Blip.
     This size map can be pruned to requirements, as sizing classes do end up taking a lot of space.
 */
-$s-auto:        auto;
-$s-0:           0;
-$s-1:           1px;
-$s-2:           2px;
-$s-quarterrem:  0.25rem;
-$s-halfrem:     0.5rem;
-$s-1rem:        1rem;
-$s-2rem:        2rem;
-$s-3rem:        3rem;
-$s-4rem:        4rem;
-$s-5rem:        5rem;
-$s-6rem:        6rem;
-$s-7rem:        7rem;
-$s-8rem:        8rem;
-$s-9rem:        9rem;
-$s-10rem:       10rem;
-
 @include sizing-proc((
     auto: $s-auto,
     0: $s-0, 
@@ -48,20 +36,6 @@ $s-10rem:       10rem;
     10rem: $s-10rem
 ));
 
-$s-90:          90%;
-$s-80:          80%;
-$s-70:          70%;
-$s-60:          60%;
-$s-50:          50%;
-$s-40:          40%;
-$s-33:          33.3333333333%;
-$s-30:          30%;
-$s-25:          25%;
-$s-20:          20%;
-$s-15:          15%;
-$s-10:          10%;
-$s-100:         100%;
-
 @include percentage-proc((
     100: $s-100,
     90: $s-90, 
@@ -72,48 +46,23 @@ $s-100:         100%;
     40: $s-40, 
     33: $s-33, 
     30: $s-30, 
+    25: $s-25,
     20: $s-20, 
     15: $s-15, 
     10: $s-10
 ));
 
 /*
+    Displays.    
+*/
+@include d-proc((
+    block, inline, inline-block, none, flex, inline-flex, table, table-cell
+));
+
+/*
     Fonts and Typography.
     Another core part of the system that initializes the relative sizes of fonts and headers.
 */
-
-// Resets and defaults.
-$base-font-size:                8px;
-$base-font-size-responsive:     16px;
-
-html {
-    @extend .sans-serif;
-    font-size: $base-font-size;
-}
-
-/* 
-    Set the font size again as we want it to be slightly smaller than the base font size. 
-*/
-body {    
-    @extend .fs-6;
-}
-
-// Responsive media query for mobile devices.
-@media only screen and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-    html {
-        font-size: $base-font-size-responsive !important;
-    }
-}
-
-$font-factor:           1.75rem;
-
-$fs-1:                  5 * $font-factor;
-$fs-2:                  4 * $font-factor;
-$fs-3:                  3 * $font-factor;
-$fs-4:                  2 * $font-factor;
-$fs-5:                  1 * $font-factor;
-$fs-6:                  $font-factor;
-$fs-7:                  1.5rem;
 
 @include font-size-proc((
     1: $fs-1, 
@@ -149,10 +98,13 @@ h5 {
 
 // Line-heights.
 @include line-height-proc((
-    solid: 1, 
-    title: 1.3, 
-    copy: 1.6
+    solid: $lh-solid, 
+    title: $lh-title, 
+    copy: $lh-copy
 ));
+
+// Font-weights.
+@include fw-number-proc();
 
 /*
     Opacity.
@@ -182,11 +134,36 @@ h5 {
     Sets up some lightweight classes to handle transition sizes.
 */
 @include transition-procs((
-    s: 0.25s,
-    m: 0.5s,
-    l: 0.75s,
-    xl: 1s
+    s: $transition-s,
+    m: $transition-m,
+    l: $transition-l,
+    xl: $transition-xl
 ));
+
+/*
+    ---------------------
+            Resets
+    ---------------------
+*/
+
+html {
+    @extend .sans-serif;
+    font-size: $base-font-size;
+}
+
+/* 
+    Set the font size again as we want it to be slightly smaller than the base font size. 
+*/
+body {    
+    @extend .fs-6;
+}
+
+// Responsive media query for mobile devices.
+@media only screen and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    html {
+        font-size: $base-font-size-responsive !important;
+    }
+}
 
 /*
     -------------------------------

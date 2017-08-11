@@ -18,7 +18,7 @@
     .br-ra-br-[size]: Bottom-right border radius of [size]
 */
 
-@mixin border-proc($sizes) {
+@mixin border-proc($sizes, $full: true) {
     @each $label, $size in $sizes {
         @mixin br-base() {
             border-style: solid;
@@ -56,22 +56,25 @@
         .br-ra-#{$label} {
             @include br-ra($size);
         }
-        .br-ra-tl-#{$label} {
-            @include br-ra-tl($size);
-        }
-        .br-ra-tr-#{$label} {
-            @include br-ra-tr($size);
-        }
-        .br-ra-bl-#{$label} {
-            @include br-ra-bl($size);
-        }
-        .br-ra-br-#{$label} {
-            @include br-ra-br($size);
-        }
+
+        @if ($full) {
+            .br-ra-tl-#{$label} {
+                @include br-ra-tl($size);
+            }
+            .br-ra-tr-#{$label} {
+                @include br-ra-tr($size);
+            }
+            .br-ra-bl-#{$label} {
+                @include br-ra-bl($size);
+            }
+            .br-ra-br-#{$label} {
+                @include br-ra-br($size);
+            }
+        }        
     }
 }
 
 // Circular border radius.
 .br-ra-100 {
-    border-radius: 100%;
+    @include br-ra(100%);
 }

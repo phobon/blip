@@ -1,9 +1,3 @@
-/*
-    Blip, atomic css framework.
-    This file contains the core files and procs for the system.
-    This can be included in a project and customised further.
-*/
-
 @import "atoms/z-index";
 @import "atoms/box-sizing";
 @import "atoms/display";
@@ -18,16 +12,16 @@
 @import "atoms/list-style";
 
 /* Sizing, flex and grid */
-@import "atoms/sizing", "atoms/grid-procs", "atoms/flex", "atoms/resize";
-@import "atoms/border-procs", "atoms/border-style";
-@import "atoms/outline-procs", "atoms/outline-offset", "atoms/outline-style";
+@import "atoms/sizing", "atoms/flex-grid", "atoms/flex", "atoms/resize";
+@import "atoms/border", "atoms/border-style";
+@import "atoms/outline", "atoms/outline-offset", "atoms/outline-style";
 
 /* Fonts and typography */
 @import "atoms/text-align", "atoms/text-decoration", "atoms/text-transform", "atoms/line-height", "atoms/word-wrap", "atoms/white-space", "atoms/text-overflow";
 @import "atoms/font-family", "atoms/font-size", "atoms/font-style", "atoms/font-weight", "atoms/typography";
 
 /* Colour procs */
-@import "atoms/colour-procs";
+@import "atoms/colour";
 
 /* Transition base and animations */
 @import "atoms/transform-origin", "atoms/transitions", "atoms/animations";

@@ -2,20 +2,22 @@
     Font-weight atoms.
 */
 
-$fw-types: (
-    bold, normal, lighter, bolder
-);
-
-@mixin fw-proc($weights) {
-    @each $w in $fw-types {
+@mixin fw-proc($types) {
+    @each $w in $types {
         .fw-#{$w} {
             @include fw($w);
         }
-    }
+    }    
+}
 
-    @for $i from 0 through $weights {
+@mixin fw-number-proc($max: 5) {
+    @for $i from 0 through $max {
         .fw-#{$i} {
             @include fw(100 + $i * 100);
         }
     }
 }
+
+@include fw-proc((
+    bold, normal, lighter, bolder
+));
