@@ -1937,43 +1937,43 @@ ul, ol {
     Another core part of the system that initializes the relative sizes of fonts and headers.
 */
 .fs-1 {
-  font-size: 8.75rem; }
+  font-size: 8.75em; }
 
 .fs-2 {
-  font-size: 7rem; }
+  font-size: 7em; }
 
 .fs-3 {
-  font-size: 5.25rem; }
+  font-size: 5.25em; }
 
 .fs-4 {
-  font-size: 3.5rem; }
+  font-size: 3.5em; }
 
 .fs-5 {
-  font-size: 1.75rem; }
+  font-size: 1.75em; }
 
 .fs-6, body {
-  font-size: 1.75rem; }
+  font-size: 1.75em; }
 
 .fs-7 {
-  font-size: 1.5rem; }
+  font-size: 1.5em; }
 
 /* 
     Setup font sizes and other specific typographic properties 
 */
 h1 {
-  font-size: 8.75rem; }
+  font-size: 8.75em; }
 
 h2 {
-  font-size: 7rem; }
+  font-size: 7em; }
 
 h3 {
-  font-size: 5.25rem; }
+  font-size: 5.25em; }
 
 h4 {
-  font-size: 3.5rem; }
+  font-size: 3.5em; }
 
 h5 {
-  font-size: 1.75rem; }
+  font-size: 1.75em; }
 
 .lh-solid {
   line-height: 1; }

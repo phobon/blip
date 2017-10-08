@@ -7,6 +7,8 @@ $s-auto:                            auto;
 $s-0:                               0;
 $s-1:                               1px;
 $s-2:                               2px;
+
+// Relative em
 $s-quarterrem:                      0.25rem;
 $s-halfrem:                         0.5rem;
 $s-1rem:                            1rem;
@@ -20,6 +22,21 @@ $s-8rem:                            8rem;
 $s-9rem:                            9rem;
 $s-10rem:                           10rem;
 
+// em
+$s-quarterem:                      0.25em;
+$s-halfem:                         0.5em;
+$s-1em:                            1em;
+$s-2em:                            2em;
+$s-3em:                            3em;
+$s-4em:                            4em;
+$s-5em:                            5em;
+$s-6em:                            6em;
+$s-7em:                            7em;
+$s-8em:                            8em;
+$s-9em:                            9em;
+$s-10em:                           10em;
+
+// Grid and relative sizing
 $s-90:                              90%;
 $s-80:                              80%;
 $s-70:                              70%;
@@ -38,7 +55,7 @@ $s-100:                             100%;
 $base-font-size:                    8px;
 $base-font-size-responsive:         16px;
 
-$font-factor:                       1.75rem;
+$font-factor:                       1.75em;
 
 $fs-1:                              5 * $font-factor;
 $fs-2:                              4 * $font-factor;
@@ -46,7 +63,7 @@ $fs-3:                              3 * $font-factor;
 $fs-4:                              2 * $font-factor;
 $fs-5:                              1 * $font-factor;
 $fs-6:                              $font-factor;
-$fs-7:                              1.5rem;
+$fs-7:                              1.5em;
 
 $lh-solid:                          1;
 $lh-title:                          1.3;
